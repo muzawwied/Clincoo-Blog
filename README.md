@@ -20,3 +20,5 @@ topik viral, artikel menarik. Panduan resmi Clincoo ada di **docs.clincoo.buzz**
 Lihat `TEMPLATE.md` untuk kerangka halaman artikel siap pakai.
 
 > Catatan: deploy produksi via push ke main.
+
+> Auto-deploy: push ke main memicu build produksi otomatis.

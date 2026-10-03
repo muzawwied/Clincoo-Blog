@@ -18,3 +18,5 @@ topik viral, artikel menarik. Panduan resmi Clincoo ada di **docs.clincoo.buzz**
 
 ## Template artikel
 Lihat `TEMPLATE.md` untuk kerangka halaman artikel siap pakai.
+
+> Catatan: deploy produksi via push ke main.

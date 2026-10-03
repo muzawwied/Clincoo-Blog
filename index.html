@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clincoo Blog — Aplikasi, Tren & Artikel Menarik</title>
+<meta name="description" content="Blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik lainnya.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://blog.clincoo.buzz/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clincoo Blog — Aplikasi, Tren & Artikel Menarik">
+<meta property="og:description" content="Blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik lainnya.">
+<meta property="og:url" content="https://blog.clincoo.buzz/">
+<meta property="og:site_name" content="Clincoo Blog">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clincoo Blog — Aplikasi, Tren & Artikel Menarik">
+<meta name="twitter:description" content="Blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik lainnya.">
+<link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          gray: { 100: '#f3f4f6', 200: '#e5e7eb', 300: '#d1d5db', 500: '#6b7280', 900: '#111827' }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { -webkit-tap-highlight-color: transparent; }
+  .fade-in { animation: fadeIn 0.35s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Clincoo Blog","url":"https://blog.clincoo.buzz/","description":"Blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik lainnya."}</script>
+</head>
+<body class="bg-white text-gray-900 font-sans antialiased min-h-screen flex flex-col">
+
+<header class="sticky top-0 z-40 bg-white border-b border-gray-100 pt-3 pb-4">
+  <div class="relative flex items-center justify-center max-w-2xl mx-auto px-4 sm:px-6">
+    <a href="/" class="absolute left-4 sm:left-6 flex items-center" aria-label="Clincoo Blog">
+      <img src="/logo.png" width="36" height="36" alt="Clincoo" style="border-radius:0.6rem">
+      <span class="text-lg font-bold tracking-tight text-gray-900 ml-2 hidden sm:inline">Clincoo Blog</span>
+    </a>
+    <h1 class="text-xl font-bold text-gray-900 sm:hidden">Clincoo Blog</h1>
+    <a href="https://docs.clincoo.buzz/" class="absolute right-4 sm:right-6 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">Docs</a>
+  </div>
+</header>
+
+<main class="flex-1 w-full max-w-2xl mx-auto px-4 sm:px-6 pt-6 fade-in">
+  <div class="relative mb-5">
+    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"><svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
+    <input type="text" id="searchInput" class="w-full border border-gray-300 rounded-full py-2.5 pl-12 pr-5 text-base outline-none focus:border-gray-900 transition-colors shadow-sm" placeholder="Cari artikel..." oninput="filterCards(this)" autocomplete="off" spellcheck="false">
+  </div>
+  <div id="articleCards"></div>
+  <div id="noResult" class="text-center py-12 text-gray-500" style="display:none">Tidak ada artikel ditemukan.</div>
+</main>
+
+<footer class="py-6 mt-12 border-t border-gray-200 text-center text-sm text-gray-500 w-full max-w-2xl mx-auto px-4 sm:px-6">
+  &copy; 2026 Clincoo. <span>Seluruh hak cipta dilindungi.</span>
+  <div class="mt-1"><a href="https://docs.clincoo.buzz/" class="text-gray-400 hover:text-gray-900 transition-colors">Panduan Clincoo</a> &middot; <a href="https://www.clincoo.buzz/" class="text-gray-400 hover:text-gray-900 transition-colors">Situs</a> &middot; <a href="https://app.clincoo.buzz/" class="text-gray-400 hover:text-gray-900 transition-colors">Aplikasi</a></div>
+</footer>
+
+<script src="/articles.js"></script>
+<script>
+var BULAN = ['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+function fmtDate(iso) {
+  var p = iso.split('-');
+  return parseInt(p[2], 10) + ' ' + BULAN[parseInt(p[1], 10) - 1] + ' ' + p[0];
+}
+function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+function render() {
+  var list = (window.blogArticles || []).slice().sort(function(a, b) { return b.date < a.date ? -1 : 1; });
+  var el = document.getElementById('articleCards');
+  el.innerHTML = list.map(function(a) {
+    return '<a data-card data-title="' + esc(a.title) + '" data-desc="' + esc(a.desc) + '" class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/' + a.slug + '/">' +
+      '<div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">' + fmtDate(a.date) + '</span></div>' +
+      '<h2 class="text-lg font-bold text-gray-900">' + esc(a.title) + '</h2>' +
+      '<div class="h-px bg-gray-100 w-full my-3"></div>' +
+      '<p class="text-sm text-gray-500 leading-relaxed">' + esc(a.desc) + '</p>' +
+      '</a>';
+  }).join('');
+}
+function filterCards(input) {
+  var q = (input.value || '').toLowerCase();
+  var any = false;
+  var cards = document.querySelectorAll('[data-card]');
+  for (var i = 0; i < cards.length; i++) {
+    var el = cards[i];
+    var ok = (el.getAttribute('data-title') || '').toLowerCase().indexOf(q) > -1 ||
+             (el.getAttribute('data-desc') || '').toLowerCase().indexOf(q) > -1;
+    el.style.display = ok ? '' : 'none';
+    if (ok) any = true;
+  }
+  document.getElementById('noResult').style.display = any ? 'none' : '';
+}
+render();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-32K4RH4DKN"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-32K4RH4DKN',{page_path:location.pathname});</script>
+</body>
+</html>

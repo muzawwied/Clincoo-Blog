@@ -1,0 +1,5 @@
+/mulai/*       https://docs.clincoo.buzz/mulai/:splat       301
+/dokumentasi/* https://docs.clincoo.buzz/dokumentasi/:splat 301
+/bantuan/*     https://docs.clincoo.buzz/bantuan/:splat     301
+/legal/*       https://docs.clincoo.buzz/legal/:splat       301
+/tentang/*     https://docs.clincoo.buzz/tentang/:splat     301

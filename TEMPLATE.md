@@ -1,22 +1,38 @@
+# Template Artikel Blog (id)
+
+Copy kerangka ini ke `<slug>/index.html` di repo Clincoo-Blog.
+Ganti: JUDUL, DESC, TANGGAL-ISO (mis. 2026-10-03), tanggal tampil (mis. 3 Okt 2026), dan isi.
+URL artikel jadi: blog.clincoo.buzz/`<slug>`/
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selamat Datang di Blog Clincoo — Clincoo Blog</title>
-<meta name="description" content="Perkenalan blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik. Panduan resmi Clincoo ada di docs.clincoo.buzz.">
+<title>JUDUL — Clincoo Blog</title>
+<meta name="description" content="DESC">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://blog.clincoo.buzz/selamat-datang/">
+<link rel="canonical" href="https://blog.clincoo.buzz/SLUG/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Selamat Datang di Blog Clincoo — Clincoo Blog">
-<meta property="og:description" content="Perkenalan blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik.">
-<meta property="og:url" content="https://blog.clincoo.buzz/selamat-datang/">
+<meta property="og:title" content="JUDUL — Clincoo Blog">
+<meta property="og:description" content="DESC">
+<meta property="og:url" content="https://blog.clincoo.buzz/SLUG/">
 <meta property="og:site_name" content="Clincoo Blog">
 <meta property="og:locale" content="id_ID">
+<meta property="og:image" content="https://blog.clincoo.buzz/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Clincoo Blog">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Selamat Datang di Blog Clincoo — Clincoo Blog">
-<meta name="twitter:description" content="Perkenalan blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik.">
-<link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
+<meta name="twitter:title" content="JUDUL — Clincoo Blog">
+<meta name="twitter:description" content="DESC">
+<meta name="twitter:image" content="https://blog.clincoo.buzz/og-image.png">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://cdn.tailwindcss.com">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -41,7 +57,7 @@
   .prose ul, .prose ol { margin: 0 0 1.1rem 1.3rem; }
   .prose li { font-size: 0.95rem; line-height: 1.85; color: #374151; margin-bottom: 0.3rem; }
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Selamat Datang di Blog Clincoo","datePublished":"2026-10-03","dateModified":"2026-10-03","description":"Perkenalan blog umum Clincoo: pembahasan aplikasi lain, topik yang lagi viral, dan artikel menarik.","mainEntityOfPage":"https://blog.clincoo.buzz/selamat-datang/","author":{"@type":"Organization","name":"Clincoo"},"publisher":{"@type":"Organization","name":"Clincoo"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"JUDUL","datePublished":"TANGGAL-ISO","dateModified":"TANGGAL-ISO","description":"DESC","mainEntityOfPage":"https://blog.clincoo.buzz/SLUG/","image":"https://blog.clincoo.buzz/og-image.png","author":{"@type":"Organization","name":"Clincoo"},"publisher":{"@type":"Organization","name":"Clincoo"}}</script>
 </head>
 <body class="bg-white text-gray-900 font-sans antialiased min-h-screen flex flex-col">
 
@@ -57,20 +73,10 @@
 </header>
 
 <main class="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-4 fade-in">
-  <p class="text-xs font-medium text-gray-400 uppercase tracking-wide mb-2">3 Okt 2026</p>
-  <h2 class="text-2xl font-bold text-gray-900 mb-6">Selamat Datang di Blog Clincoo</h2>
+  <p class="text-xs font-medium text-gray-400 uppercase tracking-wide mb-2">TANGGAL-TAMPIL</p>
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">JUDUL</h2>
   <div class="prose">
-    <p>Halo! Ini adalah blog umum Clincoo. Di sini kamu bakal menemukan pembahasan yang ringan dan menarik seputar:</p>
-    <ul>
-      <li>Aplikasi lain yang patut dicoba — review, perbandingan, dan tips pakainya</li>
-      <li>Topik yang lagi viral dan ramai dibicarakan</li>
-      <li>Tips dan trik umum seputar teknologi dan internet</li>
-      <li>Artikel-artikel menarik lainnya</li>
-    </ul>
-    <h2>Panduan Clincoo pindah rumah</h2>
-    <p>Kalau kamu nyari panduan resmi Clincoo — cara memulai, dokumentasi, pusat bantuan, dan legal — sekarang semuanya ada di <a href="https://docs.clincoo.buzz/">docs.clincoo.buzz</a>.</p>
-    <p>Blog ini khusus untuk konten umum. Artikelnya satu halaman per topik biar gampang dibaca dan gampang ditemukan di Google.</p>
-    <p>Selamat membaca!</p>
+    ISI ARTIKEL DI SINI
   </div>
 </main>
 
@@ -82,3 +88,4 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-32K4RH4DKN',{page_path:location.pathname});</script>
 </body>
 </html>
+```

@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori Web Components (12 Oktober 2026, 03:17 WIB)
+// Clincoo Docs — kategori Web Components (12 Oktober 2026, 05:00 WIB) — 12 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["web-components"] = {
  "names": { "id": "Web Components", "en": "Web Components" },
@@ -235,5 +235,91 @@ window.countryDataFiles["web-components"] = {
   }
  }
 }
- ]
+ 
+,{
+ "id": "web-components-form-associated",
+ "langs": {
+  "id": {
+   "title": "Cara Membuat Form-Associated Custom Element di Clincoo",
+   "desc": "Tata cara menghubungkan custom element ke form native menggunakan formAssociated dan ElementInternals agar nilai ikut dikirim.",
+   "content": "<p class=\"mb-4\">Custom element biasa tidak ikut dalam FormData. Dengan form-associated, nilai dari komponen Clincoo bisa masuk ke submit form seperti input standar.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Aktifkan formAssociated</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buat class MyInput extends HTMLElement { static formAssociated = true; constructor() { super(); this.internals = this.attachInternals(); } setValue(v) { this.internals.setFormValue(v); } }</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Daftarkan dan uji</h2><p class=\"mb-4\">customElements.define('my-input', MyInput); lalu di form di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> <my-input name=\"judul\"></my-input>. Saat submit, nilai ada di FormData. Dokumentasikan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — ElementInternals",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals",
+   "sourceSnippet": "formAssociated custom elements can participate in form submission via ElementInternals.",
+   "source2": "MDN — Using custom elements",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Create a Form-Associated Custom Element in Clincoo",
+   "desc": "How to connect a custom element to a native form using formAssociated and ElementInternals so the value is submitted.",
+   "content": "<p class=\"mb-4\">A normal custom element does not appear in FormData. With form-associated, the value from a Clincoo component joins form submit like a standard input.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Enable formAssociated</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> write class MyInput extends HTMLElement { static formAssociated = true; constructor() { super(); this.internals = this.attachInternals(); } setValue(v) { this.internals.setFormValue(v); } }</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Register and test</h2><p class=\"mb-4\">customElements.define('my-input', MyInput); then in a form on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> <my-input name=\"title\"></my-input>. On submit the value is in FormData. Note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — ElementInternals",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals",
+   "sourceSnippet": "formAssociated custom elements can participate in form submission via ElementInternals.",
+   "source2": "MDN — Using custom elements",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},{
+ "id": "web-components-adopted-callback",
+ "langs": {
+  "id": {
+   "title": "Cara Menangani adoptedCallback saat Elemen Pindah Dokumen",
+   "desc": "Tata cara merespons saat custom element Clincoo dipindahkan ke dokumen lain dengan adoptedCallback.",
+   "content": "<p class=\"mb-4\">adoptedCallback dipanggil ketika elemen berpindah ke dokumen baru, misalnya lewat iframe atau adoptNode. Berguna untuk membersihkan listener di editor Clincoo.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Implementasi callback</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tambahkan adoptedCallback() { this.cleanup(); this.setupForNewDoc(); } pada class yang extends HTMLElement.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji pindah dokumen</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> coba document.adoptNode(element) lalu append ke iframe. Pastikan state tidak bocor. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — HTMLElement",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement",
+   "sourceSnippet": "adoptedCallback is called when the element is moved to a new document.",
+   "source2": "MDN — Node.adoptNode",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/API/Node/adoptNode",
+   "source3": "Clincoo App",
+   "source3Url": "https://app.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Handle adoptedCallback When an Element Moves Documents",
+   "desc": "How to respond when a Clincoo custom element is moved to another document with adoptedCallback.",
+   "content": "<p class=\"mb-4\">adoptedCallback runs when the element moves to a new document, for example via iframe or adoptNode. Useful for cleaning listeners in the Clincoo editor.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Implement the callback</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> add adoptedCallback() { this.cleanup(); this.setupForNewDoc(); } to the class that extends HTMLElement.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test document move</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> try document.adoptNode(element) then append into an iframe. Ensure state does not leak. Note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — HTMLElement",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement",
+   "sourceSnippet": "adoptedCallback is called when the element is moved to a new document.",
+   "source2": "MDN — Node.adoptNode",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/API/Node/adoptNode",
+   "source3": "Clincoo App",
+   "source3Url": "https://app.clincoo.buzz/"
+  }
+ }
+},{
+ "id": "web-components-slotted-styles",
+ "langs": {
+  "id": {
+   "title": "Cara Menata Konten Slot dengan Selektor ::slotted",
+   "desc": "Tata cara memberi style pada konten yang masuk ke slot dari luar shadow DOM menggunakan ::slotted di komponen Clincoo.",
+   "content": "<p class=\"mb-4\">Konten di light DOM yang di-slot tidak otomatis di-style oleh CSS di dalam shadow. ::slotted memungkinkan styling terbatas dari dalam komponen.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pakai ::slotted</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> di dalam shadow CSS tulis ::slotted(p) { color: inherit; margin: 0; } atau ::slotted(*) untuk semua.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Batasan dan uji</h2><p class=\"mb-4\">::slotted hanya menargetkan elemen langsung di slot, tidak keturunan. Uji di pratinjau <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> dengan konten dinamis. Catat pola di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — ::slotted",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted",
+   "sourceSnippet": "::slotted represents any element that has been placed into a slot inside an HTML template.",
+   "source2": "MDN — Using templates and slots",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Style Slotted Content with the ::slotted Selector",
+   "desc": "How to style content that enters a slot from outside the shadow DOM using ::slotted in a Clincoo component.",
+   "content": "<p class=\"mb-4\">Content in the light DOM that is slotted is not automatically styled by CSS inside the shadow. ::slotted allows limited styling from within the component.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Use ::slotted</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> inside shadow CSS write ::slotted(p) { color: inherit; margin: 0; } or ::slotted(*) for everything.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Limits and test</h2><p class=\"mb-4\">::slotted only targets the direct element in the slot, not descendants. Test in the <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> preview with dynamic content. Note the pattern on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — ::slotted",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/::slotted",
+   "sourceSnippet": "::slotted represents any element that has been placed into a slot inside an HTML template.",
+   "source2": "MDN — Using templates and slots",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+}
+]
 };

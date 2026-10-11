@@ -293,5 +293,35 @@ window.countryDataFiles["filter"] = {
   }
  }
 }
+
+,{
+ "id": "filter-backdrop-filter-untuk-overlay",
+ "langs": {
+  "id": {
+   "title": "Cara Pakai backdrop-filter untuk Overlay Modal di Clincoo",
+   "desc": "Tata cara membuat efek blur pada latar belakang modal menggunakan backdrop-filter agar fokus tetap pada konten.",
+   "content": "<p class=\"mb-4\">backdrop-filter membuat overlay Clincoo terasa modern tanpa memuat gambar blur berat. Berbeda dari filter biasa yang mengaburkan elemen itu sendiri.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Terapkan CSS</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> pada div overlay set backdrop-filter: blur(8px); background: rgba(0,0,0,0.4); Pastikan ada elemen di belakangnya.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Dukungan dan fallback</h2><p class=\"mb-4\">Uji di pratinjau <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>. Jika browser lama, sediakan background solid. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — backdrop-filter",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter",
+   "sourceSnippet": "backdrop-filter applies graphical effects to the area behind an element.",
+   "source2": "CSS Tricks — backdrop-filter",
+   "source2Url": "https://css-tricks.com/almanac/properties/b/backdrop-filter/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Use backdrop-filter for a Modal Overlay in Clincoo",
+   "desc": "How to create a blur effect on the modal background using backdrop-filter so focus stays on the content.",
+   "content": "<p class=\"mb-4\">backdrop-filter makes a Clincoo overlay feel modern without loading a heavy blurred image. It differs from filter which blurs the element itself.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Apply the CSS</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> on the overlay div set backdrop-filter: blur(8px); background: rgba(0,0,0,0.4); Make sure there is content behind it.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Support and fallback</h2><p class=\"mb-4\">Test in the <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> preview. For older browsers provide a solid background. Note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — backdrop-filter",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter",
+   "sourceSnippet": "backdrop-filter applies graphical effects to the area behind an element.",
+   "source2": "CSS Tricks — backdrop-filter",
+   "source2Url": "https://css-tricks.com/almanac/properties/b/backdrop-filter/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+}
 ]
 };

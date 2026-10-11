@@ -148,6 +148,36 @@
   }
  }
 }
+
+,{
+ "id": "struktur-folder-api-dan-pages",
+ "langs": {
+  "id": {
+   "title": "Cara Atur Folder API dan Pages di Proyek Clincoo",
+   "desc": "Tata cara memisahkan folder api untuk endpoint dan pages untuk rute agar struktur proyek Clincoo tetap rapi.",
+   "content": "<p class=\"mb-4\">Proyek Clincoo yang tumbuh butuh pemisahan jelas antara kode API dan halaman UI. Folder terpisah memudahkan navigasi di editor dan deploy.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Buat folder</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buat src/api/ untuk handler dan src/pages/ untuk komponen halaman. Index export dari masing-masing.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Manfaat</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> build hanya mengambil yang diperlukan. Dokumentasikan konvensi di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — JavaScript modules",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+   "sourceSnippet": "Organize code into modules and folders for maintainability.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Organize API and Pages Folders in a Clincoo Project",
+   "desc": "How to separate api folders for endpoints and pages for routes so the Clincoo project structure stays clean.",
+   "content": "<p class=\"mb-4\">A growing Clincoo project needs a clear split between API code and UI pages. Separate folders make navigation in the editor and deploy easier.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Create the folders</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> create src/api/ for handlers and src/pages/ for page components. Export an index from each.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Benefits</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> the build only pulls what is needed. Document the convention on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — JavaScript modules",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
+   "sourceSnippet": "Organize code into modules and folders for maintainability.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+}
 ];
   extra.forEach(function (item) {
     if (!list.some(function (x) { return x.id === item.id; })) list.push(item);

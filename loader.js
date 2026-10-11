@@ -78,11 +78,18 @@
     document.body.appendChild(e);
   }
   // ... rest of the functions remain the same, abbreviated for this update
+  function loadDebugcssExtra2() {
+    var e = document.createElement('script');
+    e.src = 'data_debugcss_extra2.js?v=1';
+    e.onload = loadOverscroll;
+    e.onerror = loadOverscroll;
+    document.body.appendChild(e);
+  }
   function loadDebugcssExtra() {
     var e = document.createElement('script');
     e.src = 'data_debugcss_extra.js?v=1';
-    e.onload = loadOverscroll;
-    e.onerror = loadOverscroll;
+    e.onload = loadDebugcssExtra2;
+    e.onerror = loadDebugcssExtra2;
     document.body.appendChild(e);
   }
   function loadDebugcss() {

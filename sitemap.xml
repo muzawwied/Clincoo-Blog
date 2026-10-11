@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://blog.clincoo.buzz/debugcss/debugcss-overflow-hidden/</loc>
-    <changefreq>weekly</changefreq>
+    <changefreq>weekly</changefreq |>
     <priority>0.8</priority>
   </url>
   <url>
@@ -237,6 +237,31 @@
   </url>
   <url>
     <loc>https://blog.clincoo.buzz/pwa/pwa-deteksi-mode-standalone/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-langkah-reproduksi/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-beri-kode-error-utuh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-batasi-satu-masalah/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-contoh-sebelum-ubah/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-cek-hasil-sebelum-terapkan/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

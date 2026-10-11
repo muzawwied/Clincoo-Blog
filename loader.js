@@ -1,4 +1,4 @@
-// Loader: ... + filter + security + struktur + vitals + pwa + pwa_extra) lalu app.js
+// Loader: ... + filter + security + struktur + vitals + pwa + pwa_extra + ai_stuck) lalu app.js
 (function() {
   var done = false;
   function loadApp() {
@@ -7,11 +7,18 @@
     a.src = 'app.js?v=12';
     document.body.appendChild(a);
   }
+  function loadAiStuck() {
+    var e = document.createElement('script');
+    e.src = 'data_ai_stuck.js?v=1';
+    e.onload = loadApp;
+    e.onerror = loadApp;
+    document.body.appendChild(e);
+  }
   function loadPwaExtra() {
     var e = document.createElement('script');
     e.src = 'data_pwa_extra.js?v=1';
-    e.onload = loadApp;
-    e.onerror = loadApp;
+    e.onload = loadAiStuck;
+    e.onerror = loadAiStuck;
     document.body.appendChild(e);
   }
   function loadPwa() {

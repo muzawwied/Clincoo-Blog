@@ -1,1 +1,1 @@
-$(cat /tmp/data_struktur_new.js)
+$(cat /workspace/artifacts/data_struktur.js)

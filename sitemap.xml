@@ -102,7 +102,7 @@
   </url>
   <url>
     <loc>https://blog.clincoo.buzz/debugcss/debugcss-overflow-hidden/</loc>
-    <changefreq>weekly</changefreq |>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -262,6 +262,31 @@
   </url>
   <url>
     <loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-cek-hasil-sebelum-terapkan/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/struktur/struktur-organisir-folder-komponen/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/struktur/struktur-pisahkan-public-dan-src/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/struktur/struktur-aset-gambar-optimal/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/struktur/struktur-css-modules-folder/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/struktur/struktur-halaman-dinamis-folder/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

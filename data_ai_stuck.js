@@ -147,6 +147,35 @@ window.countryDataFiles["ai-stuck"] = {
    "source3Url": "https://blog.clincoo.buzz/"
   }
  }
+},
+{
+ "id": "ai-stuck-minta-tradeoff-sebelum-pilih",
+ "langs": {
+  "id": {
+   "title": "Cara Minta AI Jelaskan Trade-off Sebelum Memilih Solusi",
+   "desc": "Tata cara meminta AI menjelaskan kelebihan dan kekurangan setiap solusi sebelum memilih di Clincoo.",
+   "content": "<p class=\"mb-4\">AI sering langsung memberi satu solusi. Minta trade-off agar Anda bisa memilih yang sesuai konteks Clincoo.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Minta daftar pro dan kontra</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> setelah AI memberi solusi, minta 'jelaskan trade-off dari 2-3 pendekatan ini: performa, perawatan, dan kompatibilitas browser'.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pilih berdasarkan batasan proyek</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> bandingkan dengan target browser dan ukuran bundle. Catat keputusan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN Learn",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn",
+   "sourceSnippet": "Understanding trade-offs helps choose the right approach for the project.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Ask AI to Explain Trade-offs Before Choosing a Solution",
+   "desc": "How to request AI explain pros and cons of each solution before choosing in Clincoo.",
+   "content": "<p class=\"mb-4\">AI often gives one solution immediately. Ask for trade-offs so you can pick what fits the Clincoo context.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Request a list of pros and cons</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> after AI proposes a solution, ask 'explain the trade-offs of 2-3 approaches: performance, maintainability, and browser compatibility'.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Choose based on project constraints</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> compare with target browsers and bundle size. Record the decision on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN Learn",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn",
+   "sourceSnippet": "Understanding trade-offs helps choose the right approach for the project.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
 }
 ]
 };

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Avoid Synchronous Layout in Event Handlers — Clincoo</title>
+<meta name="description" content="How to avoid reading layout (offsetWidth, getBoundingClientRect) inside click or input handlers that hurt INP.">
+<link rel="canonical" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/index.en.html">
+<link rel="alternate" hreflang="id" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+<link rel="alternate" hreflang="en" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/index.en.html">
+<link rel="alternate" hreflang="x-default" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Avoid Synchronous Layout in Event Handlers">
+<meta property="og:description" content="How to avoid reading layout (offsetWidth, getBoundingClientRect) inside click or input handlers that hurt INP.">
+<meta property="og:url" content="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/index.en.html">
+<meta property="og:site_name" content="Clincoo">
+<script>window.location.replace("https://docs.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/");</script>
+<meta http-equiv="refresh" content="0;url=https://docs.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+</head>
+<body>
+<article>
+<h1>How to Avoid Synchronous Layout in Event Handlers</h1>
+<p>How to avoid reading layout (offsetWidth, getBoundingClientRect) inside click or input handlers that hurt INP.</p>
+<p class="mb-4">Reading offsetWidth inside a click handler forces the browser to calculate layout before continuing, adding input delay.</p><h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Read once outside the handler</h2><p class="mb-4">In <a href="https://editor.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">editor.clincoo.buzz</a> measure size on resize or when the panel opens, store it in a variable. In the handler only use the already measured value.</p><h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Test in the Performance panel</h2><p class="mb-4">On <a href="https://app.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">app.clincoo.buzz</a> record the interaction. There should be no forced reflow inside the handler. Record it on <a href="https://blog.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">blog.clincoo.buzz</a>.</p>
+<p>Source: <a href="https://web.dev/articles/optimize-inp">web.dev — Optimize INP</a></p>
+<p><a href="https://blog.clincoo.buzz/">Back to blog</a></p>
+</article>
+</body>
+</html>

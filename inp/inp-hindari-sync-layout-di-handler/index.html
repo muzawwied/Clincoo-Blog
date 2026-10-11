@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara Hindari Synchronous Layout di Event Handler — Clincoo</title>
+<meta name="description" content="Tata cara menghindari baca layout (offsetWidth, getBoundingClientRect) di dalam handler click atau input yang membuat INP buruk.">
+<link rel="canonical" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+<link rel="alternate" hreflang="id" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+<link rel="alternate" hreflang="en" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/index.en.html">
+<link rel="alternate" hreflang="x-default" href="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cara Hindari Synchronous Layout di Event Handler">
+<meta property="og:description" content="Tata cara menghindari baca layout (offsetWidth, getBoundingClientRect) di dalam handler click atau input yang membuat INP buruk.">
+<meta property="og:url" content="https://blog.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+<meta property="og:site_name" content="Clincoo">
+<script>window.location.replace("https://docs.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/");</script>
+<meta http-equiv="refresh" content="0;url=https://docs.clincoo.buzz/inp/inp-hindari-sync-layout-di-handler/">
+</head>
+<body>
+<article>
+<h1>Cara Hindari Synchronous Layout di Event Handler</h1>
+<p>Tata cara menghindari baca layout (offsetWidth, getBoundingClientRect) di dalam handler click atau input yang membuat INP buruk.</p>
+<p class="mb-4">Membaca offsetWidth di dalam click handler memaksa browser menghitung layout sebelum melanjutkan, menambah waktu input.</p><h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Baca sekali di luar handler</h2><p class="mb-4">Di <a href="https://editor.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">editor.clincoo.buzz</a> ukur ukuran saat resize atau saat buka panel, simpan di variabel. Di handler hanya gunakan nilai yang sudah diukur.</p><h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Uji di Performance panel</h2><p class="mb-4">Di <a href="https://app.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">app.clincoo.buzz</a> rekam interaksi. Tidak boleh ada forced reflow di handler. Catat di <a href="https://blog.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">blog.clincoo.buzz</a>.</p>
+<p>Sumber: <a href="https://web.dev/articles/optimize-inp">web.dev — Optimize INP</a></p>
+<p><a href="https://blog.clincoo.buzz/">Kembali ke blog</a></p>
+</article>
+</body>
+</html>

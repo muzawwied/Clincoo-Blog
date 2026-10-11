@@ -154,7 +154,7 @@ window.countryDataFiles["ai-stuck"] = {
   "id": {
    "title": "Cara Minta AI Jelaskan Trade-off Sebelum Memilih Solusi",
    "desc": "Tata cara meminta AI menjelaskan kelebihan dan kekurangan setiap solusi sebelum memilih di Clincoo.",
-   "content": "<p class=\"mb-4\">AI sering langsung memberi satu solusi. Minta trade-off agar Anda bisa memilih yang sesuai konteks Clincoo.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Minta daftar pro dan kontra</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> setelah AI memberi solusi, minta 'jelaskan trade-off dari 2-3 pendekatan ini: performa, perawatan, dan kompatibilitas browser'.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pilih berdasarkan batasan proyek</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> bandingkan dengan target browser dan ukuran bundle. Catat keputusan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "content": "<p class=\"mb-4\">AI sering langsung memberi satu solusi. Minta trade-off agar Anda bisa memilih yang sesuai konteks Clincoo.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Minta daftar pro dan kontra</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> setelah AI memberi solusi, minta 'jelaskan trade-off dari 2-3 pendekatan ini: performa, perawatan, dan kompatibilitas browser'.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pilih berdasarkan batasan proyek</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> bandingkan dengan browser target dan ukuran bundle. Catat keputusan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
    "source": "MDN Learn",
    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn",
    "sourceSnippet": "Understanding trade-offs helps choose the right approach for the project.",
@@ -170,6 +170,151 @@ window.countryDataFiles["ai-stuck"] = {
    "source": "MDN Learn",
    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn",
    "sourceSnippet": "Understanding trade-offs helps choose the right approach for the project.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "ai-stuck-beri-konteks-file-dan-versi",
+ "langs": {
+  "id": {
+   "title": "Cara Beri Konteks File dan Versi Browser ke AI",
+   "desc": "Tata cara menyebutkan file terkait dan versi browser saat minta bantuan AI di Clincoo supaya solusi cocok.",
+   "content": "<p class=\"mb-4\">Tanpa nama file dan versi browser, AI memberi solusi generik yang tidak cocok dengan Clincoo.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sebutkan file dan browser</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tulis nama file, baris yang dicurigai, dan versi browser yang dipakai (misal Chrome 120). Sertakan apakah error hanya di mobile.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji di lingkungan sama</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> ulangi di browser yang sama. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Browser compatibility",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Glossary/Browser_compatibility",
+   "sourceSnippet": "Mentioning the browser version helps isolate compatibility issues.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Give File Context and Browser Version to AI",
+   "desc": "How to mention related files and browser version when asking AI for help in Clincoo so the solution fits.",
+   "content": "<p class=\"mb-4\">Without the file name and browser version, AI gives a generic solution that does not fit Clincoo.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Name the file and browser</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> write the file name, the suspected line, and the browser version used (e.g. Chrome 120). Note if the error is mobile-only.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test in the same environment</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> repeat in the same browser. Record on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Browser compatibility",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Glossary/Browser_compatibility",
+   "sourceSnippet": "Mentioning the browser version helps isolate compatibility issues.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "ai-stuck-minta-output-yang-diharapkan",
+ "langs": {
+  "id": {
+   "title": "Cara Minta AI Tunjukkan Output yang Diharapkan",
+   "desc": "Tata cara meminta AI menunjukkan hasil akhir yang diharapkan sebelum mengubah kode di Clincoo.",
+   "content": "<p class=\"mb-4\">Tanpa gambaran hasil, AI mengubah kode ke arah yang salah. Minta contoh output dulu.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Deskripsikan hasil yang diinginkan</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tulis 'hasil yang diharapkan: tombol hijau dan pesan tersimpan muncul'. Minta AI konfirmasi sebelum patch.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Bandingkan dengan pratinjau</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> cocokkan dengan deskripsi. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Editor",
+   "sourceUrl": "https://editor.clincoo.buzz/",
+   "sourceSnippet": "Stating the expected output reduces wrong-direction changes.",
+   "source2": "MDN — Debugging",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Ask AI to Show the Expected Output",
+   "desc": "How to request AI show the desired end result before changing code in Clincoo.",
+   "content": "<p class=\"mb-4\">Without a picture of the result, AI changes code in the wrong direction. Ask for the output first.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Describe the desired result</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> write 'expected result: green button and saved message appears'. Ask AI to confirm before the patch.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Compare with preview</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> match against the description. Record on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Editor",
+   "sourceUrl": "https://editor.clincoo.buzz/",
+   "sourceSnippet": "Stating the expected output reduces wrong-direction changes.",
+   "source2": "MDN — Debugging",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "ai-stuck-simpan-prompt-berhasil-di-catatan",
+ "langs": {
+  "id": {
+   "title": "Cara Simpan Prompt yang Berhasil di Catatan Proyek",
+   "desc": "Tata cara mencatat prompt AI yang berhasil di Clincoo supaya bisa dipakai ulang tim.",
+   "content": "<p class=\"mb-4\">Prompt yang berhasil hilang setelah chat ditutup. Simpan di catatan proyek.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Salin prompt dan hasil</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> setelah solusi bekerja, salin prompt asli dan ringkasan perubahan ke catatan. Tambahkan kapan dan browser apa.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Bagikan di blog internal</h2><p class=\"mb-4\">Tempel ke halaman catatan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> agar rekan bisa pakai. Uji ulang di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Saving successful prompts helps the team reuse working patterns.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "MDN — Debugging",
+   "source3Url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools"
+  },
+  "en": {
+   "title": "How to Save a Successful Prompt in Project Notes",
+   "desc": "How to record AI prompts that worked in Clincoo so the team can reuse them.",
+   "content": "<p class=\"mb-4\">A prompt that worked disappears after the chat closes. Save it in project notes.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Copy the prompt and result</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> after the solution works, copy the original prompt and a summary of the change to the notes. Add when and which browser.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Share on the internal blog</h2><p class=\"mb-4\">Paste it on a notes page on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> so teammates can use it. Retest on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Saving successful prompts helps the team reuse working patterns.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "MDN — Debugging",
+   "source3Url": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools"
+  }
+ }
+},
+{
+ "id": "ai-stuck-jangan-tempel-data-sensitif",
+ "langs": {
+  "id": {
+   "title": "Cara Hindari Menempel Data Sensitif ke AI",
+   "desc": "Tata cara membersihkan token, email, dan data pengguna sebelum minta bantuan AI di Clincoo.",
+   "content": "<p class=\"mb-4\">Menempel log produksi ke AI berisiko membocorkan rahasia. Bersihkan dulu.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Ganti data nyata dengan dummy</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> ganti token dengan 'TOKEN_DUMMY', email dengan 'user@example.com', dan id dengan angka acak sebelum tempel.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Cek ulang sebelum kirim</h2><p class=\"mb-4\">Baca sekali lagi, pastikan tidak ada kunci API. Uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> dengan data uji. Catat aturan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Security",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Never paste production secrets into external AI tools.",
+   "source2": "MDN — Security",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/Security",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Avoid Pasting Sensitive Data to AI",
+   "desc": "How to scrub tokens, emails, and user data before asking AI for help in Clincoo.",
+   "content": "<p class=\"mb-4\">Pasting production logs to AI risks leaking secrets. Clean them first.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Replace real data with dummy</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> replace tokens with 'TOKEN_DUMMY', emails with 'user@example.com', and ids with random numbers before pasting.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Double-check before sending</h2><p class=\"mb-4\">Read it once more and confirm no API keys remain. Test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> with test data. Record the rule on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Security",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Never paste production secrets into external AI tools.",
+   "source2": "MDN — Security",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Web/Security",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "ai-stuck-verifikasi-di-dua-browser",
+ "langs": {
+  "id": {
+   "title": "Cara Verifikasi Solusi AI di Dua Browser",
+   "desc": "Tata cara menguji saran AI di Chrome dan Firefox sebelum diterapkan di Clincoo.",
+   "content": "<p class=\"mb-4\">Solusi yang jalan di satu browser bisa gagal di yang lain. Uji minimal dua.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji di Chrome dan Firefox</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> terapkan perubahan, lalu buka pratinjau di Chrome dan Firefox. Catat perbedaan konsol.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Perbaiki sebelum commit</h2><p class=\"mb-4\">Jika beda, minta AI sesuaikan untuk kedua mesin. Cek di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> dan simpan catatan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Cross-browser testing",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing",
+   "sourceSnippet": "Test changes in at least two browsers before considering them done.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Verify an AI Solution in Two Browsers",
+   "desc": "How to test an AI suggestion in Chrome and Firefox before applying it in Clincoo.",
+   "content": "<p class=\"mb-4\">A solution that works in one browser can fail in another. Test at least two.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test in Chrome and Firefox</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> apply the change, then open the preview in Chrome and Firefox. Note console differences.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Fix before commit</h2><p class=\"mb-4\">If they differ, ask AI to adjust for both engines. Check on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> and save the note on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Cross-browser testing",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing",
+   "sourceSnippet": "Test changes in at least two browsers before considering them done.",
    "source2": "Clincoo Editor",
    "source2Url": "https://editor.clincoo.buzz/",
    "source3": "Clincoo Blog",

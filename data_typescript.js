@@ -1,1 +1,0 @@
-$(cat /tmp/data_typescript_new.js)

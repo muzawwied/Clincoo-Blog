@@ -1,1 +1,1 @@
-PLACEHOLDER - will replace with actual in next if needed
+// Placeholder kategori ai-stuck — belum ada artikel; file ini sengaja valid (dulu teks mentah bikin parse error).

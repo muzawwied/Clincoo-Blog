@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori Komunitas (13 Oktober 2026, 03:00 WIB) — tambah 2 artikel
+// Clincoo Docs — kategori Komunitas (13 Oktober 2026, 05:00 WIB) — tambah 2 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["komunitas"] = {
  "names": { "id": "Komunitas", "en": "Community" },
@@ -56,6 +56,64 @@ window.countryDataFiles["komunitas"] = {
    "sourceSnippet": "Issue templates help contributors provide the information needed to resolve issues.",
    "source2": "MDN — debugging",
    "source2Url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Debugging",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "komunitas-cara-beri-umpan-balik-konstruktif",
+ "langs": {
+  "id": {
+   "title": "Cara Beri Umpan Balik Konstruktif di Komunitas Clincoo",
+   "desc": "Tata cara memberi saran yang spesifik dan sopan agar diskusi komunitas tetap produktif.",
+   "content": "<p class=\"mb-4\">Umpan balik yang baik membantu anggota lain memperbaiki kode tanpa merasa diserang.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sebut yang baik dulu</h2><p class=\"mb-4\">Di forum, mulai dengan bagian yang sudah benar, lalu sebut perbaikan konkret. Sertakan contoh kode jika perlu.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tawarkan alternatif</h2><p class=\"mb-4\">Alih-alih hanya bilang salah, berikan cara lain. Tautkan panduan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> dan uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "GitHub — code of conduct",
+   "source2Url": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Give Constructive Feedback in the Clincoo Community",
+   "desc": "How to give specific and polite suggestions so community discussions stay productive.",
+   "content": "<p class=\"mb-4\">Good feedback helps other members improve code without feeling attacked.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Start with what is good</h2><p class=\"mb-4\">In the forum, begin with the part that is already correct, then state a concrete improvement. Include a code example if needed.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Offer an alternative</h2><p class=\"mb-4\">Instead of only saying it is wrong, give another way. Link a guide on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> and test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "GitHub — code of conduct",
+   "source2Url": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "komunitas-cara-cari-solusi-sebelum-tanya",
+ "langs": {
+  "id": {
+   "title": "Cara Cari Solusi di Blog dan Docs Sebelum Tanya di Komunitas",
+   "desc": "Tata cara menelusuri blog.clincoo.buzz dan dokumentasi dulu agar pertanyaan di komunitas lebih terarah.",
+   "content": "<p class=\"mb-4\">Banyak pertanyaan sudah dijawab di panduan. Mencari dulu menghemat waktu semua orang.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Gunakan pencarian blog</h2><p class=\"mb-4\">Buka <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> dan ketik kata kunci error atau fitur. Baca artikel terkait.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji sendiri dulu</h2><p class=\"mb-4\">Coba langkah di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> atau <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a>. Jika masih stuck, baru tanya dengan hasil pencarian.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "MDN — Learn web development",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Learn",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Search the Blog and Docs Before Asking in the Community",
+   "desc": "How to look through blog.clincoo.buzz and the docs first so community questions are more focused.",
+   "content": "<p class=\"mb-4\">Many questions are already answered in the guides. Searching first saves everyone time.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Use the blog search</h2><p class=\"mb-4\">Open <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> and type the error or feature keyword. Read the related articles.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test yourself first</h2><p class=\"mb-4\">Try the steps on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> or <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a>. If still stuck, then ask and mention what you already searched.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "MDN — Learn web development",
+   "source2Url": "https://developer.mozilla.org/en-US/docs/Learn",
    "source3": "Clincoo Editor",
    "source3Url": "https://editor.clincoo.buzz/"
   }

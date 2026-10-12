@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori JS Debug baru (13 Oktober 2026, 02:00 WIB)
+// Clincoo Docs — kategori JS Debug (13 Oktober 2026, 05:00 WIB) — tambah 1 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["jsdebug"] = {
  "names": { "id": "JS Debug", "en": "JS Debug" },
@@ -118,6 +118,35 @@ window.countryDataFiles["jsdebug"] = {
    "source3Url": "https://blog.clincoo.buzz/"
   }
  }
+},
+{
+ "id": "jsdebug-watch-expression-di-devtools",
+ "langs": {
+  "id": {
+   "title": "Cara Pasang Watch Expression di DevTools untuk Debug JS Clincoo",
+   "desc": "Tata cara menambahkan watch expression agar nilai variabel terpantau terus saat breakpoint di proyek Clincoo.",
+   "content": "<p class=\"mb-4\">Watch expression menampilkan nilai ekspresi secara real-time tanpa console.log berulang.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tambah di panel Watch</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buka Sources, panel Watch, klik +, tulis nama variabel atau ekspresi seperti items.length.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Lihat berubah saat step</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> step over dan lihat nilai update. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Chrome DevTools — Watch expressions",
+   "sourceUrl": "https://developer.chrome.com/docs/devtools/javascript/watch-variables/",
+   "sourceSnippet": "Watch expressions let you monitor the value of a variable or expression over time.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Set a Watch Expression in DevTools for JS Debugging in Clincoo",
+   "desc": "How to add a watch expression so variable values are monitored continuously while a breakpoint is active in a Clincoo project.",
+   "content": "<p class=\"mb-4\">A watch expression shows the value of an expression in real time without repeated console.log.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Add it in the Watch panel</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> open Sources, the Watch pane, click +, and type the variable name or expression such as items.length.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">See it change while stepping</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> step over and watch the value update. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Chrome DevTools — Watch expressions",
+   "sourceUrl": "https://developer.chrome.com/docs/devtools/javascript/watch-variables/",
+   "sourceSnippet": "Watch expressions let you monitor the value of a variable or expression over time.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
 }
-]
+ ]
 };

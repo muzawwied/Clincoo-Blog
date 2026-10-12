@@ -125,4 +125,29 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/container-queries/container-queries-size-vs-inline-size/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/container-queries/container-queries-units-cqw-cqh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/container-queries/container-queries-nested/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/container-queries/container-queries-debug/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/container-queries/container-queries-card-component/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

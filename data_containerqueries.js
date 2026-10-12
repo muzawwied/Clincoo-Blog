@@ -1,3 +1,4 @@
+// Clincoo Docs — kategori Container Queries (12 Oktober 2026, 08:00 WIB) — tambah 5 artikel sampai mendekati full 12
 // Clincoo Docs — kategori Container Queries (12 Oktober 2026, 07:00 WIB) — 4 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["container-queries"] = {
@@ -112,6 +113,151 @@ window.countryDataFiles["container-queries"] = {
    "source": "Can I use — CSS Container Queries",
    "sourceUrl": "https://caniuse.com/css-container-queries",
    "sourceSnippet": "Provide progressive enhancement with base styles outside container queries for older browsers.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "container-queries-size-vs-inline-size",
+ "langs": {
+  "id": {
+   "title": "Cara Pilih Container Type Size atau Inline-Size di Clincoo",
+   "desc": "Tata cara memilih antara container-type: size atau inline-size sesuai kebutuhan layout di Clincoo.",
+   "content": "<p class=\"mb-4\">inline-size hanya mengukur lebar, size mengukur lebar dan tinggi. Pilih sesuai query yang dibutuhkan.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pakai inline-size untuk lebar</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> gunakan container-type: inline-size; untuk komponen yang merespons lebar parent seperti kartu atau sidebar.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pakai size untuk dua dimensi</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> pakai container-type: size; jika perlu query tinggi juga. Catat pilihan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — container-type",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/container-type",
+   "sourceSnippet": "inline-size makes the container queryable on the inline axis only; size allows both axes.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Choose Container Type Size or Inline-Size in Clincoo",
+   "desc": "How to choose between container-type: size or inline-size based on layout needs in Clincoo.",
+   "content": "<p class=\"mb-4\">inline-size only measures width, size measures width and height. Choose according to the queries you need.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Use inline-size for width</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> use container-type: inline-size; for components that respond to parent width such as cards or sidebars.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Use size for both dimensions</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> use container-type: size; if you also need height queries. Record the choice on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — container-type",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/container-type",
+   "sourceSnippet": "inline-size makes the container queryable on the inline axis only; size allows both axes.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "container-queries-units-cqw-cqh",
+ "langs": {
+  "id": {
+   "title": "Cara Pakai Unit Container Query (cqw, cqh) di Clincoo",
+   "desc": "Tata cara menggunakan unit cqw dan cqh agar ukuran relatif terhadap container di Clincoo.",
+   "content": "<p class=\"mb-4\">Unit cqw adalah 1% dari lebar container, cqh dari tinggi. Berguna untuk tipografi atau spacing yang skalabel.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Terapkan unit di style</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> setelah set container-type, gunakan font-size: 5cqw; atau padding: 2cqh; di dalam @container.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji skalabilitas</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> ubah ukuran container dan lihat elemen mengikuti. Dokumentasikan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — CSS container query length units",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units",
+   "sourceSnippet": "cqw is 1% of the container's inline size, cqh is 1% of the block size.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Use Container Query Units (cqw, cqh) in Clincoo",
+   "desc": "How to use cqw and cqh units so sizes are relative to the container in Clincoo.",
+   "content": "<p class=\"mb-4\">The cqw unit is 1% of the container width, cqh of the height. Useful for scalable typography or spacing.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Apply the units in styles</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> after setting container-type, use font-size: 5cqw; or padding: 2cqh; inside @container.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test scalability</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> resize the container and watch elements follow. Document it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — CSS container query length units",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units",
+   "sourceSnippet": "cqw is 1% of the container's inline size, cqh is 1% of the block size.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "container-queries-nested",
+ "langs": {
+  "id": {
+   "title": "Cara Tangani Nested Container Queries di Clincoo",
+   "desc": "Tata cara mengelola container queries yang bersarang agar tidak bentrok di layout Clincoo.",
+   "content": "<p class=\"mb-4\">Nested containers bisa saling memengaruhi. Gunakan nama atau containment yang jelas.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Beri nama pada setiap level</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> set container-name berbeda untuk parent dan child, lalu query dengan nama spesifik.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Hindari query berlebihan</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> uji layout bersarang. Pastikan style tidak override tak terduga. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Nested container queries",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+   "sourceSnippet": "Nested containers are possible; use container-name to target specific ones.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Handle Nested Container Queries in Clincoo",
+   "desc": "How to manage nested container queries so they do not conflict in Clincoo layouts.",
+   "content": "<p class=\"mb-4\">Nested containers can affect each other. Use clear names or containment.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Name each level</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> set different container-name for parent and child, then query by the specific name.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Avoid excessive queries</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> test the nested layout. Make sure styles do not override unexpectedly. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Nested container queries",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+   "sourceSnippet": "Nested containers are possible; use container-name to target specific ones.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "container-queries-debug",
+ "langs": {
+  "id": {
+   "title": "Cara Debug Container Queries yang Tidak Aktif di Clincoo",
+   "desc": "Tata cara menemukan penyebab container queries tidak bekerja di proyek Clincoo.",
+   "content": "<p class=\"mb-4\">Jika style tidak berubah, periksa containment, dukungan browser, dan selector.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Cek container-type di DevTools</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buka DevTools, pastikan elemen parent memiliki container-type yang benar dan bukan display none.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Verifikasi dukungan</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> cek caniuse atau console. Pastikan query syntax benar. Catat temuan di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Debugging container queries",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+   "sourceSnippet": "Check that the container has a valid container-type and the browser supports the feature.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Debug Container Queries That Do Not Activate in Clincoo",
+   "desc": "How to find why container queries are not working in a Clincoo project.",
+   "content": "<p class=\"mb-4\">If styles do not change, check containment, browser support, and the selector.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Check container-type in DevTools</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> open DevTools, confirm the parent element has the correct container-type and is not display:none.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Verify support</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> check caniuse or the console. Make sure the query syntax is correct. Record findings on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Debugging container queries",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+   "sourceSnippet": "Check that the container has a valid container-type and the browser supports the feature.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "container-queries-card-component",
+ "langs": {
+  "id": {
+   "title": "Cara Buat Komponen Card Responsif dengan Container Queries di Clincoo",
+   "desc": "Tata cara membuat kartu yang mengubah layout berdasarkan lebar containernya sendiri di Clincoo.",
+   "content": "<p class=\"mb-4\">Card bisa stack vertikal saat sempit dan horizontal saat lebar tanpa media query viewport.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Set container pada wrapper</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> pada .card-wrapper set container-type: inline-size; lalu di dalam @container (min-width: 500px) ubah flex-direction.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji di berbagai lebar</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> resize parent dan lihat card beradaptasi. Simpan pola di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Practical container queries",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+   "sourceSnippet": "Use container queries for component-level responsive design independent of the viewport.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Build a Responsive Card Component with Container Queries in Clincoo",
+   "desc": "How to make a card that changes layout based on its own container width in Clincoo.",
+   "content": "<p class=\"mb-4\">A card can stack vertically when narrow and become horizontal when wide without viewport media queries.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Set the container on the wrapper</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> on .card-wrapper set container-type: inline-size; then inside @container (min-width: 500px) change flex-direction.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test at different widths</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> resize the parent and watch the card adapt. Save the pattern on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Practical container queries",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_containment/Container_queries",
+   "sourceSnippet": "Use container queries for component-level responsive design independent of the viewport.",
    "source2": "Clincoo Editor",
    "source2Url": "https://editor.clincoo.buzz/",
    "source3": "Clincoo Blog",

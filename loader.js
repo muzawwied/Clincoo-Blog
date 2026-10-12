@@ -1,4 +1,4 @@
-// Loader: ... + filter + security + struktur + struktur_extra + vitals + pwa + pwa_extra + ai_stuck + typescript + containerqueries) lalu app.js
+// Loader: ... + filter + security + struktur + struktur_extra + vitals + pwa + pwa_extra + ai_stuck + typescript + containerqueries + webworker) lalu app.js
 (function() {
   var done = false;
   function loadApp() {
@@ -7,11 +7,18 @@
     a.src = 'app.js?v=12';
     document.body.appendChild(a);
   }
+  function loadWebWorker() {
+    var e = document.createElement('script');
+    e.src = 'data_webworker.js?v=1';
+    e.onload = loadApp;
+    e.onerror = loadApp;
+    document.body.appendChild(e);
+  }
   function loadContainerqueries() {
     var e = document.createElement('script');
     e.src = 'data_containerqueries.js?v=1';
-    e.onload = loadApp;
-    e.onerror = loadApp;
+    e.onload = loadWebWorker;
+    e.onerror = loadWebWorker;
     document.body.appendChild(e);
   }
   function loadTypescript() {

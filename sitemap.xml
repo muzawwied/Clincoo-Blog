@@ -1,1 +1,8 @@
-FULL_SITEMAP
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://blog.clincoo.buzz/web-worker/web-worker-type-module-untuk-import/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-pasang-breakpoint-kondisional/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-lihat-call-stack-saat-pause/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-gunakan-logpoint-tanpa-pause/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-salin-stack-trace-ke-ai/</loc></url>
+</urlset>

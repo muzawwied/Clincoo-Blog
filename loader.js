@@ -23,9 +23,11 @@
     'data_typescript.js',
     'data_containerqueries.js',
     'data_webworker.js',
+    'data_webworker_extra.js',
     'data_web_components.js',
     'data_komunitas.js',
-    'data_css_nesting.js'
+    'data_css_nesting.js',
+    'data_jsdebug.js'
   ];
   var i = 0;
   function loadApp() {
@@ -33,7 +35,7 @@
     a.src = 'app.js?v=12';
     a.onerror = function () { /* app inti gagal dimuat: tampilkan pesan ramah */ 
       var el = document.getElementById('app') || document.body;
-      el.innerHTML = '<div class="text-center py-12 text-gray-500" style="padding:24px">Gagal memuat dokumentasi. Muat ulang halaman ya.</div>';
+      el.innerHTML = '<div class=\"text-center py-12 text-gray-500\" style=\"padding:24px\">Gagal memuat dokumentasi. Muat ulang halaman ya.</div>';
     };
     document.body.appendChild(a);
   }

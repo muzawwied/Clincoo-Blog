@@ -176,4 +176,29 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/mcp/mcp-update-token-kedaluwarsa/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/mcp/mcp-hindari-loop-pemanggilan-tool/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/mcp/mcp-uji-tool-di-local/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/mcp/mcp-format-hasil-tool-untuk-ui/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/mcp/mcp-baca-status-proyek-dengan-tool/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

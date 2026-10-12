@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori Fokus (10 Oktober 2026, 09:12 WIB — tambah 1 artikel)
+// Clincoo Docs — kategori Fokus (12 Oktober 2026, 14:00 WIB — tambah 1 artikel)
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["fokus"] = {
  "names": { "id": "Fokus", "en": "Focus" },
@@ -85,6 +85,35 @@ window.countryDataFiles["fokus"] = {
    "sourceSnippet": "A focus trap keeps keyboard focus inside a modal until it is closed.",
    "source2": "WCAG — Focus Order",
    "source2Url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "fokus-outline-offset-focus-ring",
+ "langs": {
+  "id": {
+   "title": "Cara Atur Outline Offset untuk Focus Ring di Clincoo",
+   "desc": "Tata cara menambahkan outline-offset agar cincin fokus tidak menempel pada border elemen.",
+   "content": "<p class=\"mb-4\">Focus ring yang menempel pada border membuatnya sulit dibedakan, terutama pada tombol dengan border tebal.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tambah offset 2-4px</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> pada :focus-visible tambahkan outline-offset: 2px atau 4px. Uji kontras di latar terang dan gelap.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji dengan Tab</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> tekan Tab pada tombol dan tautan. Cincin harus jelas terpisah. Catat nilai offset di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — outline-offset",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset",
+   "sourceSnippet": "The outline-offset CSS property sets the amount of space between an outline and the edge or border of an element.",
+   "source2": "WCAG — Focus Visible",
+   "source2Url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Set Outline Offset for the Focus Ring in Clincoo",
+   "desc": "How to add outline-offset so the focus ring does not stick to the element border.",
+   "content": "<p class=\"mb-4\">A focus ring that sticks to the border is hard to distinguish, especially on buttons with thick borders.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Add a 2-4px offset</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> on :focus-visible add outline-offset: 2px or 4px. Test contrast on light and dark backgrounds.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test with Tab</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> press Tab on buttons and links. The ring should be clearly separated. Record the offset value on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — outline-offset",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/outline-offset",
+   "sourceSnippet": "The outline-offset CSS property sets the amount of space between an outline and the edge or border of an element.",
+   "source2": "WCAG — Focus Visible",
+   "source2Url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
    "source3": "Clincoo Editor",
    "source3Url": "https://editor.clincoo.buzz/"
   }

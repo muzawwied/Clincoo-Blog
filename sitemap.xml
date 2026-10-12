@@ -51,6 +51,21 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://blog.clincoo.buzz/web-components/web-components-lifecycle-callbacks/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/web-components/web-components-attribute-changed-callback/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/web-components/web-components-slot-default-content/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://blog.clincoo.buzz/komunitas/komunitas-bergabung-discord-clincoo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -72,6 +87,16 @@
   </url>
   <url>
     <loc>https://blog.clincoo.buzz/komunitas/komunitas-kontribusi-template/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/komunitas/komunitas-aturan-diskusi-sopan/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.clincoo.buzz/komunitas/komunitas-bagikan-snippet-kode/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

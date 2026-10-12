@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori baru PWA (11 Oktober 2026, 14:00 WIB)
+// Clincoo Docs — kategori PWA (12 Oktober 2026, 14:00 WIB) — tambah 2 artikel
 (function () {
   if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
   if (!window.countryDataFiles["pwa"]) {
@@ -146,6 +146,64 @@
    "sourceSnippet": "The display-mode CSS media feature can be used to test the display mode of an application.",
    "source2": "web.dev — Detecting the display mode",
    "source2Url": "https://web.dev/articles/customize-install",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "pwa-tambah-icon-pwa-benar",
+ "langs": {
+  "id": {
+   "title": "Cara Tambah Icon PWA yang Benar di Clincoo",
+   "desc": "Tata cara menambahkan ikon berbagai ukuran agar PWA Clincoo tampil sempurna di layar utama.",
+   "content": "<p class=\"mb-4\">Ikon yang kurang ukuran membuat PWA terlihat pecah atau tidak muncul di beberapa perangkat.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Siapkan ukuran standar</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tambahkan icons 192x192 dan 512x512 di manifest.json. Gunakan format PNG dengan latar transparan.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji di perangkat</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> install di Android dan iOS. Ikon harus tajam. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Web app manifests",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/Manifest/icons",
+   "sourceSnippet": "The icons member specifies an array of image objects that can serve as application icons.",
+   "source2": "web.dev — Add a web app manifest",
+   "source2Url": "https://web.dev/articles/add-manifest",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Add Correct PWA Icons in Clincoo",
+   "desc": "How to add icons of various sizes so the Clincoo PWA looks perfect on the home screen.",
+   "content": "<p class=\"mb-4\">Missing icon sizes make the PWA look broken or fail to appear on some devices.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Prepare standard sizes</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> add 192x192 and 512x512 icons in manifest.json. Use PNG with transparent background.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test on devices</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> install on Android and iOS. Icons should be sharp. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Web app manifests",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/Manifest/icons",
+   "sourceSnippet": "The icons member specifies an array of image objects that can serve as application icons.",
+   "source2": "web.dev — Add a web app manifest",
+   "source2Url": "https://web.dev/articles/add-manifest",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "pwa-uji-pwa-lighthouse",
+ "langs": {
+  "id": {
+   "title": "Cara Uji PWA Clincoo dengan Lighthouse",
+   "desc": "Tata cara menjalankan audit Lighthouse untuk memastikan PWA Clincoo memenuhi kriteria installable.",
+   "content": "<p class=\"mb-4\">Tanpa uji Lighthouse, PWA mungkin tidak bisa diinstall atau skor performa rendah.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Jalankan audit</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buka DevTools > Lighthouse > Progressive Web App. Perbaiki setiap item yang gagal.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Target skor tinggi</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> ulangi sampai semua kriteria PWA hijau. Catat skor di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Lighthouse — PWA",
+   "sourceUrl": "https://developer.chrome.com/docs/lighthouse/pwa/",
+   "sourceSnippet": "Lighthouse audits a page for Progressive Web App criteria.",
+   "source2": "web.dev — PWA checklist",
+   "source2Url": "https://web.dev/pwa-checklist/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Test a Clincoo PWA with Lighthouse",
+   "desc": "How to run a Lighthouse audit to ensure the Clincoo PWA meets installable criteria.",
+   "content": "<p class=\"mb-4\">Without a Lighthouse test, the PWA may not be installable or have a low performance score.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Run the audit</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> open DevTools > Lighthouse > Progressive Web App. Fix every failed item.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Aim for a high score</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> repeat until all PWA criteria are green. Record the score on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Lighthouse — PWA",
+   "sourceUrl": "https://developer.chrome.com/docs/lighthouse/pwa/",
+   "sourceSnippet": "Lighthouse audits a page for Progressive Web App criteria.",
+   "source2": "web.dev — PWA checklist",
+   "source2Url": "https://web.dev/pwa-checklist/",
    "source3": "Clincoo Editor",
    "source3Url": "https://editor.clincoo.buzz/"
   }

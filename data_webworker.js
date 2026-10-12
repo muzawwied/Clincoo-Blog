@@ -1,1 +1,1 @@
-$(cat /tmp/data_webworker_updated.js)
+PLACEHOLDER

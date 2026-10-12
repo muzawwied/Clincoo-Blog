@@ -60,8 +60,7 @@ window.countryDataFiles["web-worker"] = {
    "source3Url": "https://blog.clincoo.buzz/"
   }
  }
-}
-,
+},
 {
  "id": "web-worker-transferable-objects-untuk-performa",
  "langs": {
@@ -113,6 +112,152 @@ window.countryDataFiles["web-worker"] = {
    "source": "MDN — Worker.terminate",
    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/terminate",
    "sourceSnippet": "The terminate() method stops the worker from executing.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+}
+,
+{
+ "id": "web-worker-tangani-error-dengan-onerror",
+ "langs": {
+  "id": {
+   "title": "Cara Tangani Error di Web Worker dengan onerror di Clincoo",
+   "desc": "Tata cara menangkap kesalahan di dalam Web Worker Clincoo agar tidak hilang diam-diam dan bisa ditampilkan ke pengguna.",
+   "content": "<p class=\"mb-4\">Error di dalam worker tidak muncul di konsol halaman secara otomatis. Anda harus mendengarkan onerror.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pasang listener onerror</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> setelah membuat Worker, set worker.onerror = (e) => { console.error(e.message, e.filename, e.lineno); }.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Kirim error ke UI</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> kirim pesan khusus dari worker saat catch, atau andalkan onerror. Tampilkan pesan ramah. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Worker.onerror",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/error_event",
+   "sourceSnippet": "The error event is fired when an error occurs in the worker.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Handle Errors in a Web Worker with onerror in Clincoo",
+   "desc": "How to catch errors inside a Clincoo Web Worker so they are not silent and can be shown to the user.",
+   "content": "<p class=\"mb-4\">Errors inside a worker do not appear in the page console automatically. You must listen for onerror.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Attach the onerror listener</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> after creating the Worker, set worker.onerror = (e) => { console.error(e.message, e.filename, e.lineno); }.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Send the error to the UI</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> send a special message from the worker on catch, or rely on onerror. Show a friendly message. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Worker.onerror",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Worker/error_event",
+   "sourceSnippet": "The error event is fired when an error occurs in the worker.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-worker-pakai-importscripts",
+ "langs": {
+  "id": {
+   "title": "Cara Pakai importScripts di Web Worker Clincoo",
+   "desc": "Tata cara memuat skrip tambahan di dalam Web Worker Clincoo dengan importScripts agar kode tetap modular.",
+   "content": "<p class=\"mb-4\">Worker tidak bisa import ES modules secara default di semua browser. importScripts adalah cara klasik yang andal.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Panggil importScripts</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> di dalam worker.js tulis importScripts('helpers.js'); di awal file.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Pastikan path benar</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> uji bahwa helpers.js ter-load tanpa 404. Jangan import dari domain lain tanpa CORS. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — WorkerGlobalScope.importScripts",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts",
+   "sourceSnippet": "importScripts() synchronously imports one or more scripts into the worker's scope.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Use importScripts in a Clincoo Web Worker",
+   "desc": "How to load additional scripts inside a Clincoo Web Worker with importScripts so the code stays modular.",
+   "content": "<p class=\"mb-4\">Workers cannot import ES modules by default in all browsers. importScripts is the classic reliable way.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Call importScripts</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> inside worker.js write importScripts('helpers.js'); at the top of the file.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Make sure the path is correct</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> confirm helpers.js loads without a 404. Do not import from another domain without CORS. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — WorkerGlobalScope.importScripts",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/WorkerGlobalScope/importScripts",
+   "sourceSnippet": "importScripts() synchronously imports one or more scripts into the worker's scope.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-worker-debug-di-devtools",
+ "langs": {
+  "id": {
+   "title": "Cara Debug Web Worker di DevTools Clincoo",
+   "desc": "Tata cara membuka dan men-debug skrip Web Worker di Chrome DevTools saat mengembangkan proyek Clincoo.",
+   "content": "<p class=\"mb-4\">Breakpoint di worker tidak selalu muncul di Sources tab utama. Anda perlu menemukannya secara khusus.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Buka Sources dan cari worker</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buka DevTools → Sources, lalu di panel kiri cari folder Workers atau Threads.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Set breakpoint dan uji</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> set breakpoint di dalam onmessage, lalu kirim data. Pastikan execution berhenti. Catat langkah di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Chrome DevTools — Debugging workers",
+   "sourceUrl": "https://developer.chrome.com/docs/devtools/javascript/reference/#workers",
+   "sourceSnippet": "You can debug web workers from the Sources panel by selecting them in the threads list.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Debug a Web Worker in DevTools for Clincoo",
+   "desc": "How to open and debug a Web Worker script in Chrome DevTools while building a Clincoo project.",
+   "content": "<p class=\"mb-4\">Breakpoints inside a worker do not always appear in the main Sources tab. You need to find them specifically.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Open Sources and find the worker</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> open DevTools → Sources, then in the left panel look for the Workers or Threads folder.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Set a breakpoint and test</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> set a breakpoint inside onmessage, then send data. Confirm execution pauses. Record the steps on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Chrome DevTools — Debugging workers",
+   "sourceUrl": "https://developer.chrome.com/docs/devtools/javascript/reference/#workers",
+   "sourceSnippet": "You can debug web workers from the Sources panel by selecting them in the threads list.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-worker-shared-worker-antar-tab",
+ "langs": {
+  "id": {
+   "title": "Cara Gunakan SharedWorker untuk Komunikasi Antar Tab di Clincoo",
+   "desc": "Tata cara memakai SharedWorker agar beberapa tab Clincoo bisa berbagi state tanpa server.",
+   "content": "<p class=\"mb-4\">SharedWorker hidup selama ada tab yang terhubung. Cocok untuk sinkronisasi sederhana antar tab.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Buat SharedWorker</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> new SharedWorker('shared.js') lalu port = worker.port; port.start(); port.postMessage(...).</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tangani koneksi di worker</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> di shared.js dengarkan onconnect. Uji dengan dua tab. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — SharedWorker",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker",
+   "sourceSnippet": "The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Use a SharedWorker for Cross-Tab Communication in Clincoo",
+   "desc": "How to use a SharedWorker so multiple Clincoo tabs can share state without a server.",
+   "content": "<p class=\"mb-4\">A SharedWorker stays alive as long as any connected tab remains open. It is useful for simple cross-tab sync.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Create the SharedWorker</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> do new SharedWorker('shared.js') then port = worker.port; port.start(); port.postMessage(...).</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Handle connections in the worker</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> in shared.js listen for onconnect. Test with two tabs. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — SharedWorker",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker",
+   "sourceSnippet": "The SharedWorker interface represents a specific kind of worker that can be accessed from several browsing contexts.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-worker-batasi-jumlah-worker",
+ "langs": {
+  "id": {
+   "title": "Cara Batasi Jumlah Web Worker yang Berjalan Bersamaan di Clincoo",
+   "desc": "Tata cara mengelola pool worker sederhana agar Clincoo tidak membuat terlalu banyak thread sekaligus.",
+   "content": "<p class=\"mb-4\">Terlalu banyak worker bisa menghabiskan memori. Buat pool atau antrian.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Buat pool sederhana</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> simpan array workers dengan panjang maksimal 4, reuse yang sudah selesai.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Antrikan tugas</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> jika semua sibuk, masukkan tugas ke queue. Terminate yang idle terlalu lama. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Using Web Workers",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers",
+   "sourceSnippet": "Workers are relatively heavy-weight, so you should not create too many of them.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Limit the Number of Concurrent Web Workers in Clincoo",
+   "desc": "How to manage a simple worker pool so Clincoo does not spawn too many threads at once.",
+   "content": "<p class=\"mb-4\">Too many workers can consume memory. Create a pool or a queue.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Build a simple pool</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> keep an array of workers with a max length of 4 and reuse finished ones.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Queue the tasks</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> if all are busy, push the task to a queue. Terminate workers that stay idle too long. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Using Web Workers",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers",
+   "sourceSnippet": "Workers are relatively heavy-weight, so you should not create too many of them.",
    "source2": "Clincoo Editor",
    "source2Url": "https://editor.clincoo.buzz/",
    "source3": "Clincoo Blog",

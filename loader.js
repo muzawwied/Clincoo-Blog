@@ -24,7 +24,8 @@
     'data_containerqueries.js',
     'data_webworker.js',
     'data_web_components.js',
-    'data_komunitas.js'
+    'data_komunitas.js',
+    'data_css_nesting.js'
   ];
   var i = 0;
   function loadApp() {

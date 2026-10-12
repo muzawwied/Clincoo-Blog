@@ -22,7 +22,8 @@
     'data_ai_stuck.js',
     'data_typescript.js',
     'data_containerqueries.js',
-    'data_webworker.js'
+    'data_webworker.js',
+    'data_web_components.js'
   ];
   var i = 0;
   function loadApp() {

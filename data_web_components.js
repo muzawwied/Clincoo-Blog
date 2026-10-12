@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori Web Components (12 Oktober 2026, 15:00 WIB) — 5 artikel baru
+// Clincoo Docs — kategori Web Components (12 Oktober 2026, 18:00 WIB) — tambah 3 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["web-components"] = {
  "names": { "id": "Web Components", "en": "Web Components" },
@@ -141,6 +141,93 @@ window.countryDataFiles["web-components"] = {
    "source": "MDN — customElements",
    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define",
    "sourceSnippet": "define() throws a DOMException if the name is already defined.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-components-lifecycle-callbacks",
+ "langs": {
+  "id": {
+   "title": "Cara Gunakan Lifecycle Callbacks di Custom Element Clincoo",
+   "desc": "Tata cara memakai connectedCallback dan disconnectedCallback di web component Clincoo.",
+   "content": "<p class=\"mb-4\">Lifecycle callbacks memungkinkan custom element bereaksi saat ditambahkan atau dihapus dari DOM.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Setup di connectedCallback</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tulis connectedCallback() { this.innerHTML = this.template; } untuk render saat masuk DOM.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Cleanup di disconnectedCallback</h2><p class=\"mb-4\">Hapus listener di disconnectedCallback. Uji tambah/hapus elemen di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> lalu catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Using custom elements",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements",
+   "sourceSnippet": "Lifecycle callbacks let the element react to being added or removed from the document.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Use Lifecycle Callbacks in a Clincoo Custom Element",
+   "desc": "How to use connectedCallback and disconnectedCallback in a Clincoo web component.",
+   "content": "<p class=\"mb-4\">Lifecycle callbacks let a custom element react when it is added to or removed from the DOM.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Setup in connectedCallback</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> write connectedCallback() { this.innerHTML = this.template; } to render when it enters the DOM.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Cleanup in disconnectedCallback</h2><p class=\"mb-4\">Remove listeners in disconnectedCallback. Test adding/removing the element on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> then note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Using custom elements",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements",
+   "sourceSnippet": "Lifecycle callbacks let the element react to being added or removed from the document.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-components-attribute-changed-callback",
+ "langs": {
+  "id": {
+   "title": "Cara Tangani Perubahan Atribut dengan attributeChangedCallback",
+   "desc": "Tata cara merespons perubahan atribut pada custom element di Clincoo.",
+   "content": "<p class=\"mb-4\">attributeChangedCallback dipanggil saat atribut yang diobservasi berubah.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Deklarasikan observedAttributes</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> static get observedAttributes() { return ['title', 'disabled']; }</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Update di callback</h2><p class=\"mb-4\">Di attributeChangedCallback(name, old, newVal) update tampilan. Uji ubah atribut di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> dan catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — attributeChangedCallback",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#responding_to_attribute_changes",
+   "sourceSnippet": "The attributeChangedCallback is invoked when an observed attribute changes.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Handle Attribute Changes with attributeChangedCallback",
+   "desc": "How to respond to attribute changes on a custom element in Clincoo.",
+   "content": "<p class=\"mb-4\">attributeChangedCallback is called when an observed attribute changes.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Declare observedAttributes</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> static get observedAttributes() { return ['title', 'disabled']; }</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Update in the callback</h2><p class=\"mb-4\">In attributeChangedCallback(name, old, newVal) update the display. Test changing the attribute on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> and record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — attributeChangedCallback",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#responding_to_attribute_changes",
+   "sourceSnippet": "The attributeChangedCallback is invoked when an observed attribute changes.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "web-components-slot-default-content",
+ "langs": {
+  "id": {
+   "title": "Cara Beri Konten Default pada Slot di Web Component",
+   "desc": "Tata cara menyediakan fallback content di dalam slot agar tampil jika tidak ada konten light DOM.",
+   "content": "<p class=\"mb-4\">Slot bisa memiliki konten default yang tampil jika tidak diisi.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tulis konten di dalam slot</h2><p class=\"mb-4\">Di template shadow: <slot>Konten default</slot>. Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tambahkan teks atau elemen di dalam tag slot.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Uji tanpa light DOM</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> buat elemen tanpa anak dan pastikan default tampil. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — slot",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot",
+   "sourceSnippet": "Content inside the slot element is shown as fallback when no nodes are assigned.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Provide Default Content for a Slot in a Web Component",
+   "desc": "How to supply fallback content inside a slot so it appears when there is no light DOM content.",
+   "content": "<p class=\"mb-4\">A slot can have default content that shows if nothing is slotted.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Write content inside the slot</h2><p class=\"mb-4\">In the shadow template: <slot>Default content</slot>. In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> add text or elements inside the slot tag.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Test without light DOM</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> create the element without children and confirm the default appears. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — slot",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot",
+   "sourceSnippet": "Content inside the slot element is shown as fallback when no nodes are assigned.",
    "source2": "Clincoo Editor",
    "source2Url": "https://editor.clincoo.buzz/",
    "source3": "Clincoo Blog",

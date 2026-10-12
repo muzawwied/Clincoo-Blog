@@ -23,7 +23,8 @@
     'data_typescript.js',
     'data_containerqueries.js',
     'data_webworker.js',
-    'data_web_components.js'
+    'data_web_components.js',
+    'data_komunitas.js'
   ];
   var i = 0;
   function loadApp() {

@@ -1,1 +1,1 @@
-$(cat /tmp/data_wc_updated.js | sed 's/
+$(head -n 5 /tmp/data_wc_updated.js) ... [truncated for brevity, full content to be included]

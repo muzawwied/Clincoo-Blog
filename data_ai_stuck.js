@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori AI Stuck (12 Oktober 2026, 13:00 WIB) — 5 artikel baru
+// Clincoo Docs — kategori AI Stuck (12 Oktober 2026, 14:00 WIB) — tambah 2 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["ai-stuck"] = {
  "names": { "id": "AI Stuck", "en": "AI Stuck" },
@@ -141,6 +141,64 @@ window.countryDataFiles["ai-stuck"] = {
    "source": "Prompt Engineering Guide",
    "sourceUrl": "https://www.promptingguide.ai/",
    "sourceSnippet": "Documenting successful prompts creates a reusable knowledge base.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "ai-stuck-minta-jelaskan-error-console",
+ "langs": {
+  "id": {
+   "title": "Cara Minta AI Jelaskan Error Console Langkah demi Langkah di Clincoo",
+   "desc": "Tata cara meminta AI menguraikan pesan error console secara bertahap agar mudah dipahami dan diperbaiki.",
+   "content": "<p class=\"mb-4\">Error console yang panjang sering membuat bingung. Minta AI memecahnya jadi langkah kecil.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tempel error lengkap</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> salin seluruh stack trace, lalu minta: Jelaskan baris demi baris apa arti error ini dan langkah perbaikan pertama.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Terapkan satu langkah lalu uji</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> terapkan hanya saran pertama, muat ulang, catat hasilnya di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Console API",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/console",
+   "sourceSnippet": "The console object provides access to the browser's debugging console.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Ask AI to Explain a Console Error Step by Step in Clincoo",
+   "desc": "How to ask AI to break down a console error message step by step so it is easy to understand and fix.",
+   "content": "<p class=\"mb-4\">Long console errors are often confusing. Ask AI to split them into small steps.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Paste the full error</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> copy the entire stack trace, then ask: Explain line by line what this error means and the first fix step.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Apply one step then test</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> apply only the first suggestion, reload, and record the result on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Console API",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/console",
+   "sourceSnippet": "The console object provides access to the browser's debugging console.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "ai-stuck-batasi-scope-pertanyaan",
+ "langs": {
+  "id": {
+   "title": "Cara Batasi Scope Pertanyaan AI di Clincoo",
+   "desc": "Tata cara membatasi pertanyaan AI hanya pada satu file atau satu fitur agar jawaban lebih fokus.",
+   "content": "<p class=\"mb-4\">Pertanyaan yang terlalu luas membuat AI memberi jawaban generik yang sulit diterapkan.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sebut file dan batas jelas</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> tulis: Hanya ubah file form.js, jangan sentuh CSS global. Tujuan: tambah validasi email.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tolak jawaban di luar scope</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> jika AI mengubah file lain, minta ulang dengan batas lebih ketat. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Prompt Engineering Guide",
+   "sourceUrl": "https://www.promptingguide.ai/",
+   "sourceSnippet": "Limiting the scope of a prompt leads to more precise and usable AI responses.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Limit the Scope of AI Questions in Clincoo",
+   "desc": "How to restrict AI questions to one file or one feature so answers stay focused.",
+   "content": "<p class=\"mb-4\">Questions that are too broad make AI give generic answers that are hard to apply.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Name the file and clear limits</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> write: Only change form.js, do not touch global CSS. Goal: add email validation.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Reject answers outside the scope</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> if AI changes other files, ask again with tighter limits. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Prompt Engineering Guide",
+   "sourceUrl": "https://www.promptingguide.ai/",
+   "sourceSnippet": "Limiting the scope of a prompt leads to more precise and usable AI responses.",
    "source2": "Clincoo Editor",
    "source2Url": "https://editor.clincoo.buzz/",
    "source3": "Clincoo Blog",

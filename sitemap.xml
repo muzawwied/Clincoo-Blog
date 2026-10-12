@@ -1,1 +1,8 @@
-$(cat /tmp/sitemap_new.xml)
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://blog.clincoo.buzz/container-queries/container-queries-dasar-container-type/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/container-queries/container-queries-query-vs-media-query/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/container-queries/container-queries-style-berdasarkan-lebar/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/container-queries/container-queries-named-containers/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/container-queries/container-queries-uji-di-devtools/</loc></url>
+</urlset>

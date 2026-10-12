@@ -9,6 +9,7 @@
     'data_debugcss.js',
     'data_debugcss_extra.js',
     'data_debugcss_extra2.js',
+    'data_debugcss_extra3.js',
     'data_overscroll.js',
     'data_vitals.js',
     'data_vitals_extra.js',
@@ -17,17 +18,21 @@
     'data_security_extra2.js',
     'data_struktur.js',
     'data_struktur_extra.js',
+    'data_struktur_extra2.js',
     'data_pwa.js',
     'data_pwa_extra.js',
     'data_ai_stuck.js',
+    'data_ai_stuck_extra.js',
     'data_typescript.js',
     'data_containerqueries.js',
     'data_webworker.js',
     'data_webworker_extra.js',
     'data_web_components.js',
     'data_komunitas.js',
+    'data_komunitas_extra.js',
     'data_css_nesting.js',
-    'data_jsdebug.js'
+    'data_jsdebug.js',
+    'data_jsdebug_extra.js'
   ];
   var i = 0;
   function loadApp() {

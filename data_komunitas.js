@@ -1,4 +1,4 @@
-// Clincoo Docs — kategori Komunitas (12 Oktober 2026, 16:00 WIB) — 5 artikel baru
+// Clincoo Docs — kategori Komunitas (12 Oktober 2026, 18:00 WIB) — tambah 2 artikel
 if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
 window.countryDataFiles["komunitas"] = {
  "names": { "id": "Komunitas", "en": "Community" },
@@ -141,6 +141,64 @@ window.countryDataFiles["komunitas"] = {
    "source": "Open Source Contribution",
    "sourceUrl": "https://opensource.guide/how-to-contribute/",
    "sourceSnippet": "Contribute clean, documented templates so others can use them easily.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "komunitas-aturan-diskusi-sopan",
+ "langs": {
+  "id": {
+   "title": "Cara Ikuti Aturan Diskusi Sopan di Komunitas Clincoo",
+   "desc": "Tata cara berdiskusi dengan sopan agar komunitas Clincoo tetap produktif dan ramah.",
+   "content": "<p class=\"mb-4\">Diskusi sopan membuat komunitas lebih membantu.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Baca aturan channel</h2><p class=\"mb-4\">Di Discord atau forum, baca pin message. Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> siapkan pertanyaan jelas sebelum post.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Hindari spam dan off-topic</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> tetap di topik. Terima kritik dengan baik. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Community Guidelines",
+   "sourceUrl": "https://opensource.guide/building-community/",
+   "sourceSnippet": "Follow channel rules and keep discussions respectful and on-topic.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Follow Polite Discussion Rules in the Clincoo Community",
+   "desc": "How to discuss politely so the Clincoo community stays productive and friendly.",
+   "content": "<p class=\"mb-4\">Polite discussion makes the community more helpful.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Read the channel rules</h2><p class=\"mb-4\">On Discord or the forum, read the pinned message. In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> prepare a clear question before posting.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Avoid spam and off-topic</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> stay on topic. Accept criticism gracefully. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "Community Guidelines",
+   "sourceUrl": "https://opensource.guide/building-community/",
+   "sourceSnippet": "Follow channel rules and keep discussions respectful and on-topic.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "komunitas-bagikan-snippet-kode",
+ "langs": {
+  "id": {
+   "title": "Cara Bagikan Snippet Kode dengan Benar di Komunitas",
+   "desc": "Tata cara membagikan potongan kode yang mudah dibaca dan diuji oleh komunitas Clincoo.",
+   "content": "<p class=\"mb-4\">Snippet yang baik mempercepat bantuan.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Minimal dan lengkap</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> potong kode yang relevan saja, sertakan HTML/CSS/JS yang cukup untuk mereproduksi.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Gunakan code block</h2><p class=\"mb-4\">Di Discord atau forum, bungkus dengan ```. Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> uji dulu. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "How to Ask for Help",
+   "sourceUrl": "https://stackoverflow.com/help/how-to-ask",
+   "sourceSnippet": "Share a minimal, complete, and verifiable code example.",
+   "source2": "Clincoo Editor",
+   "source2Url": "https://editor.clincoo.buzz/",
+   "source3": "Clincoo Blog",
+   "source3Url": "https://blog.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Share a Code Snippet Correctly in the Community",
+   "desc": "How to share a code snippet that is easy to read and test by the Clincoo community.",
+   "content": "<p class=\"mb-4\">A good snippet speeds up help.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Minimal and complete</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> cut only the relevant code and include enough HTML/CSS/JS to reproduce.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Use a code block</h2><p class=\"mb-4\">On Discord or the forum, wrap it in ```. On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> test first. Record it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "How to Ask for Help",
+   "sourceUrl": "https://stackoverflow.com/help/how-to-ask",
+   "sourceSnippet": "Share a minimal, complete, and verifiable code example.",
    "source2": "Clincoo Editor",
    "source2Url": "https://editor.clincoo.buzz/",
    "source3": "Clincoo Blog",

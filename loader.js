@@ -17,6 +17,7 @@
     'data_filter.js',
     'data_security.js',
     'data_security_extra2.js',
+    'data_security_extra3.js',
     'data_struktur.js',
     'data_struktur_extra.js',
     'data_struktur_extra2.js',
@@ -34,12 +35,19 @@
     'data_web_components.js',
     'data_komunitas.js',
     'data_komunitas_extra.js',
+    'data_komunitas_extra2.js',
     'data_css_nesting.js',
     'data_jsdebug.js',
     'data_jsdebug_extra.js',
     'data_jsdebug_extra2.js',
     'data_console.js',
-    'data_console_extra.js'
+    'data_console_extra.js',
+    'data_console_extra2.js',
+    'data_fokus.js',
+    'data_fokus_extra.js',
+    'data_fokus_extra2.js',
+    'data_fokus_extra3.js',
+    'data_fokus_extra4.js'
   ];
   var i = 0;
   function loadApp() {

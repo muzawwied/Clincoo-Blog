@@ -118,6 +118,35 @@ window.countryDataFiles["komunitas"] = {
    "source3Url": "https://editor.clincoo.buzz/"
   }
  }
+},
+{
+ "id": "komunitas-cara-reply-dengan-solusi-lengkap",
+ "langs": {
+  "id": {
+   "title": "Cara Reply dengan Solusi Lengkap di Komunitas Clincoo",
+   "desc": "Tata cara membalas pertanyaan di komunitas dengan langkah, kode, dan tautan panduan yang jelas.",
+   "content": "<p class=\"mb-4\">Reply yang lengkap membantu penanya langsung mencoba solusi.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sertakan langkah dan kode</h2><p class=\"mb-4\">Tulis ulang masalah singkat, lalu berikan langkah. Sertakan cuplikan kode yang sudah diuji di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a>.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tautkan sumber</h2><p class=\"mb-4\">Sertakan tautan ke artikel di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> dan minta penanya uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "Stack Overflow — How to write a good answer",
+   "source2Url": "https://stackoverflow.com/help/how-to-answer",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Reply with a Complete Solution in the Clincoo Community",
+   "desc": "How to reply to community questions with clear steps, code, and guide links.",
+   "content": "<p class=\"mb-4\">A complete reply helps the asker try the solution immediately.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Include steps and code</h2><p class=\"mb-4\">Restate the problem briefly, then give steps. Include a code snippet already tested in <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a>.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Link sources</h2><p class=\"mb-4\">Include a link to an article on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> and ask the asker to test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "Stack Overflow — How to write a good answer",
+   "source2Url": "https://stackoverflow.com/help/how-to-answer",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
 }
  ]
 };

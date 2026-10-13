@@ -1,1 +1,1 @@
-// placeholder - will be replaced
+$(cat /tmp/data_baseline_updated.js)

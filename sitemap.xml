@@ -1,1 +1,13 @@
-test
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://blog.clincoo.buzz/web-worker/web-worker-type-module-untuk-import/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-pasang-breakpoint-kondisional/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-lihat-call-stack-saat-pause/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-gunakan-logpoint-tanpa-pause/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/jsdebug/jsdebug-salin-stack-trace-ke-ai/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-bantuan-core-web-vitals/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-bantuan-html-semantic/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-bantuan-js-uncaught/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-bantuan-keyboard-trap/</loc></url>
+  <url><loc>https://blog.clincoo.buzz/ai-stuck/ai-stuck-minta-bantuan-image-lazy/</loc></url>
+</urlset>

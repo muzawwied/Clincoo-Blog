@@ -24,6 +24,7 @@
     'data_pwa_extra.js',
     'data_ai_stuck.js',
     'data_ai_stuck_extra.js',
+    'data_ai_stuck_extra2.js',
     'data_typescript.js',
     'data_typescript_extra.js',
     'data_containerqueries.js',

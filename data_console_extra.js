@@ -1,0 +1,1 @@
+$(cat /tmp/data_console_extra.js)

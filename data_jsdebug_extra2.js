@@ -1,0 +1,1 @@
+$(cat /tmp/data_jsdebug_extra2.js)

@@ -59,5 +59,63 @@
    "source3Url": "https://blog.clincoo.buzz/"
   }
  }
+},
+{
+ "id": "komunitas-cara-ajukan-ide-fitur",
+ "langs": {
+  "id": {
+   "title": "Cara Ajukan Ide Fitur di Komunitas Clincoo",
+   "desc": "Tata cara mengajukan ide fitur baru dengan jelas agar komunitas dan tim bisa mempertimbangkan.",
+   "content": "<p class=\"mb-4\">Ide fitur yang spesifik lebih mudah didiskusikan.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Jelaskan masalah dan solusi</h2><p class=\"mb-4\">Di komunitas sebut masalah yang dihadapi di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a>, lalu usulkan solusi singkat.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sertakan contoh</h2><p class=\"mb-4\">Berikan mockup atau langkah. Tautkan ke <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> jika ada panduan terkait. Uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "GitHub — feature requests",
+   "source2Url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Propose a Feature Idea in the Clincoo Community",
+   "desc": "How to propose a new feature idea clearly so the community and team can consider it.",
+   "content": "<p class=\"mb-4\">A specific feature idea is easier to discuss.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Explain the problem and solution</h2><p class=\"mb-4\">In the community state the problem faced in <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a>, then propose a short solution.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Include an example</h2><p class=\"mb-4\">Provide a mockup or steps. Link to <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a> if there is a related guide. Test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>.</p>",
+   "source": "Clincoo Blog",
+   "sourceUrl": "https://blog.clincoo.buzz/",
+   "sourceSnippet": "Official Clincoo blog for guides and tips.",
+   "source2": "GitHub — feature requests",
+   "source2Url": "https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+},
+{
+ "id": "komunitas-cara-hindari-topik-duplikat",
+ "langs": {
+  "id": {
+   "title": "Cara Hindari Topik Duplikat di Komunitas Clincoo",
+   "desc": "Tata cara mencari thread yang sudah ada sebelum membuat topik baru supaya komunitas tidak penuh duplikat.",
+   "content": "<p class=\"mb-4\">Topik duplikat membingungkan. Cari dulu sebelum post.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Gunakan pencarian komunitas</h2><p class=\"mb-4\">Ketik kata kunci di pencarian komunitas atau lihat pin. Jika ada, reply di thread itu.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tautkan ke blog</h2><p class=\"mb-4\">Jika solusi ada di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>, sebutkan. Uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> sebelum tanya ulang.</p>",
+   "source": "Community best practices",
+   "sourceUrl": "https://stackoverflow.com/help/how-to-ask",
+   "sourceSnippet": "Search before asking to avoid duplicate questions.",
+   "source2": "Clincoo Blog",
+   "source2Url": "https://blog.clincoo.buzz/",
+   "source3": "Clincoo App",
+   "source3Url": "https://app.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Avoid Duplicate Topics in the Clincoo Community",
+   "desc": "How to search for existing threads before creating a new topic so the community is not full of duplicates.",
+   "content": "<p class=\"mb-4\">Duplicate topics confuse people. Search first before posting.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Use the community search</h2><p class=\"mb-4\">Type keywords in the community search or check pinned posts. If it exists, reply in that thread.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Link to the blog</h2><p class=\"mb-4\">If the solution is on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>, mention it. Test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> before asking again.</p>",
+   "source": "Community best practices",
+   "sourceUrl": "https://stackoverflow.com/help/how-to-ask",
+   "sourceSnippet": "Search before asking to avoid duplicate questions.",
+   "source2": "Clincoo Blog",
+   "source2Url": "https://blog.clincoo.buzz/",
+   "source3": "Clincoo App",
+   "source3Url": "https://app.clincoo.buzz/"
+  }
+ }
 });
 })();

@@ -31,4 +31,33 @@
   }
  }
 });
+  list.push({
+ "id": "jsdebug-debug-unhandled-rejection",
+ "langs": {
+  "id": {
+   "title": "Cara Debug Unhandled Promise Rejection di Clincoo",
+   "desc": "Tata cara menemukan dan memperbaiki promise yang reject tanpa catch agar tidak muncul error di console Clincoo.",
+   "content": "<p class=\"mb-4\">Unhandled rejection sering muncul sebagai error merah di console tanpa stack yang jelas.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Aktifkan break on exceptions</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buka DevTools Sources, centang Pause on uncaught exceptions. Reload dan lihat titik reject.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Tambahkan catch atau .catch</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> bungkus dengan try/catch atau .catch(err => console.error(err)). Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Promise rejection",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events",
+   "sourceSnippet": "Unhandled promise rejections can be observed via the unhandledrejection event.",
+   "source2": "Chrome DevTools — Pause on exceptions",
+   "source2Url": "https://developer.chrome.com/docs/devtools/javascript/breakpoints/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Debug Unhandled Promise Rejection in Clincoo",
+   "desc": "How to find and fix a promise that rejects without a catch so it does not show a console error in Clincoo.",
+   "content": "<p class=\"mb-4\">An unhandled rejection often appears as a red console error without a clear stack.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Enable break on exceptions</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> open DevTools Sources and check Pause on uncaught exceptions. Reload and see the rejection point.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Add a catch or .catch</h2><p class=\"mb-4\">On <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> wrap with try/catch or .catch(err => console.error(err)). Note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Promise rejection",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events",
+   "sourceSnippet": "Unhandled promise rejections can be observed via the unhandledrejection event.",
+   "source2": "Chrome DevTools — Pause on exceptions",
+   "source2Url": "https://developer.chrome.com/docs/devtools/javascript/breakpoints/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+});
 })();

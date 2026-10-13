@@ -125,7 +125,6 @@ window.countryDataFiles["fetch"] = {
   "id": {
    "title": "Cara Retry Fetch dengan Backoff Sederhana di Clincoo",
    "desc": "Tata cara mencoba ulang permintaan fetch yang gagal sementara dengan jeda yang bertambah di Clincoo.",
-   "content": "<p class=\"mb-4\">Error sementara seperti 503 atau jaringan putus bisa dicoba ulang.",
    "content": "<p class=\"mb-4\">Error sementara seperti 503 atau jaringan putus bisa dicoba ulang.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Fungsi retry</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> buat async function yang loop max 3 kali, await delay(2**i * 100), panggil fetch.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Jangan retry error 4xx</h2><p class=\"mb-4\">Di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a> hanya retry 5xx atau network. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
    "source": "MDN — Fetch",
    "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API",

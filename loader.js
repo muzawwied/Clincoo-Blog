@@ -47,7 +47,8 @@
     'data_fokus_extra.js',
     'data_fokus_extra2.js',
     'data_fokus_extra3.js',
-    'data_fokus_extra4.js'
+    'data_fokus_extra4.js',
+    'data_fetch.js'
   ];
   var i = 0;
   function loadApp() {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Cancel a Fetch Request with AbortController in Clincoo — Clincoo</title>
+<meta name="description" content="How to use AbortController so a fetch request can be canceled when the user navigates or the input changes in Clincoo.">
+<link rel="canonical" href="https://blog.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/index.en.html">
+<link rel="alternate" hreflang="id" href="https://blog.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/">
+<link rel="alternate" hreflang="en" href="https://blog.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/index.en.html">
+<link rel="alternate" hreflang="x-default" href="https://blog.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Cancel a Fetch Request with AbortController in Clincoo">
+<meta property="og:description" content="How to use AbortController so a fetch request can be canceled when the user navigates or the input changes in Clincoo.">
+<meta property="og:url" content="https://blog.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/index.en.html">
+<meta property="og:site_name" content="Clincoo">
+<script>window.location.replace("https://docs.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/index.en.html");</script>
+<meta http-equiv="refresh" content="0;url=https://docs.clincoo.buzz/fetch/fetch-gunakan-abortcontroller/index.en.html">
+</head>
+<body>
+<article>
+<h1>How to Cancel a Fetch Request with AbortController in Clincoo</h1>
+<p>How to use AbortController so a fetch request can be canceled when the user navigates or the input changes in Clincoo.</p>
+<p class="mb-4">An uncanceled fetch can keep running and overwrite newer results.</p><h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Create the signal</h2><p class="mb-4">In <a href="https://editor.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">editor.clincoo.buzz</a> const controller = new AbortController(); fetch(url, { signal: controller.signal }). When needed, controller.abort().</p><h2 class="text-lg font-bold text-gray-900 mt-8 mb-2">Catch AbortError</h2><p class="mb-4">On <a href="https://app.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">app.clincoo.buzz</a> catch error.name === 'AbortError' and ignore it. Note it on <a href="https://blog.clincoo.buzz/" target="_blank" rel="noopener" class="underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900">blog.clincoo.buzz</a>.</p>
+<p>Source: <a href="https://developer.mozilla.org/en-US/docs/Web/API/AbortController">MDN — AbortController</a></p>
+<p><a href="https://blog.clincoo.buzz/">Back to blog</a></p>
+</article>
+</body>
+</html>

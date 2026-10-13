@@ -32,6 +32,7 @@
     'data_containerqueries_extra.js',
     'data_webworker.js',
     'data_webworker_extra.js',
+    'data_webworker_extra2.js',
     'data_web_components.js',
     'data_komunitas.js',
     'data_komunitas_extra.js',
@@ -48,7 +49,11 @@
     'data_fokus_extra2.js',
     'data_fokus_extra3.js',
     'data_fokus_extra4.js',
-    'data_fetch.js'
+    'data_fetch.js',
+    'data_fetch_extra.js',
+    'data_debounce.js',
+    'data_debounce_extra.js',
+    'data_debounce_extra2.js'
   ];
   var i = 0;
   function loadApp() {

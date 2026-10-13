@@ -60,4 +60,62 @@
   }
  }
 });
+  list.push({
+ "id": "ai-stuck-minta-bantuan-css-grid",
+ "langs": {
+  "id": {
+   "title": "Cara Minta Bantuan AI untuk Debug CSS Grid",
+   "desc": "Tata cara menjelaskan layout grid yang rusak dan CSS yang dipakai supaya AI bisa sarankan perbaikan di Clincoo.",
+   "content": "<p class=\"mb-4\">CSS Grid yang tidak sesuai sering karena grid-template-columns atau gap salah.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sertakan HTML dan CSS</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> salin markup dan style grid. Sebut browser dan ukuran layar.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Gambarkan hasil yang diinginkan</h2><p class=\"mb-4\">Tuliskan 'item harus 3 kolom dengan gap 24px'. Uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — CSS Grid",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout",
+   "sourceSnippet": "The CSS Grid Layout module excels at dividing a page into major regions.",
+   "source2": "CSS-Tricks — Grid",
+   "source2Url": "https://css-tricks.com/snippets/css/complete-guide-grid/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Ask AI for Help Debugging CSS Grid",
+   "desc": "How to describe a broken grid layout and the CSS used so AI can suggest fixes in Clincoo.",
+   "content": "<p class=\"mb-4\">A CSS Grid that does not align is often due to wrong grid-template-columns or gap.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Include HTML and CSS</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> copy the grid markup and style. Mention the browser and screen size.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Describe the desired result</h2><p class=\"mb-4\">Write 'items should be 3 columns with 24px gap'. Test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>. Note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — CSS Grid",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout",
+   "sourceSnippet": "The CSS Grid Layout module excels at dividing a page into major regions.",
+   "source2": "CSS-Tricks — Grid",
+   "source2Url": "https://css-tricks.com/snippets/css/complete-guide-grid/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+});
+  list.push({
+ "id": "ai-stuck-minta-bantuan-optimasi-gambar",
+ "langs": {
+  "id": {
+   "title": "Cara Minta Bantuan AI untuk Optimasi Gambar",
+   "desc": "Tata cara menjelaskan ukuran gambar dan format supaya AI bisa sarankan optimasi di Clincoo.",
+   "content": "<p class=\"mb-4\">Gambar besar memperlambat halaman. AI bisa bantu pilih format dan ukuran.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Sertakan ukuran dan format</h2><p class=\"mb-4\">Di <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> sebut lebar, tinggi, dan format (PNG/JPG). Minta saran WebP atau AVIF.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Minta atribut loading</h2><p class=\"mb-4\">Tanyakan cara tambah loading=lazy dan srcset. Uji di <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>. Catat di <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Responsive images",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images",
+   "sourceSnippet": "Serve images in modern formats and appropriate sizes for better performance.",
+   "source2": "web.dev — image optimization",
+   "source2Url": "https://web.dev/fast/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  },
+  "en": {
+   "title": "How to Ask AI for Help with Image Optimization",
+   "desc": "How to explain image size and format so AI can suggest optimization in Clincoo.",
+   "content": "<p class=\"mb-4\">Large images slow down the page. AI can help choose format and size.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Include size and format</h2><p class=\"mb-4\">In <a href=\"https://editor.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">editor.clincoo.buzz</a> mention width, height, and format (PNG/JPG). Ask for WebP or AVIF suggestions.</p><h2 class=\"text-lg font-bold text-gray-900 mt-8 mb-2\">Ask for loading attributes</h2><p class=\"mb-4\">Ask how to add loading=lazy and srcset. Test on <a href=\"https://app.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">app.clincoo.buzz</a>. Note it on <a href=\"https://blog.clincoo.buzz/\" target=\"_blank\" rel=\"noopener\" class=\"underline decoration-gray-300 underline-offset-2 hover:decoration-gray-900 text-gray-900\">blog.clincoo.buzz</a>.</p>",
+   "source": "MDN — Responsive images",
+   "sourceUrl": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images",
+   "sourceSnippet": "Serve images in modern formats and appropriate sizes for better performance.",
+   "source2": "web.dev — image optimization",
+   "source2Url": "https://web.dev/fast/",
+   "source3": "Clincoo Editor",
+   "source3Url": "https://editor.clincoo.buzz/"
+  }
+ }
+});
 })();

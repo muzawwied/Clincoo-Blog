@@ -421,24 +421,71 @@
      Tempel isi masing-masing file di antara <script> dan </script>.
      ===================================================================== -->
 
+<!-- Wadah data bersama: semua blok di bawah menambah ke objek ini -->
+<script>window.countryDataFiles = window.countryDataFiles || {};</script>
+
 <!-- ===== data_clincoo.js ===== -->
 <script>
-/* TEMPEL ISI data_clincoo.js DI SINI */
+/* TEMPEL ISI data_clincoo.js DI SINI (ganti baris komentar ini).
+   Bentuk data yang dibaca aplikasi, kalau perlu acuan:
+   window.countryDataFiles['id-kategori'] = {
+     names: { id: 'Nama Kategori', en: 'Category Name' },
+     articles: [
+       { id: 'slug-artikel', langs: {
+           id: { title: '...', desc: '...', content: '<p>...</p>' },
+           en: { title: '...', desc: '...', content: '<p>...</p>' }
+       } }
+     ]
+   };
+*/
 </script>
 
 <!-- ===== data_komunitas.js ===== -->
 <script>
-/* TEMPEL ISI data_komunitas.js DI SINI */
+/* TEMPEL ISI data_komunitas.js DI SINI (ganti baris komentar ini).
+   Bentuk data yang dibaca aplikasi, kalau perlu acuan:
+   window.countryDataFiles['id-kategori'] = {
+     names: { id: 'Nama Kategori', en: 'Category Name' },
+     articles: [
+       { id: 'slug-artikel', langs: {
+           id: { title: '...', desc: '...', content: '<p>...</p>' },
+           en: { title: '...', desc: '...', content: '<p>...</p>' }
+       } }
+     ]
+   };
+*/
 </script>
 
 <!-- ===== data_komunitas_extra.js ===== -->
 <script>
-/* TEMPEL ISI data_komunitas_extra.js DI SINI */
+/* TEMPEL ISI data_komunitas_extra.js DI SINI (ganti baris komentar ini).
+   Bentuk data yang dibaca aplikasi, kalau perlu acuan:
+   window.countryDataFiles['id-kategori'] = {
+     names: { id: 'Nama Kategori', en: 'Category Name' },
+     articles: [
+       { id: 'slug-artikel', langs: {
+           id: { title: '...', desc: '...', content: '<p>...</p>' },
+           en: { title: '...', desc: '...', content: '<p>...</p>' }
+       } }
+     ]
+   };
+*/
 </script>
 
 <!-- ===== data_komunitas_extra2.js ===== -->
 <script>
-/* TEMPEL ISI data_komunitas_extra2.js DI SINI */
+/* TEMPEL ISI data_komunitas_extra2.js DI SINI (ganti baris komentar ini).
+   Bentuk data yang dibaca aplikasi, kalau perlu acuan:
+   window.countryDataFiles['id-kategori'] = {
+     names: { id: 'Nama Kategori', en: 'Category Name' },
+     articles: [
+       { id: 'slug-artikel', langs: {
+           id: { title: '...', desc: '...', content: '<p>...</p>' },
+           en: { title: '...', desc: '...', content: '<p>...</p>' }
+       } }
+     ]
+   };
+*/
 </script>
 
 <!-- app.js (digabung langsung di sini) -->
@@ -476,7 +523,7 @@ function getAllArticles() {
   let all = [];
   for (const cId in countries) {
     const c = countries[cId];
-    c.articles.forEach(art => {
+    (c.articles || []).forEach(art => {
       const langData = art.langs[currentLang] || art.langs['id'];
       all.push({
         countryId: cId,
@@ -491,7 +538,7 @@ function getAllArticles() {
 
 function getCountryArticles(countryId) {
   const c = countries[countryId];
-  if (!c) return [];
+  if (!c || !c.articles) return [];
   return c.articles.map(art => {
     const langData = art.langs[currentLang] || art.langs['id'];
     return { countryId, articleId: art.id, countryName: c.names[currentLang] || c.names['id'], ...langData };

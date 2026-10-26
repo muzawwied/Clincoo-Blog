@@ -88,40 +88,41 @@ main.seo-main .seo-body ul{margin:0 0 20px;padding:0 0 0 22px;list-style:disc}
 .seo-body li{margin:0 0 8px;padding-left:4px}
 .seo-body li::marker{color:var(--accent)}
 .seo-body li:last-child{margin-bottom:0}
-/* tabel */
+/* tabel — tanpa garis, latar lembut */
 main.seo-main .seo-body table{
   width:100%;margin:0 0 24px;border-collapse:separate;border-spacing:0;
-  font-size:15px;line-height:1.6;border:1px solid var(--line);border-radius:12px;overflow:hidden;
+  font-size:15px;line-height:1.65;border:0 !important;border-radius:14px;overflow:hidden;
+  background:var(--surface);table-layout:fixed;max-width:100%;min-width:0;
 }
-.seo-body th,.seo-body td{padding:12px 16px;text-align:left;vertical-align:top;border:0;border-bottom:1px solid var(--line)}
-.seo-body thead th{background:var(--surface);font-size:13.5px;font-weight:650;color:var(--muted)}
-.seo-body tbody tr:last-child td{border-bottom:0}
-.seo-body tbody td:first-child{width:28%;font-weight:600;white-space:normal}
-.seo-body tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--surface) 55%,transparent)}
+main.seo-main .seo-body th,main.seo-main .seo-body td{
+  padding:14px 18px;text-align:left;vertical-align:top;background:transparent;
+  border:0 !important;min-width:0;overflow-wrap:anywhere;
+}
+main.seo-main .seo-body thead th{padding-top:16px;padding-bottom:6px;font-size:13.5px;font-weight:600;color:var(--muted)}
+main.seo-main .seo-body tbody td:first-child{width:30%;font-weight:600;white-space:normal}
+main.seo-main .seo-body tbody tr:nth-child(even) td{background:rgba(255,255,255,.65)}
 /* tautan */
 .seo-body a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 .seo-body a:hover{text-decoration-thickness:2px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 /* footer */
-.seo-footer{
-  margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
-  font-size:13.5px;color:var(--muted);text-align:left;
-}
+.seo-footer{margin-top:48px;padding-top:8px;font-size:13.5px;color:var(--muted);text-align:left}
 .seo-footer a{color:var(--muted);text-decoration:none;margin:0 2px}
 .seo-footer a:hover{color:var(--link);text-decoration:underline}
 /* mobile */
 @media (max-width:600px){
   main.seo-main{padding:32px 18px 48px}
   .seo-body h2{font-size:19px}
-  main.seo-main .seo-body table,.seo-body tbody,.seo-body tr,.seo-body td{display:block;width:100%}
-  main.seo-main .seo-body table{border-radius:12px}
-  .seo-body thead{display:none}
-  .seo-body tbody tr{padding:12px 16px;border-bottom:1px solid var(--line)}
-  .seo-body tbody tr:last-child{border-bottom:0}
-  .seo-body tbody tr:nth-child(even) td{background:none}
-  .seo-body td,.seo-body tbody td:first-child{padding:0;border:0;width:100%}
-  .seo-body tbody td:first-child{margin-bottom:2px;color:var(--text)}
-  .seo-body td:last-child{color:var(--muted);font-size:14.5px}
+  main.seo-main .seo-body table,main.seo-main .seo-body tbody{display:block;width:100%;min-width:0;max-width:100%;table-layout:auto}
+  main.seo-main .seo-body table{border-radius:14px}
+  main.seo-main .seo-body thead{display:none}
+  main.seo-main .seo-body tbody tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;width:100%;padding:14px 18px;background:transparent}
+  main.seo-main .seo-body tbody tr:nth-child(even){background:rgba(255,255,255,.65)}
+  main.seo-main .seo-body td,main.seo-main .seo-body tbody td:first-child,main.seo-main .seo-body tbody tr:nth-child(even) td{
+    display:block;width:100%;min-width:0;padding:0;background:none;white-space:normal;overflow-wrap:anywhere;
+  }
+  main.seo-main .seo-body tbody td:first-child{color:var(--text)}
+  main.seo-main .seo-body td:last-child{color:var(--muted);font-size:14.5px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.seo-header{display:none}main.seo-main{padding:0}.seo-body h2{break-after:avoid}.seo-body tr{break-inside:avoid}}
@@ -137,4 +138,3 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius
 <footer class="seo-footer">© 2026 Clincoo · <a href="/">Clincoo Docs</a> · <a href="https://app.clincoo.buzz/">app.clincoo.buzz</a></footer>
 </main>
 </body></html>
- 

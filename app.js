@@ -7,7 +7,19 @@
 // =============================================
 // STATE
 // =============================================
-let currentLang = 'id';
+const languageStorageKey = 'clincoo-docs-language';
+function getInitialLanguage() {
+  const queryLang = new URLSearchParams(location.search).get('lang');
+  const pathIsEnglish = /(?:^|\/)index\.en(?:\.html)?$/i.test(location.pathname);
+  let savedLang = 'id';
+  try { savedLang = localStorage.getItem(languageStorageKey) || 'id'; } catch (e) {}
+  const selected = queryLang === 'en' || pathIsEnglish ? 'en' : (queryLang === 'id' ? 'id' : savedLang);
+  if (queryLang === 'en' || queryLang === 'id' || pathIsEnglish) {
+    try { localStorage.setItem(languageStorageKey, selected); } catch (e) {}
+  }
+  return selected === 'en' ? 'en' : 'id';
+}
+let currentLang = getInitialLanguage();
 let currentView = 'home'; // 'home' | 'country' | 'article' | 'about'
 let currentCountryId = null;
 let currentArticleId = null;
@@ -149,7 +161,16 @@ function toggleCatDrop(cId) {
 }
 
 function changeLanguage(key) {
+  if (!languages[key]) return;
   currentLang = key;
+  try { localStorage.setItem(languageStorageKey, key); } catch (e) {}
+  document.documentElement.lang = key;
+  if (location.pathname === '/' || location.pathname === '/index.html') {
+    const url = new URL(location.href);
+    if (key === 'en') url.searchParams.set('lang', 'en');
+    else url.searchParams.delete('lang');
+    history.replaceState(null, '', url.pathname + url.search + url.hash);
+  }
   updateSidebarUI();
   if (currentView === 'home') renderHome();
   else if (currentView === 'country') renderCountry(currentCountryId);
@@ -502,6 +523,8 @@ window.addEventListener('popstate', function(e) {
 });
 
 function init() {
+  document.documentElement.lang = currentLang;
+  document.title = currentLang === 'en' ? 'Clincoo Docs - Articles, Guides & Tips' : 'Clincoo Docs - Artikel, Panduan & Tips';
   updateSidebarUI();
   parseAndRender(false);
 }

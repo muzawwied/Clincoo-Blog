@@ -1,216 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <script>(function(){if(/\.pages\.dev$/.test(location.hostname))location.replace("https://docs.clincoo.buzz"+location.pathname+location.search+location.hash);})();</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Documentation — Clincoo Docs</title>
-<meta name="description" content="All articles in the Documentation category of the Clincoo Docs: 10 official Clincoo articles.">
+<meta name="description" content="Product guides and practical tutorials for building and managing projects with Clincoo.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://docs.clincoo.buzz/dokumentasi/index.en.html">
-<meta property="og:type" content="article">
+<link rel="alternate" hreflang="id" href="https://docs.clincoo.buzz/dokumentasi/"><link rel="alternate" hreflang="en" href="https://docs.clincoo.buzz/dokumentasi/index.en.html"><link rel="alternate" hreflang="x-default" href="https://docs.clincoo.buzz/dokumentasi/">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Documentation — Clincoo Docs">
-<meta property="og:description" content="All articles in the Documentation category of the Clincoo Docs: 10 official Clincoo articles.">
+<meta property="og:description" content="Product guides and practical tutorials for building and managing projects with Clincoo.">
 <meta property="og:url" content="https://docs.clincoo.buzz/dokumentasi/index.en.html">
 <meta property="og:site_name" content="Clincoo Docs">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://docs.clincoo.buzz/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Clincoo Docs">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Documentation — Clincoo Docs">
-<meta name="twitter:description" content="All articles in the Documentation category of the Clincoo Docs: 10 official Clincoo articles.">
+<meta name="twitter:description" content="Product guides and practical tutorials for building and managing projects with Clincoo.">
 <meta name="twitter:image" content="https://docs.clincoo.buzz/og-image.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/logo.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://cdn.tailwindcss.com">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          gray: { 100: '#f3f4f6', 200: '#e5e7eb', 300: '#d1d5db', 500: '#6b7280', 900: '#111827' }
-        }
-      }
-    }
-  }
-</script>
-<style>
-  body { -webkit-tap-highlight-color: transparent; }
-  .hide-scrollbar::-webkit-scrollbar { display: none; }
-  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-  #sidebar { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-  #sidebarOverlay { transition: opacity 0.3s ease; }
-  .fade-in { animation: fadeIn 0.35s ease-out; }
-  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-  .drop-in { animation: dropIn 0.18s ease-out; }
-  @keyframes dropIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+<link rel="stylesheet" href="/assets/seo.css?v=6">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style id="rapih">
+:root{--bg:#fff;--surface:#f7f8fa;--text:#111827;--muted:#6b7280;--line:#f0f1f4;--accent:#111827}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;color-scheme:light;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+::selection{background:#e5e7eb;color:#111827}
+body{
+  margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;
+  background:var(--bg);color:var(--text);
+  font:16px/1.75 'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* header */
+.seo-header{
+  position:sticky;top:0;z-index:40;display:flex;align-items:center;
+  background:var(--bg);border:0;border-bottom:0;box-shadow:none;
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  padding:6px max(20px,calc((100% - 720px)/2));
+}
+.seo-header::after{content:none;display:none}
+.seo-back{
+  display:inline-flex;align-items:center;margin-left:-12px;padding:4px;
+  color:var(--muted);text-decoration:none;background:transparent;border:0;
+  transition:color .2s ease,transform .15s ease;
+}
+.seo-back svg{width:26px;height:26px;flex-shrink:0}
+.seo-back:hover{color:var(--text)}
+.seo-back:active{transform:scale(.96)}
+.seo-head-title{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  font-size:15px;font-weight:700;color:var(--text);pointer-events:none;
+}
+
+/* konten */
+main.seo-main{flex:1 0 auto;display:flex;flex-direction:column;width:100%;max-width:720px;margin:0 auto;padding:16px 20px 24px}
+main.seo-main .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+main.seo-main .seo-title+p{margin:0;font-size:15px;line-height:1.65;color:var(--muted)}
+
+/* breadcrumb */
+.seo-crumb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:0 0 20px;font-size:14px;font-weight:500;line-height:1.4}
+.seo-crumb a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+.seo-crumb a:hover{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.seo-crumb .sep{color:#d1d5db;font-weight:400}
+.seo-crumb [aria-current]{color:var(--text);font-weight:700}
+
+/* daftar artikel */
+.art-list{display:flex;flex-direction:column;margin-top:24px;border-top:1px solid var(--line)}
+.art-row{
+  display:flex;align-items:center;gap:16px;padding:20px 4px;
+  border-bottom:1px solid var(--line);color:inherit;text-decoration:none;cursor:pointer;
+  -webkit-tap-highlight-color:transparent;transition:background .15s ease;
+}
+.art-row:last-child{border-bottom:0}
+.art-row:active{background:#f7f7f8}
+.art-body{flex:1;min-width:0}
+.art-title{margin:0;font-size:17px;font-weight:700;line-height:1.4;letter-spacing:-.01em;color:var(--text)}
+.art-desc{
+  margin:6px 0 0;font-size:14px;line-height:1.55;color:var(--muted);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.art-arrow{flex-shrink:0;width:18px;height:18px;color:#d1d5db;transition:color .15s ease,transform .15s ease}
+.art-row:hover .art-arrow{color:var(--text);transform:translateX(3px)}
+.art-row:hover .art-title{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* footer */
+.seo-footer{margin-top:auto;padding-top:48px;font-size:13.5px;color:var(--muted);border:0;box-shadow:none}
+.seo-footer::before{content:none;display:none}
+.seo-footer a{color:var(--muted);text-decoration:none;margin:0 2px}
+.seo-footer a:hover{color:var(--text);text-decoration:underline}
+
+@media (max-width:600px){main.seo-main{padding:16px 18px 20px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.art-row,.art-arrow,.seo-back{transition:none}}
+@media print{.seo-header{display:none}main.seo-main{padding:0}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Documentation","description":"All articles in the Documentation category of the Clincoo Docs: 10 official Clincoo articles.","mainEntity":{"@type":"ItemList","numberOfItems":10,"itemListElement":[{"@type":"ListItem","position":1,"name":"Clincoo AI Assistant","url":"https://docs.clincoo.buzz/dokumentasi/asisten-ai-clincoo/index.en.html"},{"@type":"ListItem","position":2,"name":"Clincoo Plans and Pricing","url":"https://docs.clincoo.buzz/dokumentasi/paket-dan-harga-clincoo/index.en.html"},{"@type":"ListItem","position":3,"name":"Team Collaboration in Clincoo","url":"https://docs.clincoo.buzz/dokumentasi/kolaborasi-tim/index.en.html"},{"@type":"ListItem","position":4,"name":"How to Use the Terminal in the Clincoo Editor","url":"https://docs.clincoo.buzz/dokumentasi/cara-pakai-terminal-di-editor/index.en.html"},{"@type":"ListItem","position":5,"name":"How to Set Project Environment Variables","url":"https://docs.clincoo.buzz/dokumentasi/cara-atur-variabel-lingkungan/index.en.html"},{"@type":"ListItem","position":6,"name":"QRIS Payment Gateway API Reference (ClincooPay)","url":"https://docs.clincoo.buzz/dokumentasi/api-payment-gateway-qris/index.en.html"}]}}</script>
-</head>
-<body class="bg-white text-gray-900 font-sans antialiased min-h-screen">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"https://docs.clincoo.buzz/"},{"@type":"ListItem","position":2,"name":"Documentation"}]},"name":"Documentation","description":"Product guides and practical tutorials for building and managing projects with Clincoo.","mainEntity":{"@type":"ItemList","numberOfItems":21,"itemListElement":[{"@type":"ListItem","position":1,"name":"QRIS Payment Gateway API Reference (ClincooPay)","url":"https://docs.clincoo.buzz/dokumentasi/api-payment-gateway-qris/index.en.html"},{"@type":"ListItem","position":2,"name":"Clincoo AI Assistant","url":"https://docs.clincoo.buzz/dokumentasi/asisten-ai-clincoo/index.en.html"},{"@type":"ListItem","position":3,"name":"How to Set a Heading Hierarchy","url":"https://docs.clincoo.buzz/dokumentasi/cara-atur-heading-berjenjang/index.en.html"},{"@type":"ListItem","position":4,"name":"How to Set Project Environment Variables","url":"https://docs.clincoo.buzz/dokumentasi/cara-atur-variabel-lingkungan/index.en.html"},{"@type":"ListItem","position":5,"name":"How to Set Up Project Webhooks in Clincoo","url":"https://docs.clincoo.buzz/dokumentasi/cara-atur-webhook-proyek/index.en.html"},{"@type":"ListItem","position":6,"name":"How to Read a Failed Deploy Log","url":"https://docs.clincoo.buzz/dokumentasi/cara-baca-log-deploy-yang-gagal/index.en.html"},{"@type":"ListItem","position":7,"name":"How to Build a Two-Column Grid Layout","url":"https://docs.clincoo.buzz/dokumentasi/cara-buat-layout-grid-dua-kolom/index.en.html"},{"@type":"ListItem","position":8,"name":"How to Optimize Images Before Deploy","url":"https://docs.clincoo.buzz/dokumentasi/cara-optimasi-gambar-sebelum-deploy/index.en.html"},{"@type":"ListItem","position":9,"name":"How to Use the Terminal in the Clincoo Editor","url":"https://docs.clincoo.buzz/dokumentasi/cara-pakai-terminal-di-editor/index.en.html"},{"@type":"ListItem","position":10,"name":"How to Center an Element with Flexbox","url":"https://docs.clincoo.buzz/dokumentasi/cara-rata-tengah-elemen-dengan-flexbox/index.en.html"},{"@type":"ListItem","position":11,"name":"How to Withdraw Your Clincoo Earnings","url":"https://docs.clincoo.buzz/dokumentasi/cara-tarik-saldo-dari-clincoo/index.en.html"},{"@type":"ListItem","position":12,"name":"Clincoo Database: Data Tables and Per-Project API","url":"https://docs.clincoo.buzz/dokumentasi/database-clincoo/index.en.html"},{"@type":"ListItem","position":13,"name":"Clincoo Database: Store Data Straight from Your Backend Function","url":"https://docs.clincoo.buzz/dokumentasi/fitur-database-clincoo/index.en.html"},{"@type":"ListItem","position":14,"name":"Clincoo Email Feature: Complete Guide to Sending Email, Broadcast, and Audience","url":"https://docs.clincoo.buzz/dokumentasi/fitur-email-clincoo/index.en.html"},{"@type":"ListItem","position":15,"name":"Clincoo AI Integrations: Models, Secrets, and Per-Project API","url":"https://docs.clincoo.buzz/dokumentasi/integrasi-ai-clincoo/index.en.html"},{"@type":"ListItem","position":16,"name":"Manage Clincoo Domains and DNS: Verification, Records, SSL, to Cache","url":"https://docs.clincoo.buzz/dokumentasi/kelola-domain-clincoo/index.en.html"},{"@type":"ListItem","position":17,"name":"Clincoo Email API Keys: Manage Access and Sender Identity","url":"https://docs.clincoo.buzz/dokumentasi/kunci-api-email-clincoo/index.en.html"},{"@type":"ListItem","position":18,"name":"Team Collaboration in Clincoo","url":"https://docs.clincoo.buzz/dokumentasi/kolaborasi-tim/index.en.html"},{"@type":"ListItem","position":19,"name":"Sending Email from Your Deployed Site in Clincoo","url":"https://docs.clincoo.buzz/dokumentasi/mengirim-email-dari-situs-deploy/index.en.html"},{"@type":"ListItem","position":20,"name":"Clincoo Plans and Pricing","url":"https://docs.clincoo.buzz/dokumentasi/paket-dan-harga-clincoo/index.en.html"},{"@type":"ListItem","position":21,"name":"Clincoo MCP Server: Manage Projects from External AI","url":"https://docs.clincoo.buzz/dokumentasi/server-mcp-clincoo/index.en.html"}]}}</script>
 
-<div id="sidebarOverlay" class="fixed inset-0 bg-black/40 z-[60] hidden opacity-0" onclick="toggleSidebar()"></div>
-
-<aside id="sidebar" class="fixed top-0 left-0 h-full w-72 z-[70] transform bg-white -translate-x-full shadow-2xl flex flex-col border-r border-gray-100">
-  <div class="p-2 border-b border-gray-100 flex items-center">
-    <div class="flex items-center justify-center text-gray-900 flex-shrink-0">
-      <img src="/logo.png" width="42" height="42" alt="Clincoo" style="border-radius:0.6rem">
+<script src="/assets/language-preference.js?v=1" defer></script>
+</head><body>
+<header class="seo-header"><a class="seo-back" href="/" aria-label="Back"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></a><span class="seo-head-title" aria-hidden="true">Documentation</span></header>
+<main class="seo-main">
+<nav class="seo-crumb" aria-label="Breadcrumb"><a href="/">Docs</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Documentation</span></nav>
+<h1 class="seo-title sr-only">Documentation</h1>
+<p>Product guides and practical tutorials for building and managing projects with Clincoo.</p>
+<div class="art-list">
+  <a class="art-row" href="/dokumentasi/api-payment-gateway-qris/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">QRIS Payment Gateway API Reference (ClincooPay)</h2>
+      <p class="art-desc">ClincooPay is the built-in Clincoo payment gateway: buyers pay with QRIS, the balance lands in your project dashboard, and you can withdraw it anytime. This is the official API reference for sites deployed from app.clincoo.buzz .</p>
     </div>
-    <span class="text-xl font-bold tracking-tight text-gray-900 ml-2">Clincoo Docs</span>
-    <button onclick="toggleSidebar()" aria-label="Close menu" class="ml-auto p-1.5 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-md transition-colors">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-    </button>
-  </div>
-  <div class="flex flex-col gap-0.5 flex-grow overflow-y-auto hide-scrollbar py-2 pb-4">
-    <h3 class="px-6 pt-3 text-[12px] font-bold text-gray-400 mb-1.5 uppercase tracking-wider">Menu</h3>
-    <a href="/" class="w-full flex items-center px-6 py-2 hover:bg-gray-50 transition-colors group">
-      <svg class="w-5 h-5 text-gray-500 mr-4 group-hover:text-gray-900 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-      <span class="text-[15px] font-medium text-gray-800 group-hover:text-gray-900">Home</span>
-    </a>
-    <div id="catDrop" class="flex flex-col max-h-[70vh] overflow-y-auto py-1 drop-in"></div>
-<script src="/assets/cat-nav.js?v=4"></script>
-    <div class="h-px bg-gray-100 w-10 mx-6 my-3"></div>
-    <a href="/tentang/" class="w-full flex items-center px-6 py-2 hover:bg-gray-50 transition-colors group">
-      <svg class="w-5 h-5 text-gray-500 mr-4 group-hover:text-gray-900 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-      <span class="text-[15px] font-medium text-gray-800 group-hover:text-gray-900">About</span>
-    </a>
-  </div>
-</aside>
-
-<header class="sticky top-0 z-40 bg-white border-b border-gray-100 pt-3 pb-4">
-  <div class="relative flex items-center justify-center max-w-2xl mx-auto px-4 sm:px-6">
-    <button onclick="toggleSidebar()" aria-label="Open menu" class="absolute left-4 sm:left-6 p-2 -ml-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16 M4 12h10 M4 18h16"/></svg>
-    </button>
-    <div class="text-center">
-      <h1 class="text-xl font-bold text-gray-900">Documentation</h1>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/asisten-ai-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo AI Assistant</h2>
+      <p class="art-desc">The AI assistant lives inside every Clincoo project and understands your workspace. It answers questions, writes and edits code, manages files, and even runs commands — you just ask in everyday language.</p>
     </div>
-  </div>
-</header>
-<main class="max-w-2xl mx-auto px-4 sm:px-6 pt-6 fade-in">
-<div class="relative mb-4">
-  <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"><svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
-  <input type="text" id="searchInput" class="w-full border border-gray-300 rounded-full py-2.5 pl-12 pr-5 text-base outline-none focus:border-gray-900 transition-colors shadow-sm" placeholder="Search articles..." oninput="filterCards(this)" autocomplete="off" spellcheck="false">
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-atur-heading-berjenjang/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Set a Heading Hierarchy</h2>
+      <p class="art-desc">A heading is the page outline, not a way to make text bigger. In the HTML file of an editor.clincoo.buzz project, use one h1 for the page title, h2 for sections, and h3 for subsections.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-atur-variabel-lingkungan/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Set Project Environment Variables</h2>
+      <p class="art-desc">Environment variables store a secret outside the files visitors download. Static HTML and JS stay public after deploy, so a key pasted there is effectively shared.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-atur-webhook-proyek/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Set Up Project Webhooks in Clincoo</h2>
+      <p class="art-desc">Webhooks are Clincoo&#x27;s official notification channel: they tell your own systems automatically whenever an important event happens in your project, such as a successful ClincooPay QRIS payment or a finished deploy. Without…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-baca-log-deploy-yang-gagal/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Read a Failed Deploy Log</h2>
+      <p class="art-desc">A failed deploy usually stops on one line that names a file or a command. Read that line in the log before pressing deploy again in editor.clincoo.buzz .</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-buat-layout-grid-dua-kolom/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Build a Two-Column Grid Layout</h2>
+      <p class="art-desc">Grid fits side-by-side cards that should line up. In editor.clincoo.buzz wrap the items in one element, then set the columns in CSS, not with a table.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-optimasi-gambar-sebelum-deploy/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Optimize Images Before Deploy</h2>
+      <p class="art-desc">A full camera photo is often larger than the HTML and CSS combined. Shrink it before deploy so the preview and the live site are both fast.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-pakai-terminal-di-editor/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Use the Terminal in the Clincoo Editor</h2>
+      <p class="art-desc">The terminal in editor.clincoo.buzz runs Linux commands in the project session. The session lasts a few minutes between commands, and tools installed in that session disappear when it ends.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-rata-tengah-elemen-dengan-flexbox/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Center an Element with Flexbox</h2>
+      <p class="art-desc">Centering that drifts when the width changes is usually still using a fixed margin. Flexbox calculates the leftover space. Edit in editor.clincoo.buzz and check the live preview.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/cara-tarik-saldo-dari-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">How to Withdraw Your Clincoo Earnings</h2>
+      <p class="art-desc">Earnings from ClincooPay QRIS payments land in your project balance on app.clincoo.buzz and can be withdrawn anytime from the same page. This guide shows how to cash out from the Payments page and read the withdrawal history.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/database-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo Database: Data Tables and Per-Project API</h2>
+      <p class="art-desc">The Database page in Clincoo project settings is where you store and manage your app&#x27;s data in clean tables — accessible through the API anytime. Every Clincoo project gets its own separate database, so data never mixes…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/fitur-database-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo Database: Store Data Straight from Your Backend Function</h2>
+      <p class="art-desc">Backend functions in Clincoo do more than run logic — every function automatically gets a built-in Database : a ready-to-use db object for storing data that persists permanently , with no database server to set up, no external…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/fitur-email-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo Email Feature: Complete Guide to Sending Email, Broadcast, and Audience</h2>
+      <p class="art-desc">The Clincoo Email feature lets every Clincoo project send real email — announcements, newsletters, and automated notifications from the sites you deploy — without setting up SMTP, signing up for a third-party service, or…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/integrasi-ai-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo AI Integrations: Models, Secrets, and Per-Project API</h2>
+      <p class="art-desc">The AI Integrations page in Clincoo project settings — labeled &quot;AI Router: models and secrets per project&quot; — is the AI control center for a single project. From here you set the default model used by your project&#x27;s AI…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/kelola-domain-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Manage Clincoo Domains and DNS: Verification, Records, SSL, to Cache</h2>
+      <p class="art-desc">The Domain page at app.clincoo.buzz/domain is the single place to manage your custom domain: verify ownership through nameservers, manage DNS records, monitor SSL certificates, and control caching. Once your domain is active…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/kunci-api-email-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo Email API Keys: Manage Access and Sender Identity</h2>
+      <p class="art-desc">The API Keys tab in your project settings (Email → Kunci API) is where you manage Clincoo Email API access: view and copy the project key, regenerate it, disable it, and set the sender identity — the display name and address…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/kolaborasi-tim/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Team Collaboration in Clincoo</h2>
+      <p class="art-desc">Collaboration lets several people work on the same project: invite members by email with a clear division of roles, so everyone knows what they can work on.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/mengirim-email-dari-situs-deploy/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Sending Email from Your Deployed Site in Clincoo</h2>
+      <p class="art-desc">Sites you deploy on Clincoo can send their own email — order confirmations, contact form notifications, even audience broadcasts. This guide walks you from zero to your first successful request.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/paket-dan-harga-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo Plans and Pricing</h2>
+      <p class="art-desc">Clincoo uses a freemium model: a free plan generous enough to genuinely get started, and paid plans as your needs grow. Current prices always show on the Subscription page in your account — this article explains the structure…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+  <a class="art-row" href="/dokumentasi/server-mcp-clincoo/index.en.html">
+    <div class="art-body">
+      <h2 class="art-title">Clincoo MCP Server: Manage Projects from External AI</h2>
+      <p class="art-desc">The Clincoo MCP Server turns every Clincoo project into a Model Context Protocol (MCP) server. That means your favorite external AI apps — Claude Desktop, Cursor, Windsurf, or any modern MCP client — can read and work on that…</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
 </div>
-<a data-card data-title="Clincoo AI Assistant" data-desc="What the AI assistant in every project can do: file management, terminal, web search, deploys, and its limits." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/asisten-ai-clincoo/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">Clincoo AI Assistant</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">What the AI assistant in every project can do: file management, terminal, web search, deploys, and its limits.</p>
-</a>
-<a data-card data-title="Clincoo Plans and Pricing" data-desc="The Starter, Pro, and Business plan structure: deploy quotas, collaborators, AI messages, domains, and how to upgrade." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/paket-dan-harga-clincoo/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">Clincoo Plans and Pricing</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">The Starter, Pro, and Business plan structure: deploy quotas, collaborators, AI messages, domains, and how to upgrade.</p>
-</a>
-<a data-card data-title="Team Collaboration in Clincoo" data-desc="How to invite teammates, collaborator quotas per plan, and habits for working cleanly as a team." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/kolaborasi-tim/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">Team Collaboration in Clincoo</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to invite teammates, collaborator quotas per plan, and habits for working cleanly as a team.</p>
-</a>
-<a data-card data-title="How to Use the Terminal in the Clincoo Editor" data-desc="How to run Linux commands in the Clincoo terminal: inspect the project folder, list files, and stop a process without deleting your work." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-pakai-terminal-di-editor/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Use the Terminal in the Clincoo Editor</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to run Linux commands in the Clincoo terminal: inspect the project folder, list files, and stop a process without deleting your work.</p>
-</a>
-<a data-card data-title="How to Set Project Environment Variables" data-desc="How to store an API key as an env var in Clincoo, keep it out of public code, and check that the value is actually read." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-atur-variabel-lingkungan/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Set Project Environment Variables</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to store an API key as an env var in Clincoo, keep it out of public code, and check that the value is actually read.</p>
-</a>
-<a data-card data-title="QRIS Payment Gateway API Reference (ClincooPay)" data-desc="The official ClincooPay reference: create QRIS transactions from your deployed site via /api/pay, check status, payment webhooks, and balance withdrawals." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/api-payment-gateway-qris/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">QRIS Payment Gateway API Reference (ClincooPay)</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">The official ClincooPay reference: create QRIS transactions from your deployed site via /api/pay, check status, payment webhooks, and balance withdrawals.</p>
-</a>
-<a data-card data-title="How to Center an Element with Flexbox" data-desc="How to center a box on the main and cross axis with Flexbox in the Clincoo editor, without a negative-margin trick." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-rata-tengah-elemen-dengan-flexbox/">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Center an Element with Flexbox</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to center a box on the main and cross axis with Flexbox in the Clincoo editor, without a negative-margin trick.</p>
-</a>
-<a data-card data-title="How to Optimize Images Before Deploy" data-desc="How to shrink images, pick a format, and set width plus alt before a Clincoo site is deployed." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-optimasi-gambar-sebelum-deploy/">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Optimize Images Before Deploy</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to shrink images, pick a format, and set width plus alt before a Clincoo site is deployed.</p>
-</a>
-<a data-card data-title="Sending Email from Your Deployed Site in Clincoo" data-desc="Enable the email feature per project, grab the API key from the Kunci API tab, then send messages from your deployed site with one request. Quota is 1,000 emails per month." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/mengirim-email-dari-situs-deploy/">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">Sending Email from Your Deployed Site in Clincoo</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">Enable the email feature per project, grab the API key from the Kunci API tab, then send messages from your deployed site with one request. Quota is 1,000 emails per month.</p>
-</a>
-<a data-card data-title="How to Build a Two-Column Grid Layout" data-desc="How to build two columns with CSS Grid that collapse to one column on a narrow screen, in the Clincoo editor." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-buat-layout-grid-dua-kolom/">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Build a Two-Column Grid Layout</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to build two columns with CSS Grid that collapse to one column on a narrow screen, in the Clincoo editor.</p>
-</a>
-<a data-card data-title="How to Set a Heading Hierarchy" data-desc="How to use one h1 and ordered headings on a Clincoo page so titles are easy for people and search engines to scan." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-atur-heading-berjenjang/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Set a Heading Hierarchy</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">How to use one h1 and ordered headings on a Clincoo page so titles are easy for people and search engines to scan.</p>
-</a>
-<a data-card data-title="How to Set Up Project Webhooks in Clincoo" data-desc="The official Clincoo webhook guide: register HTTPS endpoint URLs per project, pick GET or POST, ClincooPay payment notifications, and deploy event notifications." class="mb-4 block border border-gray-200 rounded-[0.5rem] p-5 hover:border-gray-400 transition-colors" href="/dokumentasi/cara-atur-webhook-proyek/index.en.html">
-  <div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">Documentation</span></div>
-  <h2 class="text-lg font-bold text-gray-900">How to Set Up Project Webhooks in Clincoo</h2>
-  <div class="h-px bg-gray-100 w-full my-3"></div>
-  <p class="text-sm text-gray-500 leading-relaxed">The official Clincoo webhook guide: register HTTPS endpoint URLs per project, pick GET or POST, ClincooPay payment notifications, and deploy event notifications.</p>
-</a>
-<div id="noResult" class="text-center py-12 text-gray-500" style="display:none">No articles found.</div>
+<footer class="seo-footer">© 2026 Clincoo · <a href="/">Clincoo Docs</a> · <a href="https://app.clincoo.buzz/">app.clincoo.buzz</a></footer>
 </main>
-<footer class="py-6 mt-12 border-t border-gray-200 text-center text-sm text-gray-500 w-full max-w-2xl mx-auto px-4 sm:px-6">
-  &copy; 2026 Clincoo. <span>All rights reserved.</span>
-</footer>
-
-<script>
-function toggleSidebar() {
-  var sidebar = document.getElementById('sidebar');
-  var overlay = document.getElementById('sidebarOverlay');
-  if (sidebar.classList.contains('-translate-x-full')) {
-    sidebar.classList.remove('-translate-x-full');
-    overlay.classList.remove('hidden');
-    setTimeout(function(){ overlay.classList.remove('opacity-0'); }, 10);
-  } else {
-    sidebar.classList.add('-translate-x-full');
-    overlay.classList.add('opacity-0');
-    setTimeout(function(){ overlay.classList.add('hidden'); }, 300);
-  }
-}
-function filterCards(input) {
-  var q = (input.value || '').toLowerCase();
-  var any = false;
-  var cards = document.querySelectorAll('[data-card]');
-  for (var i = 0; i < cards.length; i++) {
-    var el = cards[i];
-    var ok = (el.getAttribute('data-title') || '').toLowerCase().indexOf(q) > -1 ||
-             (el.getAttribute('data-desc') || '').toLowerCase().indexOf(q) > -1;
-    el.style.display = ok ? '' : 'none';
-    if (ok) any = true;
-  }
-  document.getElementById('noResult').style.display = any ? 'none' : '';
-}
-function toggleDrop() {
-  var drop = document.getElementById('catDrop');
-  var icon = document.getElementById('catDropIcon');
-  if (drop.classList.contains('hidden')) { drop.classList.remove('hidden'); drop.classList.add('flex'); icon.classList.add('rotate-180'); }
-  else { drop.classList.add('hidden'); drop.classList.remove('flex'); icon.classList.remove('rotate-180'); }
-}
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-32K4RH4DKN"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-32K4RH4DKN',{page_path:location.pathname});</script>
-</body>
-</html>
+</body></html>

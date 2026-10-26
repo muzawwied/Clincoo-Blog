@@ -85,3 +85,123 @@ body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Rob
 .seo-body .text-gray-500 { color:#6b7280; }
 .seo-body .text-gray-600 { color:#4b5563; }
 .seo-body .mt-1 { margin-top:0.25rem; }
+
+/* Komponen tabel dan kotak contoh pada artikel dokumentasi webhook */
+.seo-body .art-table { width:100%; border-collapse:collapse; font-size:0.9rem; margin:0 0 1rem; }
+.seo-body .art-table th, .seo-body .art-table td { border:1px solid #e5e7eb; padding:0.5rem 0.75rem; text-align:left; vertical-align:top; }
+.seo-body .art-table th { background:#f9fafb; color:#111827; font-weight:600; white-space:nowrap; }
+.seo-body .art-table code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.85em; background:#f3f4f6; padding:0.1rem 0.3rem; border-radius:0.25rem; color:#111827; }
+.seo-body .src-box { border:1px solid #e5e7eb; border-radius:0.75rem; padding:1rem 1.25rem; margin:0 0 1rem; background:#f9fafb; }
+.seo-body .src-box ol { padding-left:1.2rem; margin:0; }
+.seo-body .src-box li { margin-bottom:0.4rem; font-size:0.9rem; }
+.seo-search { width:100%; box-sizing:border-box; margin:0 0 1.25rem; padding:0.75rem 1rem; border:1px solid #e5e7eb; border-radius:9999px; font:inherit; outline:none; }
+.seo-search:focus { border-color:#9ca3af; }
+.seo-cards { display:grid; gap:0.75rem; }
+.seo-card { display:block; padding:1.1rem 1.2rem; border:1px solid #e5e7eb; border-radius:0.75rem; color:#111827; text-decoration:none; transition:border-color .15s ease, background .15s ease; }
+.seo-card:hover { border-color:#9ca3af; background:#fcfcfc; }
+.seo-card-label { color:#9ca3af; font-size:0.75rem; text-transform:uppercase; letter-spacing:0.05em; }
+.seo-card h2 { margin:0.4rem 0; font-size:1.1rem; font-weight:700; line-height:1.4; }
+.seo-card p { margin:0; color:#6b7280; font-size:0.9rem; line-height:1.6; }
+
+
+/* Legal-derived shared article theme v1 */
+:root{
+  --bg:#ffffff;--surface:#f7f8fa;--text:#111827;--muted:#6b7280;--line:#eceef3;
+  --link:#111827;--accent:#111827;--accent-soft:#f3f4f6;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:light;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+::selection{background:#e5e7eb;color:#111827}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.75 'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.seo-header{
+  position:sticky;top:0;z-index:40;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--bg);border:0;border-bottom:0;box-shadow:none;
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  padding:6px max(20px,calc((100% - 720px)/2));
+}
+.seo-header::after{content:none;display:none}
+.seo-back{
+  display:inline-flex;align-items:center;gap:8px;margin-left:-12px;padding:4px;
+  color:var(--muted);font-size:14px;font-weight:500;line-height:1.25rem;text-decoration:none;
+  background:transparent;border:0;border-radius:0;
+  transition:color .2s ease,transform .15s ease;
+}
+.seo-back svg{width:26px;height:26px;flex-shrink:0}
+.seo-back:hover{color:var(--text)}
+.seo-back:active{transform:scale(.96)}
+
+main.seo-main{max-width:720px;margin:0 auto;padding:16px 20px 64px}
+.seo-crumb{display:flex;align-items:center;gap:8px;margin:0 0 20px;font-size:14px;font-weight:500;line-height:1.4;flex-wrap:wrap}
+.seo-crumb a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+.seo-crumb a:hover{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.seo-crumb .sep{color:#d1d5db;font-weight:400}
+.seo-crumb [aria-current]{color:var(--text);font-weight:600}
+main.seo-main .seo-title{
+  margin:0 0 8px;font-size:clamp(28px,5vw,38px);line-height:1.2;font-weight:750;letter-spacing:-.02em;color:var(--text);
+}
+main.seo-main .seo-body{font-size:16px;color:var(--text);overflow-wrap:break-word;text-align:left}
+.seo-body p{margin:0 0 16px}
+.seo-body strong{font-weight:650}
+/* paragraf pembuka + tanggal pembaruan */
+.seo-body>p:first-child{font-size:17px;color:var(--muted);margin-top:16px}
+.legal-article .seo-body>p:nth-child(2){
+  display:inline-block;margin:0 0 8px;padding:4px 14px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line);font-size:13.5px;color:var(--muted);
+}
+.legal-article .seo-body>p:nth-child(2) em{font-style:normal}
+/* judul bagian */
+main.seo-main .seo-body h2{
+  margin:44px 0 14px;padding-top:28px;border-top:1px solid var(--line);
+  font-size:21px;line-height:1.35;font-weight:700;letter-spacing:-.01em;color:var(--text);
+  scroll-margin-top:72px;
+}
+.legal-article .seo-body>p:nth-child(2)+h2{margin-top:32px}
+/* daftar */
+main.seo-main .seo-body ul{margin:0 0 20px;padding:0 0 0 22px;list-style:disc}
+.seo-body li{margin:0 0 8px;padding-left:4px}
+.seo-body li::marker{color:var(--accent)}
+.seo-body li:last-child{margin-bottom:0}
+/* tabel — tanpa garis, latar lembut */
+main.seo-main .seo-body table{
+  width:100%;margin:0 0 24px;border-collapse:separate;border-spacing:0;
+  font-size:15px;line-height:1.65;border:0 !important;border-radius:14px;overflow:hidden;
+  background:var(--surface);table-layout:fixed;max-width:100%;min-width:0;
+}
+main.seo-main .seo-body th,main.seo-main .seo-body td{
+  padding:14px 18px;text-align:left;vertical-align:top;background:transparent;
+  border:0 !important;min-width:0;overflow-wrap:anywhere;
+}
+main.seo-main .seo-body thead th{padding-top:16px;padding-bottom:6px;font-size:13.5px;font-weight:600;color:var(--muted)}
+main.seo-main .seo-body tbody td:first-child{width:30%;font-weight:600;white-space:normal}
+main.seo-main .seo-body tbody tr:nth-child(even) td{background:rgba(255,255,255,.65)}
+/* tautan */
+.seo-body a{color:var(--link);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.seo-body a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+/* footer */
+.seo-footer{margin-top:48px;padding-top:8px;font-size:13.5px;color:var(--muted);text-align:left;border:0;border-top:0;box-shadow:none}
+.seo-footer::before{content:none;display:none}
+.seo-footer a{color:var(--muted);text-decoration:none;margin:0 2px}
+.seo-footer a:hover{color:var(--link);text-decoration:underline}
+/* mobile */
+@media (max-width:600px){
+  main.seo-main{padding:16px 18px 48px}
+  .seo-body h2{font-size:19px}
+  main.seo-main .seo-body table,main.seo-main .seo-body tbody{display:block;width:100%;min-width:0;max-width:100%;table-layout:auto}
+  main.seo-main .seo-body table{border-radius:14px}
+  main.seo-main .seo-body thead{display:none}
+  main.seo-main .seo-body tbody tr{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;width:100%;padding:14px 18px;background:transparent}
+  main.seo-main .seo-body tbody tr:nth-child(even){background:rgba(255,255,255,.65)}
+  main.seo-main .seo-body td,main.seo-main .seo-body tbody td:first-child,main.seo-main .seo-body tbody tr:nth-child(even) td{
+    display:block;width:100%;min-width:0;padding:0;background:none;white-space:normal;overflow-wrap:anywhere;
+  }
+  main.seo-main .seo-body tbody td:first-child{color:var(--text)}
+  main.seo-main .seo-body td:last-child{color:var(--muted);font-size:14.5px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.seo-header{display:none}main.seo-main{padding:0}.seo-body h2{break-after:avoid}.seo-body tr{break-inside:avoid}}

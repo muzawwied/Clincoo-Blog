@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://docs.clincoo.buzz/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/api-payment-gateway-qris/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/api-payment-gateway-qris/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/asisten-ai-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/asisten-ai-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-atur-heading-berjenjang/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-atur-heading-berjenjang/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-atur-variabel-lingkungan/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-atur-variabel-lingkungan/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-atur-webhook-proyek/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-atur-webhook-proyek/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-baca-log-deploy-yang-gagal/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-baca-log-deploy-yang-gagal/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-buat-layout-grid-dua-kolom/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-buat-layout-grid-dua-kolom/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-optimasi-gambar-sebelum-deploy/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-optimasi-gambar-sebelum-deploy/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-pakai-terminal-di-editor/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-pakai-terminal-di-editor/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-rata-tengah-elemen-dengan-flexbox/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-rata-tengah-elemen-dengan-flexbox/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-tarik-saldo-dari-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/cara-tarik-saldo-dari-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/database-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/database-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/fitur-database-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/fitur-database-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/fitur-email-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/fitur-email-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/integrasi-ai-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/integrasi-ai-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/kelola-domain-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/kelola-domain-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/kolaborasi-tim/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/kolaborasi-tim/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/kunci-api-email-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/kunci-api-email-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/mengirim-email-dari-situs-deploy/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/mengirim-email-dari-situs-deploy/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/paket-dan-harga-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/paket-dan-harga-clincoo/index.en.html</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/server-mcp-clincoo/</loc></url>
+  <url><loc>https://docs.clincoo.buzz/dokumentasi/server-mcp-clincoo/index.en.html</loc></url>
   <url><loc>https://docs.clincoo.buzz/legal/</loc></url>
   <url><loc>https://docs.clincoo.buzz/legal/index.en.html</loc></url>
   <url><loc>https://docs.clincoo.buzz/legal/syarat-dan-ketentuan/</loc></url>

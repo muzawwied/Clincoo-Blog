@@ -70,9 +70,11 @@
       --line: #eceef3;
       --card: #ffffff;
       --radius: 18px;
+      --gutter: 1rem;
       --shadow-sm: 0 1px 2px rgba(17, 24, 39, .04), 0 1px 3px rgba(17, 24, 39, .05);
       --shadow-md: 0 8px 24px -8px rgba(79, 70, 229, .18), 0 2px 6px rgba(17, 24, 39, .05);
     }
+    @media (min-width: 640px) { :root { --gutter: 1.5rem; } }
 
     html { scroll-behavior: smooth; }
 
@@ -92,32 +94,94 @@
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
-    /* Sidebar */
+    /* ---------- Sidebar ---------- */
     #sidebar {
-      transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
-      border-radius: 0 24px 24px 0;
-      background: rgba(255, 255, 255, .92);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+      border-radius: 0;
+      background: #fff;
+      box-shadow: 8px 0 32px -12px rgba(17, 24, 39, .18) !important;
+      --accent: #111827; --accent-soft: #f3f4f6;
     }
-    #sidebarOverlay {
-      transition: opacity 0.3s ease;
-      backdrop-filter: blur(3px);
-      -webkit-backdrop-filter: blur(3px);
-    }
-    #sidebar button {
-      border-radius: 12px;
-      margin: 0 10px;
-      width: calc(100% - 20px);
-      padding-left: 14px;
-      padding-right: 14px;
-      transition: background .2s ease, transform .15s ease;
-    }
-    #sidebar button:hover { background: var(--accent-soft); }
-    #sidebar button:active { transform: scale(.98); }
-    #sidebar button:hover i, #sidebar button:hover span { color: var(--accent); }
+    #sidebarOverlay { transition: opacity 0.3s ease; background: rgba(17, 24, 39, .35); }
+    #sidebar button, #sidebar a { -webkit-tap-highlight-color: transparent; }
+    #sidebar button:focus, #sidebar button:focus-visible,
+    #sidebar a:focus, #sidebar a:focus-visible { outline: none !important; box-shadow: none !important; }
 
-    /* Animations */
+    /* kepala */
+    .sb-head { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--line); flex-shrink: 0; }
+    .sb-head a { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+    .sb-head img { border-radius: 8px; }
+    .sb-head b { font-size: 17px; font-weight: 800; letter-spacing: -0.02em; }
+    .sb-close { margin-left: auto; width: 34px; height: 34px; display: grid; place-items: center; border-radius: 6px; color: #9ca3af; transition: background .15s ease, color .15s ease; }
+    .sb-close:hover { background: #f5f6f8; color: #111827; }
+
+    /* daftar kategori (dibuat oleh app.js) */
+    #countryDrop { padding: 8px 0 14px !important; animation: none; }
+    #countryDrop > button {
+      border-radius: 0;
+      padding: 10px 20px 6px !important;
+      margin-top: 4px;
+      font-size: 12px !important;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted) !important;
+      background: transparent !important;
+    }
+    #countryDrop > button:hover, #countryDrop > button.font-semibold { color: var(--ink) !important; }
+    #countryDrop > button svg { width: 14px; height: 14px; }
+    #countryDrop > div[id^="catList-"] {
+      margin: 0 20px 6px 26px;
+      padding: 0 !important;
+      border-left: 1px solid var(--line);
+    }
+    #countryDrop a {
+      display: block;
+      border-radius: 0;
+      padding: 7px 10px 7px 14px !important;
+      margin-left: -1px;
+      border-left: 2px solid transparent;
+      font-size: 13.5px !important;
+      line-height: 1.45;
+      color: #4b5563 !important;
+      transition: color .15s ease, border-color .15s ease;
+    }
+    #countryDrop a:hover { color: #111827 !important; background: transparent !important; }
+    #countryDrop a.font-semibold { color: #111827 !important; border-left-color: #111827; background: transparent; }
+
+    /* footer: pilihan bahasa */
+    .sb-foot { position: relative; border-top: 1px solid var(--line); padding: 10px 12px; flex-shrink: 0; }
+    #langBtn {
+      width: 100%; display: flex; align-items: center; gap: 10px;
+      padding: 9px 10px; border-radius: 6px;
+      font-size: 14px; font-weight: 500; color: #111827; text-align: left;
+      transition: background .15s ease;
+    }
+    #langBtn:hover { background: #f5f6f8; }
+    #langBtn svg { width: 18px; height: 18px; color: #6b7280; flex-shrink: 0; }
+    #langBtn svg:last-child { width: 15px; height: 15px; color: #9ca3af; margin-left: auto; }
+    #langDrop {
+      position: absolute; left: 12px; right: 12px; bottom: calc(100% - 2px);
+      margin-bottom: 6px;
+      background: #fff; border: 1px solid var(--line);
+      border-radius: 8px; padding: 4px;
+      box-shadow: 0 12px 32px -8px rgba(17, 24, 39, .25), 0 2px 6px rgba(17, 24, 39, .06);
+      z-index: 5;
+      animation: popUp .16s ease-out;
+    }
+    @keyframes popUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    #langDrop button {
+      width: 100%; border-radius: 5px;
+      padding: 9px 12px !important;
+      font-size: 13.5px !important; font-weight: 500;
+      color: #374151 !important; text-align: left;
+      transition: background .15s ease;
+    }
+    #langDrop button:hover, #langDrop button:active, #langDrop button:focus { background: #f5f6f8 !important; color: #111827 !important; }
+    #langDrop button.font-semibold { color: #111827 !important; font-weight: 700; }
+    #langDrop button.font-semibold::after { content: "\2713"; margin-left: auto; font-size: 12px; }
+
+    /* ---------- Animasi ---------- */
     .fade-in { animation: fadeIn 0.45s cubic-bezier(.2,.7,.2,1); }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes skeletonPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
@@ -125,70 +189,130 @@
     @keyframes dropIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
     .skeleton-card { animation: skeletonPulse 1.4s ease-in-out infinite; border-radius: var(--radius); }
 
-    /* Daftar artikel: dibuat lebih lembut & berasa "kartu" */
-    #app { padding-top: 6px; }
-    #articleList { display: flex; flex-direction: column; gap: 14px; }
-
-    #articleList a,
-    #articleList article,
-    #articleList [onclick] {
-      transition: transform .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, border-color .25s ease, background .25s ease;
-      -webkit-tap-highlight-color: transparent;
+    /* ---------- Header (dibuat oleh app.js) ---------- */
+    #app > header {
+      position: sticky; top: 0; z-index: 40;
+      margin: 0 calc(-1 * var(--gutter));
+      padding: 12px var(--gutter) !important;
+      background: rgba(250, 251, 255, .8) !important;
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid rgba(236, 238, 243, .9) !important;
     }
-
-    #articleList article,
-    #articleList > div > a,
-    #articleList > a,
-    #articleList > div[onclick],
-    #articleList > div > div[onclick] {
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-      padding: 16px 18px;
-    }
-
-    #articleList article:hover,
-    #articleList > div > a:hover,
-    #articleList > a:hover,
-    #articleList > div[onclick]:hover,
-    #articleList > div > div[onclick]:hover {
-      transform: translateY(-2px);
-      border-color: #c7d2fe;
-      box-shadow: var(--shadow-md);
-    }
-
-    #articleList article:active,
-    #articleList a:active { transform: scale(.985); }
-
-    #articleList h1, #articleList h2, #articleList h3 {
-      letter-spacing: -0.015em;
-      line-height: 1.3;
+    /* tombol menu — ikon polos, tanpa latar */
+    #app > header button {
+      width: 40px; height: 40px; flex-shrink: 0;
+      margin-left: -8px !important;
+      padding: 0 !important;
+      display: grid; place-items: center;
+      background: transparent !important;
+      border: 0 !important; box-shadow: none !important;
+      border-radius: 0 !important;
       color: var(--ink);
+      transition: transform .15s ease, color .2s ease;
     }
-    #articleList h2 { font-weight: 800; }
-    #articleList p { color: var(--muted); }
-    #articleList img { border-radius: 14px; }
-    #articleList a { text-decoration: none; }
-    #articleList a:hover h1, #articleList a:hover h2, #articleList a:hover h3 { color: var(--accent); }
-
-    /* Judul kategori / pemisah jadi lebih ramah */
-    #articleList h1, #articleList h2 { position: relative; }
-
-    /* Fokus keyboard */
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 10px;
+    #app > header button:hover { background: transparent !important; color: var(--accent); }
+    #app > header button:active { transform: scale(.9); }
+    #app > header > .relative > button { left: 0; }
+    /* tombol kembali — teks + ikon polos */
+    #app > header > div[onclick] {
+      display: inline-flex;
+      margin-left: -4px !important;
+      padding: 6px 4px !important;
+      background: transparent !important;
+      border: 0 !important; box-shadow: none !important;
+      border-radius: 0 !important;
+      transition: color .2s ease, transform .15s ease;
     }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--line) !important;
-      color: var(--muted);
+    #app > header > div[onclick]:hover { background: transparent !important; color: var(--accent) !important; }
+    #app > header > div[onclick]:active { transform: scale(.96); }
+    /* kolom pencarian */
+    #searchInput {
+      background: #fff;
+      border: 1px solid var(--line) !important;
+      border-radius: 999px;
+      padding-top: 12px; padding-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
+    #searchInput:focus {
+      border-color: #9ca3af !important;
+      box-shadow: var(--shadow-sm);
+      outline: none;
+    }
+    #app > header h2 { letter-spacing: -0.02em; }
 
-    /* Scrollbar tipis */
+    /* ---------- Kartu artikel ---------- */
+    /* daftar polos: tanpa kotak, hanya garis tipis pemisah */
+    #homeCards { display: flex; flex-direction: column; }
+    #homeCards > div {
+      margin: 0 !important;
+      background: transparent;
+      border: 0 !important;
+      border-bottom: 1px solid var(--line) !important;
+      border-radius: 0 !important;
+      padding: 18px 2px !important;
+      box-shadow: none;
+    }
+    #homeCards > div:last-child { border-bottom: 0 !important; }
+    #homeCards span.uppercase {
+      color: var(--accent) !important;
+      font-weight: 700;
+      letter-spacing: .06em;
+    }
+    #homeCards h3 { letter-spacing: -0.015em; line-height: 1.35; transition: color .2s ease; }
+    #homeCards > div:hover h3 { color: var(--accent); }
+    #homeCards .h-px { display: none; }
+    #homeCards p { margin-top: 6px; }
+
+    /* ---------- Halaman artikel / tentang ---------- */
+    #app article h1 { letter-spacing: -0.025em; }
+    #app .prose {
+      text-align: left !important;
+      line-height: 1.8 !important;
+      color: #1f2937;
+    }
+    #app .prose h2 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.015em; margin: 2rem 0 .75rem; color: var(--ink); }
+    #app .prose h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 .5rem; color: var(--ink); }
+    #app .prose p { margin: 0 0 1rem; }
+    #app .prose ul { list-style: disc; padding-left: 1.4rem; margin: 0 0 1rem; }
+    #app .prose ol { list-style: decimal; padding-left: 1.4rem; margin: 0 0 1rem; }
+    #app .prose li { margin: .3rem 0; }
+    #app .prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    #app .prose img { border-radius: 14px; max-width: 100%; height: auto; }
+    #app .prose code {
+      background: var(--accent-soft); color: #3730a3;
+      padding: 2px 6px; border-radius: 6px; font-size: .9em;
+    }
+    #app .prose pre {
+      background: #0f172a; color: #e2e8f0;
+      padding: 16px 18px; border-radius: 14px;
+      overflow-x: auto; margin: 0 0 1.25rem; font-size: .88rem; line-height: 1.6;
+    }
+    #app .prose pre code { background: transparent; color: inherit; padding: 0; }
+    #app .prose blockquote {
+      border-left: 4px solid #c7d2fe; background: var(--accent-soft);
+      padding: 10px 16px; border-radius: 0 12px 12px 0; margin: 0 0 1rem; color: #3730a3;
+    }
+    #app .prose table { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: .92rem; display: block; overflow-x: auto; }
+    #app .prose th, #app .prose td { border: 1px solid var(--line); padding: 8px 12px; text-align: left; }
+    #app .prose th { background: #f8fafc; font-weight: 700; }
+
+    /* Sumber informasi */
+    #sourceDetails a {
+      background: transparent !important;
+      border: 0 !important;
+      border-bottom: 1px solid var(--line) !important;
+      border-radius: 0 !important;
+      padding: 12px 2px !important;
+    }
+    #sourceDetails a:last-child { border-bottom: 0 !important; }
+
+    /* ---------- Umum ---------- */
+    a:focus, button:focus, input:focus, [onclick]:focus { outline: none; }
+    a:focus-visible, button:focus-visible { outline: 1px solid #9ca3af; outline-offset: 2px; }
+    #app > header button:active, #app > header > div[onclick]:active { transform: none !important; }
+    footer { border-top: 1px solid var(--line) !important; color: var(--muted); }
     * { scrollbar-width: thin; scrollbar-color: #d1d5db transparent; }
 
     @media (prefers-reduced-motion: reduce) {
@@ -240,47 +364,561 @@
 
 <div id="sidebarOverlay" class="fixed inset-0 bg-black/40 z-[60] hidden opacity-0" onclick="toggleSidebar()"></div>
 
-<aside id="sidebar" class="fixed top-0 left-0 h-full w-72 z-[70] transform -translate-x-full shadow-2xl flex flex-col border-r border-gray-100">
-  <div class="p-3 border-b border-gray-100 flex items-center">
-    <div class="flex items-center justify-center text-gray-900 flex-shrink-0">
-      <img src="logo.png" width="42" height="42" alt="Clincoo" style="border-radius:0.8rem">
-    </div>
-    <span class="text-xl font-extrabold tracking-tight text-gray-900 ml-2.5">Clincoo Docs</span>
-    <button onclick="toggleSidebar()" aria-label="Tutup menu" class="ml-auto p-1.5 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors" style="width:auto;margin:0;padding:6px;">
+<aside id="sidebar" class="fixed top-0 left-0 h-full w-72 z-[70] transform -translate-x-full flex flex-col border-r border-gray-100">
+  <div class="sb-head">
+    <a href="/" aria-label="Clincoo Docs">
+      <img src="logo.png" width="38" height="38" alt="Clincoo">
+      <b>Clincoo Docs</b>
+    </a>
+    <button onclick="toggleSidebar()" aria-label="Tutup menu" class="sb-close">
       <i data-lucide="x" class="w-5 h-5"></i>
     </button>
   </div>
-  <div class="flex flex-col gap-0.5 flex-grow overflow-y-auto hide-scrollbar py-2 pb-4">
-    <h3 class="px-6 pt-3 text-[11px] font-bold text-gray-400 mb-1.5 uppercase tracking-widest">Menu</h3>
-    <button onclick="goHomeFromMenu()" class="w-full flex items-center py-2.5 transition-colors group text-left">
-      <i data-lucide="home" class="w-5 h-5 text-gray-500 mr-4 transition-colors"></i>
-      <span id="ctaHomeText" class="text-[15px] font-semibold text-gray-800">Beranda</span>
-    </button>
-    <div id="countryDrop" class="flex flex-col max-h-[70vh] overflow-y-auto py-1 drop-in"></div>
-    <button onclick="toggleDrop('langDrop')" class="w-full flex items-center py-2.5 transition-colors group text-left">
-      <i data-lucide="languages" class="w-5 h-5 text-gray-500 mr-4 transition-colors flex-shrink-0"></i>
-      <span id="ctaLangText" class="text-[15px] font-semibold text-gray-800 flex-1">Indonesia</span>
-      <i data-lucide="chevron-down" id="langDropIcon" class="w-4 h-4 text-gray-400 transition-transform flex-shrink-0"></i>
-    </button>
-    <div id="langDrop" class="hidden flex-col py-1 drop-in"></div>
-    <div class="h-px bg-gray-100 w-10 mx-6 my-3"></div>
-    <button onclick="goToAbout()" class="w-full flex items-center py-2.5 transition-colors group text-left">
-      <i data-lucide="info" class="w-5 h-5 text-gray-500 mr-4 transition-colors flex-shrink-0"></i>
-      <span id="ctaAboutText" class="text-[15px] font-semibold text-gray-800 flex-1">Tentang</span>
+  <div id="countryDrop" class="flex flex-col flex-1 min-h-0 overflow-y-auto hide-scrollbar"></div>
+  <div class="sb-foot">
+    <div id="langDrop" class="hidden flex-col"></div>
+    <button id="langBtn" onclick="toggleDrop('langDrop')" aria-haspopup="true">
+      <i data-lucide="languages"></i>
+      <span id="ctaLangText">Indonesia</span>
+      <i data-lucide="chevrons-up-down" id="langDropIcon"></i>
     </button>
   </div>
 </aside>
 
 <main class="flex-1 w-full max-w-2xl mx-auto px-4 sm:px-6 pb-8">
-  <div id="app" class="fade-in">
-    <div id="articleList"></div>
-  </div>
+  <div id="app" class="fade-in"></div>
 </main>
 
 <footer class="py-6 mt-12 text-center text-sm w-full max-w-2xl mx-auto px-4 sm:px-6">
   &copy; 2026 Clincoo. <span id="footerText">Seluruh hak cipta dilindungi.</span>
 </footer>
-<script src="loader.js?v=15"></script>
-<script>if (window.lucide) lucide.createIcons();</script>
+
+<!-- File data (dimuat berurutan; kalau ada yang gagal, yang lain tetap jalan) -->
+<script src="data_clincoo.js"></script>
+<script src="data_komunitas.js"></script>
+<script src="data_komunitas_extra.js"></script>
+<script src="data_komunitas_extra2.js"></script>
+
+<!-- app.js (digabung langsung di sini) -->
+<script>
+// Merge semua file data per negara ke dalam satu object 'countries'
+(function() {
+  if (typeof window.countryDataFiles === 'undefined') window.countryDataFiles = {};
+  window.countries = window.countryDataFiles;
+})();
+
+// =============================================
+// STATE
+// =============================================
+let currentLang = 'id';
+let currentView = 'home'; // 'home' | 'country' | 'article' | 'about'
+let currentCountryId = null;
+let currentArticleId = null;
+
+// =============================================
+// BAHASA
+// =============================================
+const languages = {
+  'id': { nativeName: 'Indonesia', ui: { home: 'Beranda', about: 'Tentang', searchPh: 'Cari artikel...', noResult: 'Tidak ada artikel ditemukan.', footer: 'Seluruh hak cipta dilindungi.', source: 'Sumber Informasi', back: 'Kembali', country: 'Kategori', articles: 'artikel' } },
+  'en': { nativeName: 'English',   ui: { home: 'Home',    about: 'About',   searchPh: 'Search articles...', noResult: 'No articles found.',           footer: 'All rights reserved.',              source: 'Information Source', back: 'Back',    country: 'Category', articles: 'articles' } }
+};
+
+
+// =============================================
+// HELPER
+// =============================================
+function ui() { return languages[currentLang].ui; }
+
+function getAllArticles() {
+  // Kumpulkan semua artikel dari semua negara untuk halaman beranda
+  let all = [];
+  for (const cId in countries) {
+    const c = countries[cId];
+    c.articles.forEach(art => {
+      const langData = art.langs[currentLang] || art.langs['id'];
+      all.push({
+        countryId: cId,
+        articleId: art.id,
+        countryName: c.names[currentLang] || c.names['id'],
+        ...langData
+      });
+    });
+  }
+  return all;
+}
+
+function getCountryArticles(countryId) {
+  const c = countries[countryId];
+  if (!c) return [];
+  return c.articles.map(art => {
+    const langData = art.langs[currentLang] || art.langs['id'];
+    return { countryId, articleId: art.id, countryName: c.names[currentLang] || c.names['id'], ...langData };
+  });
+}
+
+
+// =============================================
+// SIDEBAR
+// =============================================
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  if (sidebar.classList.contains('-translate-x-full')) {
+    sidebar.classList.remove('-translate-x-full');
+    document.body.style.overflow = 'hidden';
+    overlay.classList.remove('hidden');
+    setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+  } else {
+    sidebar.classList.add('-translate-x-full');
+    document.body.style.overflow = '';
+    overlay.classList.add('opacity-0');
+    setTimeout(() => overlay.classList.add('hidden'), 300);
+  }
+}
+
+function toggleDrop(id) {
+  const drop = document.getElementById(id);
+  const icon = document.getElementById(id + 'Icon');
+  if (!drop) return;
+  const isHidden = drop.classList.contains('hidden');
+  drop.classList.toggle('hidden', !isHidden);
+  drop.classList.toggle('flex', isHidden);
+  icon && icon.classList.toggle('rotate-180', isHidden);
+}
+
+function updateSidebarUI() {
+  const u = ui();
+  const setTxt = (id, txt) => { const el = document.getElementById(id); if (el) el.innerText = txt; };
+  setTxt('ctaHomeText', u.home);
+  setTxt('ctaCatText', u.country);
+  setTxt('ctaAboutText', u.about);
+  setTxt('footerText', u.footer);
+  setTxt('ctaLangText', languages[currentLang].nativeName);
+
+  // Populate bahasa
+  const langDrop = document.getElementById('langDrop');
+  if (langDrop) {
+    langDrop.innerHTML = '';
+    for (const key in languages) {
+      const btn = document.createElement('button');
+      const langActive = currentLang === key;
+      btn.className = 'w-full flex items-center px-14 py-2 text-sm transition-colors ' + (langActive ? 'font-semibold text-gray-900' : 'text-gray-600 hover:bg-gray-50');
+      btn.innerText = languages[key].nativeName;
+      btn.onclick = () => changeLanguage(key);
+      langDrop.appendChild(btn);
+    }
+  }
+
+  // Populate kategori di sidebar — tiap kategori bisa dibuka jadi daftar judul artikelnya
+  const countryDropEl = document.getElementById('countryDrop');
+  if (countryDropEl) {
+    countryDropEl.innerHTML = '';
+    for (const cId in countries) {
+      const c = countries[cId];
+      if (!c.articles || !c.articles.length) continue; // lewati kategori kosong
+      const name = c.names[currentLang] || c.names['id'];
+      const isActive = currentCountryId === cId && currentView === 'country';
+      const btn = document.createElement('button');
+      btn.className = 'w-full flex items-center px-6 py-2 text-left transition-colors text-sm ' + (isActive ? 'font-semibold text-gray-900' : 'text-gray-600 hover:bg-gray-50');
+      btn.innerHTML = '<span class="line-clamp-1 flex-1">' + name + '</span>' +
+        '<svg class="w-4 h-4 text-gray-400 transition-transform flex-shrink-0' + (isActive ? ' rotate-180' : '') + '" id="catIcon-' + cId + '" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>';
+      btn.onclick = () => toggleCatDrop(cId);
+      countryDropEl.appendChild(btn);
+
+      const list = document.createElement('div');
+      list.id = 'catList-' + cId;
+      list.className = 'flex flex-col pb-1' + (isActive ? '' : ' hidden');
+      c.articles.forEach(art => {
+        const ld = art.langs[currentLang] || art.langs['id'];
+        const a = document.createElement('a');
+        a.href = '/' + cId + '/' + art.id + '/' + (currentLang === 'en' ? 'index.en.html' : '');
+        const artActive = currentView === 'article' && currentCountryId === cId && currentArticleId === art.id;
+        a.className = 'w-full flex items-center px-12 py-1.5 text-left transition-colors text-[13px] ' + (artActive ? 'font-semibold text-gray-900' : 'text-gray-600 hover:bg-gray-50');
+        a.innerHTML = '<span class="line-clamp-2">' + ld.title + '</span>';
+        list.appendChild(a);
+      });
+      countryDropEl.appendChild(list);
+    }
+  }
+}
+
+function toggleCatDrop(cId) {
+  const drop = document.getElementById('catList-' + cId);
+  const icon = document.getElementById('catIcon-' + cId);
+  if (!drop) return;
+  drop.classList.toggle('hidden');
+  drop.classList.toggle('flex');
+  icon && icon.classList.toggle('rotate-180');
+}
+
+function changeLanguage(key) {
+  currentLang = key;
+  updateSidebarUI();
+  if (currentView === 'home') renderHome();
+  else if (currentView === 'country') renderCountry(currentCountryId);
+  else if (currentView === 'article') renderArticle(currentCountryId, currentArticleId);
+  else if (currentView === 'about') renderAbout();
+  // Close dropdown
+  const drop = document.getElementById('langDrop');
+  if (drop) { drop.classList.add('hidden'); drop.classList.remove('flex'); }
+  const icon = document.getElementById('langDropIcon');
+  icon && icon.classList.remove('rotate-180');
+}
+
+function goArticle(countryId, articleId) {
+  location.href = '/' + countryId + '/' + articleId + '/' + (currentLang === 'en' ? 'index.en.html' : '');
+}
+
+function goCountry(countryId) {
+  location.href = '/' + countryId + '/' + (currentLang === 'en' ? 'index.en.html' : '');
+}
+
+function selectCountry(countryId) {
+  // Tutup dropdown negara
+  const drop = document.getElementById('countryDrop');
+  if (drop) { drop.classList.add('hidden'); drop.classList.remove('flex'); }
+  const icon = document.getElementById('countryDropIcon');
+  if (icon) icon.classList.remove('rotate-180');
+
+  toggleSidebar();
+  goCountry(countryId);
+}
+
+function goHomeFromMenu() {
+  toggleSidebar();
+  currentCountryId = null;
+  currentView = 'home';
+  updateSidebarUI();
+  renderHome();
+}
+
+function goToAbout() {
+  toggleSidebar();
+  location.href = '/tentang/';
+}
+
+// =============================================
+// RENDER
+// =============================================
+const appContainer = () => document.getElementById('app-container') || document.getElementById('app');
+
+function makeHeader(backFn, backLabel) {
+  return '<header class="sticky top-0 py-3 z-40 bg-white border-b border-gray-100">' +
+    '<div class="flex items-center text-gray-500 cursor-pointer hover:text-gray-900 transition-colors -ml-2 p-2 rounded-md hover:bg-gray-100" onclick="' + backFn + '">' +
+    '<svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>' +
+    '<span class="font-medium text-sm">' + backLabel + '</span></div></header>';
+}
+
+// BERANDA — semua artikel campur
+function renderHome(searchQuery, skipPush) {
+  currentView = 'home';
+  searchQuery = searchQuery || '';
+  const u = ui();
+  let all = getAllArticles();
+
+  if (searchQuery.trim()) {
+    const q = searchQuery.toLowerCase();
+    all = all.filter(a => a.title.toLowerCase().includes(q) || a.desc.toLowerCase().includes(q) || a.countryName.toLowerCase().includes(q));
+  }
+
+  let cardsHtml = '';
+  if (all.length === 0) {
+    cardsHtml = '<div class="text-center py-12 text-gray-500">' + u.noResult + '</div>';
+  } else {
+    all.forEach(item => {
+      cardsHtml += '<div class="mb-4 border border-gray-200 rounded-[0.5rem] p-5 cursor-pointer hover:border-gray-400 transition-colors" onclick="goArticle(\'' + item.countryId + '\',\'' + item.articleId + '\')">' +
+        '<div class="mb-2">' +
+        '<span class="text-xs font-medium text-gray-400 uppercase tracking-wide">' + item.countryName + '</span>' +
+        '</div>' +
+        '<h3 class="text-lg font-bold text-gray-900">' + item.title + '</h3>' +
+        '<div class="h-px bg-gray-100 w-full my-3"></div>' +
+        '<p class="text-sm text-gray-500 leading-relaxed">' + item.desc + '</p>' +
+        '</div>';
+    });
+  }
+
+  appContainer().innerHTML =
+    '<header class="sticky top-0 z-40 bg-white border-b border-gray-100 pt-3 pb-3">' +
+    '<div class="flex items-center gap-3">' +
+    '<button onclick="toggleSidebar()" class="p-2 -ml-2 text-gray-700 hover:bg-gray-100 rounded-md focus:outline-none transition-colors flex-shrink-0">' +
+    '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16 M4 12h10 M4 18h16"/></svg>' +
+    '</button>' +
+    '<div class="relative flex-grow">' +
+    '<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"><svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>' +
+    '<input type="text" id="searchInput" class="w-full border border-gray-300 rounded-full py-2.5 pl-12 pr-5 text-base outline-none focus:border-gray-900 transition-colors shadow-sm" placeholder="' + u.searchPh + '" value="' + searchQuery + '" oninput="handleSearch(this)" autocomplete="off" spellcheck="false">' +
+    '</div>' +
+    '</header>' +
+    '<div class="pt-6 fade-in" id="homeCards">' + cardsHtml + '</div>';
+
+  window.scrollTo(0, 0);
+}
+
+// HALAMAN NEGARA — daftar artikel negara itu
+function renderCountry(countryId, skipPush) {
+  currentView = 'country';
+  currentCountryId = countryId;
+  if (!skipPush) {
+    const url = '#/' + countryId;
+    if (location.hash !== url) {
+      history.pushState({view:'country', countryId: countryId}, '', url);
+    }
+  }
+  const c = countries[countryId];
+  if (!c) { renderHome(); return; }
+  const u = ui();
+  const name = c.names[currentLang] || c.names['id'];
+  const arts = getCountryArticles(countryId);
+
+  let cardsHtml = '';
+  arts.forEach(item => {
+    cardsHtml += '<div class="mb-4 border border-gray-200 rounded-[0.5rem] p-5 cursor-pointer hover:border-gray-400 transition-colors" onclick="goArticle(\'' + countryId + '\',\'' + item.articleId + '\')">' +
+      '<div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">' + name + '</span></div>' +
+      '<h3 class="text-lg font-bold text-gray-900">' + item.title + '</h3>' +
+      '<div class="h-px bg-gray-100 w-full my-3"></div>' +
+      '<p class="text-sm text-gray-500 leading-relaxed">' + item.desc + '</p>' +
+      '</div>';
+  });
+
+  appContainer().innerHTML =
+    '<header class="sticky top-0 pt-3 pb-4 z-40 bg-white border-b border-gray-100">' +
+    '<div class="relative flex items-center justify-center">' +
+    '<button onclick="toggleSidebar()" class="absolute left-0 p-2 -ml-2 text-gray-700 hover:bg-gray-100 rounded-md focus:outline-none transition-colors">' +
+    '<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16 M4 12h10 M4 18h16"/></svg>' +
+    '</button>' +
+    '<div class="text-center">' +
+    '<h2 class="text-xl font-bold text-gray-900">' + name + '</h2>' +
+    '<p class="text-xs text-gray-400 mt-0.5">' + arts.length + ' ' + u.articles + '</p>' +
+    '</div>' +
+    '</div>' +
+    '</header>' +
+    '<div class="pt-6 fade-in" id="homeCards">' + cardsHtml + '</div>';
+
+  window.scrollTo(0, 0);
+}
+
+// HALAMAN ARTIKEL — isi artikel lengkap
+function renderArticle(countryId, articleId, skipPush) {
+  currentView = 'article';
+  currentCountryId = countryId;
+  currentArticleId = articleId;
+  if (!skipPush) {
+    const url = '#/' + countryId + '/' + articleId;
+    if (location.hash !== url) {
+      history.pushState({view:'article', countryId: countryId, articleId: articleId}, '', url);
+    }
+  }
+
+  const c = countries[countryId];
+  if (!c) { renderHome(); return; }
+  const artObj = c.articles.find(a => a.id === articleId);
+  if (!artObj) { renderCountry(countryId); return; }
+  const item = artObj.langs[currentLang] || artObj.langs['id'];
+  const u = ui();
+
+  appContainer().innerHTML =
+    makeHeader('renderCountry(\'' + countryId + '\')', u.back) +
+    '<article class="pt-8 pb-10 fade-in">' +
+    '<div class="flex items-center justify-center mb-3">' +
+    '<span class="text-sm font-medium text-gray-400">' + (c.names[currentLang] || c.names['id']) + '</span>' +
+    '</div>' +
+    '<h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 leading-tight text-center">' + item.title + '</h1>' +
+    '<div class="prose prose-gray max-w-none text-gray-800 leading-loose text-justify space-y-4">' + item.content + '</div>' +
+    '</article>' +
+    (function(){
+      var hasSource = !!(item.sourceUrl || item.sourceUrl2 || item.sourceUrl3);
+      if (!hasSource) return '';
+      return '<div class="mt-4 border-t border-gray-200 pt-6 pb-12">' +
+    '<div class="flex items-center text-gray-500 cursor-pointer group" onclick="toggleSourceInfo()">' +
+    '<svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>' +
+    '<span class="ml-3 font-medium text-sm group-hover:text-gray-900 transition-colors">' + u.source + '</span>' +
+    '<svg id="sourceIconArrow" class="w-5 h-5 ml-auto text-gray-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>' +
+    '</div>' +
+    (function(){
+      var srcs=[
+        {url:item.sourceUrl,  name:item.source,  snip:item.sourceSnippet},
+        {url:item.sourceUrl2, name:item.source2, snip:item.sourceSnippet2},
+        {url:item.sourceUrl3, name:item.source3, snip:item.sourceSnippet3}
+      ];
+      var h='<div id="sourceDetails" class="hidden mt-4 space-y-3">';
+      srcs.forEach(function(s){
+        if(!s.url) return;
+        var d=s.url.replace(/https?:\/\//,'').split('/')[0];
+        h+='<a href="'+s.url+'" target="_blank" rel="noopener" class="block p-4 border border-gray-200 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">'
+          +'<div class="flex items-start gap-3">'
+          +'<span style="position:relative;display:inline-block;width:2.5rem;height:2.5rem;flex-shrink:0;margin-top:0.125rem">'
+          +'<img src="https://www.google.com/s2/favicons?domain='+d+'&sz=64" style="width:2.5rem;height:2.5rem;border-radius:0.25rem;border:1px solid #e5e7eb;background:#fff;position:absolute;top:0;left:0" onerror="this.style.opacity=\'0\';this.nextElementSibling.style.display=\'flex\'">'
+          +'<span style="display:none;width:2.5rem;height:2.5rem;border-radius:0.25rem;border:1px solid #e5e7eb;background:#dbeafe;color:#2563eb;font-weight:700;font-size:0.875rem;align-items:center;justify-content:center;position:absolute;top:0;left:0">'+(s.name||d).charAt(0).toUpperCase()+'</span>'
+          +'</span>'
+          +'<div class="min-w-0"><div class="font-bold text-gray-900 text-sm">'+(s.name||d)+'</div>'
+          +'<div class="text-xs text-blue-500 truncate mt-0.5">'+d+'</div>'
+          +(s.snip?'<div class="text-xs text-gray-500 mt-1 leading-relaxed">'+s.snip+'</div>':'')
+          +'</div></div></a>';
+      });
+      h+='</div>';
+      return h;
+    })()+
+      '</div></div>';
+    })()
+
+  window.scrollTo(0, 0);
+}
+
+// TENTANG
+function renderAbout(skipPush) {
+  if (!skipPush) {
+    if (location.hash !== '#/about') {
+      history.pushState({view:'about'}, '', '#/about');
+    }
+  }
+  currentView = 'about';
+  const u = ui();
+  
+  // Konten panjang 5 Paragraf mengenai visi misi global & sharing
+  const contentId = `
+    <p class="mb-4"><strong>Clincoo Docs</strong> adalah rumah resmi untuk artikel, panduan, dan tips seputar Clincoo — ruang kerja web lengkap dengan editor kode, template siap pakai, terminal terintegrasi, dan deploy dalam satu tempat. Blog ini hadir agar setiap fitur Clincoo punya panduan yang mudah diikuti siapa pun.</p>
+    <p class="mb-4">Kami percaya membuat website seharusnya tidak butuh gelar komputer. Karena itu setiap artikel di sini ditulis dengan bahasa sederhana, langkah yang jelas, dan contoh nyata — dari memulai akun pertama sampai menerbitkan situs ke seluruh dunia.</p>
+    <p class="mb-4">AI di Clincoo adalah asisten: ia membantu menjelaskan, menyarankan, dan mempercepat pekerjaanmu — kamu tetap pemegang kendali. Blog ini mengikuti prinsip yang sama: kami menemani, bukan menggantikanmu.</p>
+    <p class="mb-4">Semua artikel disusun per kategori supaya kamu cepat menemukan yang dicari, baik dalam bahasa Indonesia maupun Inggris — dan daftarnya terus bertambah.</p>
+    <p class="mb-4">Selamat berkarya. Mulai dari artikel mana pun, dan jangan lupa buka app.clincoo.buzz untuk langsung mencoba.</p>
+  `;
+
+  // Terapkan konten yang sama untuk mencegah error bahasa, bisa diterjemahkan nanti
+  const aboutContent = {
+    id: { title: 'Tentang Clincoo Docs', body: contentId },
+    en: { title: 'About Clincoo Docs', body: contentId }
+  };
+  
+  const d = aboutContent[currentLang] || aboutContent['id'];
+
+  const wikybookLogo = '<img src="logo.png" width="50" height="50" alt="Clincoo" style="border-radius:0.6rem">';
+
+  const socialIcons = '<div class="mt-6"><a href="https://app.clincoo.buzz/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gray-900 text-white text-sm font-semibold hover:bg-gray-700 transition-colors">Buka Aplikasi Clincoo</a></div>';
+
+  appContainer().innerHTML =
+    makeHeader('renderHome()', u.back) +
+    '<article class="pt-8 pb-10 fade-in">' +
+    '<div class="flex items-center justify-center mb-3">' +
+    '<span class="text-sm font-medium text-gray-400">Informasi Platform</span>' +
+    '</div>' +
+    '<h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-8 leading-tight text-center">' + d.title + '</h1>' +
+    '<div class="prose prose-gray max-w-none text-gray-800 leading-loose text-justify space-y-4">' + d.body + '</div>' +
+    '<div class="mt-12 border-t border-gray-200 pt-8 flex flex-col items-center">' +
+    '<div class="text-gray-900 mb-3">' + wikybookLogo + '</div>' +
+    '<h3 class="text-lg font-bold text-gray-900 tracking-tight">Clincoo Docs</h3>' +
+    '<p class="text-sm text-gray-500 mt-1">Artikel, Panduan & Tips Clincoo</p>' +
+    socialIcons +
+    '</div>' +
+    '</article>';
+
+  window.scrollTo(0, 0);
+}
+
+function toggleSourceInfo() {
+  const details = document.getElementById('sourceDetails');
+  const arrow = document.getElementById('sourceIconArrow');
+  if (!details) return;
+  const hidden = details.classList.contains('hidden');
+  details.classList.toggle('hidden', !hidden);
+  arrow && (arrow.style.transform = hidden ? 'rotate(90deg)' : 'rotate(0deg)');
+}
+
+
+// =============================================
+// SEARCH DEBOUNCE FIX
+// =============================================
+let _searchTimer = null;
+
+function handleSearch(inputEl) {
+  const val = inputEl.value;
+  clearTimeout(_searchTimer);
+  _searchTimer = setTimeout(function() {
+    updateCards(val);
+  }, 250);
+}
+
+function updateCards(searchQuery) {
+  searchQuery = searchQuery || '';
+  const u = ui();
+  let all = getAllArticles();
+
+  if (searchQuery.trim()) {
+    const q = searchQuery.toLowerCase();
+    all = all.filter(function(a) {
+      return a.title.toLowerCase().includes(q) ||
+             a.desc.toLowerCase().includes(q) ||
+             a.countryName.toLowerCase().includes(q);
+    });
+  }
+
+  let html = '';
+  if (all.length === 0) {
+    html = '<div class="text-center py-12 text-gray-500">' + u.noResult + '</div>';
+  } else {
+    all.forEach(function(item) {
+      html += '<div class="mb-4 border border-gray-200 rounded-[0.5rem] p-5 cursor-pointer hover:border-gray-400 transition-colors" onclick="goArticle(\'' + item.countryId + '\',\'' + item.articleId + '\')">' +
+        '<div class="mb-2"><span class="text-xs font-medium text-gray-400 uppercase tracking-wide">' + item.countryName + '</span></div>' +
+        '<h3 class="text-lg font-bold text-gray-900">' + item.title + '</h3>' +
+        '<div class="h-px bg-gray-100 w-full my-3"></div>' +
+        '<p class="text-sm text-gray-500 leading-relaxed">' + item.desc + '</p>' +
+        '</div>';
+    });
+  }
+
+  const container = document.getElementById('homeCards');
+  if (container) {
+    container.innerHTML = html;
+  }
+}
+
+// =============================================
+// INIT
+// =============================================
+// =============================================
+// ROUTER — parse URL saat load & popstate
+// =============================================
+function parseAndRender(skipPush) {
+  const hash = (location.hash || '#/').slice(1); // buang '#'
+  const qMark = hash.indexOf('?');
+  let path = (qMark >= 0 ? hash.slice(0, qMark) : hash);
+  const q = qMark >= 0 ? (new URLSearchParams(hash.slice(qMark + 1)).get('q') || '') : '';
+  while (path.endsWith('/')) path = path.slice(0, -1);
+  while (path.startsWith('/')) path = path.slice(1);
+  const parts = path.split('/').filter(Boolean);
+
+  if (parts.length === 0) {
+    renderHome(q, skipPush || true);
+  } else if (parts.length === 1) {
+    if (parts[0] === 'about') {
+      renderAbout(skipPush || true);
+    } else {
+      renderCountry(parts[0], skipPush || true);
+    }
+  } else if (parts.length >= 2) {
+    renderArticle(parts[0], parts[1], skipPush || true);
+  } else {
+    renderHome('', true);
+  }
+}
+
+window.addEventListener('popstate', function(e) {
+  parseAndRender(true);
+});
+
+function init() {
+  updateSidebarUI();
+  parseAndRender(false);
+}
+
+init();
+</script>
+<script>
+if (window.lucide) lucide.createIcons();
+document.addEventListener('click', function(e) {
+  var d = document.getElementById('langDrop');
+  if (!d || d.classList.contains('hidden')) return;
+  if (e.target.closest('#langBtn') || e.target.closest('#langDrop')) return;
+  d.classList.add('hidden'); d.classList.remove('flex');
+});
+</script>
 </body>
 </html>

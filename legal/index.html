@@ -36,44 +36,55 @@ html{height:100%;color-scheme:light;scroll-behavior:smooth;-webkit-text-size-adj
 body{margin:0;min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);font:16px/1.75 'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
 .seo-header{position:sticky;top:0;z-index:40;display:flex;align-items:center;background:var(--bg);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);padding:12px max(20px,calc((100% - 720px)/2))}
 .seo-back{display:inline-flex;align-items:center;gap:8px;margin-left:-4px;padding:6px 4px;color:var(--muted);font-size:14px;font-weight:500;line-height:1.25rem;text-decoration:none;background:transparent;border:0;border-radius:0;transition:color .2s ease,transform .15s ease}
-.seo-back svg{width:24px;height:24px;flex-shrink:0}
+.seo-head-title{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:18px;font-weight:700;color:var(--text);pointer-events:none}
+.seo-crumb{display:flex;align-items:center;gap:8px;margin:0 0 20px;font-size:14px;font-weight:500;line-height:1.4;flex-wrap:wrap}
+.seo-crumb a{color:var(--muted);text-decoration:none;transition:color .2s ease}
+.seo-crumb a:hover{color:var(--text);text-decoration:underline;text-underline-offset:3px}
+.seo-crumb .sep{color:#d1d5db;font-weight:400}
+.seo-crumb [aria-current]{color:var(--text);font-weight:700}
+.seo-back svg{width:30px;height:30px;flex-shrink:0}
 .seo-back:hover{color:var(--text)}
 .seo-back:active{transform:scale(.96)}
-main.seo-main{flex:1 0 auto;display:flex;flex-direction:column;width:100%;max-width:720px;margin:0 auto;padding:48px 20px 24px}
-main.seo-main .seo-cat{align-self:flex-start;display:inline-block;margin:0 0 14px;padding:3px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:600}
+main.seo-main{flex:1 0 auto;display:flex;flex-direction:column;width:100%;max-width:720px;margin:0 auto;padding:16px 20px 24px}
 main.seo-main .seo-title{margin:0 0 8px;font-size:clamp(28px,5vw,38px);line-height:1.2;font-weight:750;letter-spacing:-.02em;color:var(--text)}
-main.seo-main .seo-title+p{margin:16px 0 0;font-size:17px;color:var(--muted)}
+main.seo-main .sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+main.seo-main .seo-title+p{margin:0;font-size:15px;line-height:1.65;color:var(--muted)}
 /* daftar artikel — sama dengan halaman utama */
-.art-list{display:flex;flex-direction:column;gap:0;margin-top:24px}
-.art-row{
-  display:flex;align-items:center;gap:14px;padding:18px 4px;
-  border-bottom:1px solid #f0f1f4;color:inherit;text-decoration:none;cursor:pointer;
-  -webkit-tap-highlight-color:transparent;transition:background .15s ease;
-}
+.art-list{display:flex;flex-direction:column;gap:0;margin-top:24px;border-top:1px solid #f0f1f4}
+.art-row{display:flex;align-items:center;gap:16px;padding:20px 4px;border-bottom:1px solid #f0f1f4;color:inherit;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .15s ease}
 .art-row:last-child{border-bottom:0}
 .art-row:active{background:#f7f7f8}
 .art-body{flex:1;min-width:0}
-.art-cat{display:block;margin-bottom:4px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9ca3af}
-.art-title{font-size:16px;font-weight:700;line-height:1.4;letter-spacing:-.01em;color:#111827;margin:0}
-.art-desc{margin:4px 0 0;font-size:13.5px;line-height:1.55;color:#6b7280;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.art-title{font-size:17px;font-weight:700;line-height:1.4;letter-spacing:-.01em;color:#111827;margin:0}
+.art-desc{margin:6px 0 0;font-size:14px;line-height:1.55;color:#6b7280;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .art-arrow{flex-shrink:0;width:18px;height:18px;color:#d1d5db;transition:color .15s ease,transform .15s ease}
 .art-row:hover .art-arrow{color:#111827;transform:translateX(3px)}
 .art-row:hover .art-title{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.seo-footer{margin-top:auto;padding-top:48px;font-size:13.5px;color:var(--muted)}
+.seo-footer{margin-top:auto;padding-top:48px;font-size:13.5px;color:var(--muted);border:0;border-top:0;box-shadow:none}
+.seo-footer::before{content:none;display:none}
 .seo-footer a{color:var(--muted);text-decoration:none;margin:0 2px}
 .seo-footer a:hover{color:var(--text);text-decoration:underline}
 @media (max-width:600px){main.seo-main{padding:32px 18px 20px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.art-row,.art-arrow{transition:none}}
 @media print{.seo-header{display:none}main.seo-main{padding:0}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Legal","description":"Dokumen hukum dan ketentuan resmi untuk penggunaan Clincoo.","mainEntity":{"@type":"ItemList","numberOfItems":1,"itemListElement":[{"@type":"ListItem","position":1,"name":"Syarat & Ketentuan","url":"https://docs.clincoo.buzz/legal/syarat-dan-ketentuan/"}]}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Docs","item":"https://docs.clincoo.buzz/"},{"@type":"ListItem","position":2,"name":"Legal"}]},"name":"Legal","description":"Dokumen hukum dan ketentuan resmi untuk penggunaan Clincoo.","mainEntity":{"@type":"ItemList","numberOfItems":1,"itemListElement":[{"@type":"ListItem","position":1,"name":"Syarat & Ketentuan","url":"https://docs.clincoo.buzz/legal/syarat-dan-ketentuan/"}]}}</script>
 </head><body>
-<header class="seo-header"><a class="seo-back" href="/"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg><span>Kembali</span></a></header>
+<header class="seo-header"><a class="seo-back" href="/" aria-label="Kembali"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg></a><span class="seo-head-title" aria-hidden="true">Legal</span></header>
 <main class="seo-main">
-<h1 class="seo-title">Legal</h1>
+<nav class="seo-crumb" aria-label="Breadcrumb"><a href="/">Docs</a><span class="sep" aria-hidden="true">/</span><span aria-current="page">Legal</span></nav>
+<h1 class="seo-title sr-only">Legal</h1>
 <p>Dokumen hukum dan ketentuan resmi untuk penggunaan Clincoo.</p>
-<div class="art-list"><a class="art-row" href="/legal/syarat-dan-ketentuan/"><div class="art-body"><span class="art-cat">Legal</span><h2 class="art-title">Syarat &amp; Ketentuan</h2><p class="art-desc">Aturan penggunaan platform Clincoo: akun, publikasi situs, fitur AI, konten terlarang, pembayaran, dan batasan tanggung jawab.</p></div><svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></div>
+<div class="art-list">
+  <a class="art-row" href="/legal/syarat-dan-ketentuan/">
+    <div class="art-body">
+      <h2 class="art-title">Syarat &amp; Ketentuan</h2>
+      <p class="art-desc">Aturan penggunaan platform Clincoo: akun, publikasi situs, fitur AI, konten terlarang, pembayaran, dan batasan tanggung jawab.</p>
+    </div>
+    <svg class="art-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+  </a>
+</div>
 <footer class="seo-footer">© 2026 Clincoo · <a href="/">Clincoo Docs</a> · <a href="https://app.clincoo.buzz/">app.clincoo.buzz</a></footer>
 </main>
 </body></html>

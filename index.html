@@ -250,24 +250,6 @@
     }
     #app > header h2 { letter-spacing: -0.02em; }
 
-    /* ---------- Chip filter app ---------- */
-    .app-chips { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; scrollbar-width: none; }
-    .app-chips::-webkit-scrollbar { display: none; }
-    .sb-apps { margin: 0; padding: 0 16px 10px; flex-shrink: 0; }
-    .app-chip {
-      display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0;
-      padding: 5px 14px 5px 5px; border-radius: 999px;
-      border: 1px solid #e5e7eb; background: #fff;
-      font-size: 13px; font-weight: 600; color: #374151;
-      cursor: pointer; user-select: none; -webkit-user-select: none;
-      transition: background .2s ease, color .2s ease, border-color .2s ease;
-    }
-    .app-chip:hover { border-color: #9ca3af; }
-    .app-chip.active { background: #eceef1; border-color: #d1d5db; color: #111827; }
-    .chip-ico { width: 22px; height: 22px; border-radius: 50%; background: #fff; display: grid; place-items: center; overflow: hidden; flex-shrink: 0; }
-    .chip-ico img { width: 100%; height: 100%; display: block; }
-    .chip-ico.pad img { width: 82%; height: 82%; }
-
     /* ---------- Daftar artikel ---------- */
     #homeCards { display: flex; flex-direction: column; gap: 0; }
     .art-row {
@@ -407,7 +389,6 @@
       <i data-lucide="x" class="w-5 h-5"></i>
     </button>
   </div>
-  <div class="sb-apps app-chips"></div>
   <div id="countryDrop" class="flex flex-col flex-1 min-h-0 overflow-y-auto hide-scrollbar"></div>
   <div class="sb-foot">
     <div id="langDrop" class="hidden flex-col"></div>
@@ -517,53 +498,6 @@ let currentLang = 'id';
 let currentView = 'home'; // 'home' | 'country' | 'article' | 'about'
 let currentCountryId = null;
 let currentArticleId = null;
-let currentApp = null; // null = semua | 'clincoo' | 'clincoo-ai'
-
-// =============================================
-// APP (produk): Clincoo & Clincoo AI
-// Tandai lewat field `app` di data kategori ATAU di tiap artikel.
-// Tanpa field -> pakai APP_MAP di bawah -> kalau tak ada, 'umum' (tampil di semua app).
-// =============================================
-const APPS = {
-  'clincoo':    { label: 'Clincoo',    icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iQ2xpbmNvbyI+CiAgPHRpdGxlPkNsaW5jb288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE2IiBmaWxsPSIjZmZmZmZmIi8+CiAgPGcgZmlsbD0iIzAwMDAwMCI+CiAgICA8cGF0aCBkPSJNMTAgMTZDNyAxMCA5IDcgMTIgN0MxNCA3IDE1IDExIDEzIDE2WiIvPgogICAgPHBhdGggZD0iTTEyIDlDMTAuNSAxMSAxMSAxMyAxMiAxNC41QzEzIDEzIDEzLjUgMTEgMTIgOVoiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuMjUiLz4KICAgIDxwYXRoIGQ9Ik0yMiAxNkMyNSAxMCAyMyA3IDIwIDdDMTggNyAxNyAxMSAxOSAxNloiLz4KICAgIDxwYXRoIGQ9Ik0yMCA5QzIxLjUgMTEgMjEgMTMgMjAgMTQuNUMxOSAxMyAxOC41IDExIDIwIDlaIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjI1Ii8+CiAgICA8cGF0aCBkPSJNMTYgMjdDMjQgMjcgMjggMjIuNSAyOCAxN0MyOCAxMi41IDIxIDExLjUgMTYgMTEuNUMxMSAxMS41IDQgMTIuNSA0IDE3QzQgMjIuNSA4IDI3IDE2IDI3WiIvPgogIDwvZz4KICA8Y2lyY2xlIGN4PSIxMi41IiBjeT0iMTciIHI9IjEuNSIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC42Ii8+CiAgPGNpcmNsZSBjeD0iMTkuNSIgY3k9IjE3IiByPSIxLjUiIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuNiIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTYsMjAgMTUsMTguNSAxNywxOC41IiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjUiLz4KPC9zdmc+Cg==', pad: false },
-  'clincoo-ai': { label: 'Clincoo AI', icon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjIyNCAyMjQgNTc2IDU3NiIgd2lkdGg9IjUxMiIgaGVpZ2h0PSI1MTIiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iQ2xpbmNvbyBBSSI+CiAgPHRpdGxlPkNsaW5jb28gQUk8L3RpdGxlPgogIDxkZWZzPgogICAgPHBhdGggaWQ9InBldGFsIiBkPSJNNTEyIDUxMiBDNTA1IDM4MCA1NzAgMjg1IDY4MCAyNjAgQzY5MCA0MDAgNjIwIDQ5MCA1MTIgNTEyIFoiLz4KICAgIDxjaXJjbGUgaWQ9ImRvdCIgY3g9IjQ2OSIgY3k9IjI5MyIgcj0iMzIuNSIvPgogIDwvZGVmcz4KICA8ZyBmaWxsPSIjMDAwIj4KICAgIDx1c2UgaHJlZj0iI3BldGFsIi8+CiAgICA8dXNlIGhyZWY9IiNwZXRhbCIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgNTEyIDUxMikiLz4KICAgIDx1c2UgaHJlZj0iI3BldGFsIiB0cmFuc2Zvcm09InJvdGF0ZSgxODAgNTEyIDUxMikiLz4KICAgIDx1c2UgaHJlZj0iI3BldGFsIiB0cmFuc2Zvcm09InJvdGF0ZSgyNzAgNTEyIDUxMikiLz4KICAgIDx1c2UgaHJlZj0iI2RvdCIvPgogICAgPHVzZSBocmVmPSIjZG90IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA1MTIgNTEyKSIvPgogICAgPHVzZSBocmVmPSIjZG90IiB0cmFuc2Zvcm09InJvdGF0ZSgxODAgNTEyIDUxMikiLz4KICAgIDx1c2UgaHJlZj0iI2RvdCIgdHJhbnNmb3JtPSJyb3RhdGUoMjcwIDUxMiA1MTIpIi8+CiAgPC9nPgo8L3N2Zz4K', pad: true }
-};
-const APP_MAP = { mulai: 'clincoo', dokumentasi: 'clincoo', bantuan: 'clincoo', legal: 'umum' };
-
-function appOfArticle(cId, art) {
-  const c = countries[cId] || {};
-  const a = (art && art.app) || c.app || APP_MAP[cId] || 'umum';
-  return APPS[a] ? a : 'umum';
-}
-function artVisible(cId, art) {
-  const a = appOfArticle(cId, art);
-  return !currentApp || a === 'umum' || a === currentApp;
-}
-function labelWithApp(item) {
-  return (item.appId && APPS[item.appId]) ? APPS[item.appId].label + ' \u00b7 ' + item.countryName : item.countryName;
-}
-function renderChips() {
-  let h = '';
-  for (const id in APPS) {
-    const a = APPS[id];
-    h += '<span class="app-chip' + (currentApp === id ? ' active' : '') + '" role="button" tabindex="0" aria-pressed="' + (currentApp === id) + '" onclick="setApp(\'' + id + '\')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();setApp(\'' + id + '\')}">' +
-      '<span class="chip-ico' + (a.pad ? ' pad' : '') + '"><img src="' + a.icon + '" alt=""></span>' + a.label + '</span>';
-  }
-  document.querySelectorAll('.app-chips').forEach(el => { el.innerHTML = h; });
-}
-function setApp(id) {
-  currentApp = (currentApp === id) ? null : id;
-  try { localStorage.setItem('clincooApp', currentApp || ''); } catch (e) {}
-  renderChips();
-  updateSidebarUI();
-  if (currentView === 'home') {
-    const i = document.getElementById('searchInput');
-    updateCards(i ? i.value : '');
-  } else if (currentView === 'country') {
-    if (!getCountryArticles(currentCountryId).length) renderHome();
-    else renderCountry(currentCountryId, true);
-  }
-}
 
 // =============================================
 // BAHASA
@@ -585,10 +519,8 @@ function getAllArticles() {
   for (const cId in countries) {
     const c = countries[cId];
     (c.articles || []).forEach(art => {
-      if (!artVisible(cId, art)) return;
       const langData = art.langs[currentLang] || art.langs['id'];
       all.push({
-        appId: appOfArticle(cId, art),
         countryId: cId,
         articleId: art.id,
         countryName: c.names[currentLang] || c.names['id'],
@@ -602,7 +534,7 @@ function getAllArticles() {
 function getCountryArticles(countryId) {
   const c = countries[countryId];
   if (!c || !c.articles) return [];
-  return c.articles.filter(art => artVisible(countryId, art)).map(art => {
+  return c.articles.map(art => {
     const langData = art.langs[currentLang] || art.langs['id'];
     return { countryId, articleId: art.id, countryName: c.names[currentLang] || c.names['id'], ...langData };
   });
@@ -667,8 +599,7 @@ function updateSidebarUI() {
     countryDropEl.innerHTML = '';
     for (const cId in countries) {
       const c = countries[cId];
-      const visArts = (c.articles || []).filter(a => artVisible(cId, a));
-      if (!visArts.length) continue; // lewati kategori kosong / terfilter
+      if (!c.articles || !c.articles.length) continue; // lewati kategori kosong
       const name = c.names[currentLang] || c.names['id'];
       const isActive = currentCountryId === cId && currentView === 'country';
       const btn = document.createElement('button');
@@ -684,7 +615,7 @@ function updateSidebarUI() {
       const inner = document.createElement('div');
       inner.className = 'cat-inner';
       list.appendChild(inner);
-      visArts.forEach(art => {
+      c.articles.forEach(art => {
         const ld = art.langs[currentLang] || art.langs['id'];
         const a = document.createElement('a');
         a.href = '/' + cId + '/' + art.id + '/' + (currentLang === 'en' ? 'index.en.html' : '');
@@ -792,7 +723,7 @@ function renderHome(searchQuery, skipPush) {
     cardsHtml = '<div class="text-center py-12 text-gray-500">' + u.noResult + '</div>';
   } else {
     all.forEach(item => {
-      cardsHtml += artRow(item.countryId, item.articleId, labelWithApp(item), item.title, item.desc);
+      cardsHtml += artRow(item.countryId, item.articleId, item.countryName, item.title, item.desc);
     });
   }
 
@@ -805,12 +736,10 @@ function renderHome(searchQuery, skipPush) {
     '<div class="relative flex-grow">' +
     '<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none"><svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>' +
     '<input type="text" id="searchInput" class="w-full border border-gray-300 rounded-full py-2.5 pl-12 pr-5 text-base outline-none focus:border-gray-900 transition-colors shadow-sm" placeholder="' + u.searchPh + '" value="' + searchQuery + '" oninput="handleSearch(this)" autocomplete="off" spellcheck="false">' +
-    '</div></div>' +
-    '<div class="app-chips"></div>' +
+    '</div>' +
     '</header>' +
     '<div class="pt-6 fade-in" id="homeCards">' + cardsHtml + '</div>';
 
-  renderChips();
   window.scrollTo(0, 0);
 }
 
@@ -1011,7 +940,7 @@ function updateCards(searchQuery) {
     html = '<div class="text-center py-12 text-gray-500">' + u.noResult + '</div>';
   } else {
     all.forEach(function(item) {
-      html += artRow(item.countryId, item.articleId, labelWithApp(item), item.title, item.desc);
+      html += artRow(item.countryId, item.articleId, item.countryName, item.title, item.desc);
     });
   }
 
@@ -1056,9 +985,7 @@ window.addEventListener('popstate', function(e) {
 });
 
 function init() {
-  try { const v = localStorage.getItem('clincooApp'); if (APPS[v]) currentApp = v; } catch (e) {}
   updateSidebarUI();
-  renderChips();
   parseAndRender(false);
 }
 
